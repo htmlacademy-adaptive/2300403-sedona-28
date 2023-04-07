@@ -1,0 +1,90 @@
+.feedback-form__introduce,
+.feedback-form__contacts,
+.feedback-form__impression,
+.feedback-form__attractions,
+.feedback-form__description {
+  border: none;
+}
+
+.feedback-form__introduce-legend,
+.feedback-form__contacts-legend,
+.feedback-form__impression-legend,
+.feedback-form__attractions-legend,
+.feedback-form__description-label {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.feedback-form__introduce-list,
+.feedback-form__contacts-list,
+.feedback-form__impression-list,
+.feedback-form__attractions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback-form__introduce-input::placeholder {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.feedback-form__introduce-input,
+.feedback-form__contacts-input,
+.feedback-form__description-input {
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.feedback-form__contacts-input::placeholder,
+.feedback-form__description-input::placeholder {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.feedback-form__description-input {
+  min-width: 279px;
+  min-height: 150px;
+  padding: 16px;
+  resize: none;
+}
+
+.feedback-form__impression-label,
+.feedback-form__attractions-label {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: none;
+}
+
+.feedback-form__button {
+  min-width: 280px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: none;
+
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.feedback-form__required-field-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+}

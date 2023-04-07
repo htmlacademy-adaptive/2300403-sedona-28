@@ -1,0 +1,36 @@
+.catalog-photos__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-photos__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-photos__item-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  color: #000000;
+}
+
+.catalog-photos__item-text {
+  text-transform: none;
+}
+
+.catalog-photos__item-likes {
+  display: flex;
+  align-items: end;
+}
+
+.catalog-photos__item-like-image {
+  margin-right: 14px;
+}
+
+.catalog-photos__item-like-amount {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 14px;
+}
