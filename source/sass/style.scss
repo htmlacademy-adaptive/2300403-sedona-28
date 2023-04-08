@@ -1,1 +1,27 @@
-// Начните писать стили здесь
+@use "./blocks/fonts.scss";
+@use "./blocks/visually-hidden.scss";
+@use "./blocks/page-header.scss";
+@use "./blocks/welcome-images.scss";
+@use "./blocks/page-advantages.scss";
+@use "./blocks/section-main-booking.scss";
+@use "./blocks/footer-developer-information.scss";
+@use "./blocks/page-intro.scss";
+@use "./blocks/footer.scss";
+@use "./blocks/socials-list.scss";
+@use "./blocks/catalog-photos.scss";
+@use "./blocks/catalog-video.scss";
+@use "./blocks/feedback-form.scss";
+@use "./blocks/sent-form-window.scss";
+@use "./blocks/error-form-window.scss";
+
+body {
+  margin: 0;
+  background: #ffffff;
+
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+}

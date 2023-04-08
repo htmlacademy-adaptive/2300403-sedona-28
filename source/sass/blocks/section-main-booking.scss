@@ -1,0 +1,25 @@
+.section-main-booking b {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.section-main-booking__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 284px;
+  height: 58px;
+  background-color: #81b3d2;
+}
+
+.section-main-booking__button-link {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #ffffff;
+}

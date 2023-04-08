@@ -1,0 +1,44 @@
+.page-advantages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-advantages__item-text-wrap {
+  background-color: #81b3d2;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.page-advantages__item:nth-last-child(-n+3) {
+  background-color: #eeeeee;
+}
+
+.page-advantages__item-bold-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.page-advantages__item:not(:nth-last-child(-n+3)) .page-advantages__item-bold-text {
+  color: #ffffff;
+}
+
+.page-advantages__sub-item-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.page-advantages__sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
