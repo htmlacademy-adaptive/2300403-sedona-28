@@ -13,7 +13,7 @@
   color: #ffffff;
 }
 
-.page-advantages__item:nth-last-child(-n+3) {
+.page-advantages__item:nth-last-child(1) {
   background-color: #eeeeee;
 }
 
@@ -25,7 +25,7 @@
   color: #000000;
 }
 
-.page-advantages__item:not(:nth-last-child(-n+3)) .page-advantages__item-bold-text {
+.page-advantages__item:nth-child(-n+2) .page-advantages__item-bold-text {
   color: #ffffff;
 }
 
@@ -41,4 +41,105 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+// Вид последних 3-х приемуществ
+.page-advantages__more-about-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+// Вид на планшете
+@media (min-width: $tablet-width) {
+
+  // Сетка первого блока приемуществ
+  .page-advantages__item:first-child {
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+    grid-template-rows: 256px 331px;
+
+    .page-advantages__item-photo {
+      height: 256px;
+      grid-area: 1/2/4/4;
+    }
+
+    .page-advantages__sub-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      grid-area: 2/1/3/4;
+    }
+  }
+
+  // Сетка второго блока преимуществ
+  .page-advantages__item:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 512px 256px;
+    grid-template-rows: 256px;
+
+    .page-advantages__item-text-wrap {
+      grid-area: 1/2/1/3;
+    }
+
+    .page-advantages__item-photo:nth-child(2) {
+      grid-area: 1/1/2/2;
+      height: 256px;
+    }
+  }
+
+  // Сетка последних 3-х блоков приемуществ
+  .page-advantages__more-about-list {
+    width: 768px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+// Вид на десктопе
+@media (min-width: $desktop-width) {
+
+  // Сетка первого блока приемуществ
+  .page-advantages__item:first-child {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 256px 330px;
+
+    .page-advantages__item-photo {
+
+      height: 256px;
+      grid-area: 1/2/4/4;
+    }
+
+    .page-advantages__sub-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      grid-area: 2/1/3/4;
+    }
+  }
+
+  // Сетка второго блока преимуществ
+  .page-advantages__item:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 800px 400px;
+    grid-template-rows: 256px;
+
+    .page-advantages__item-text-wrap {
+      grid-area: 1/2/1/3;
+    }
+
+    .page-advantages__item-photo:nth-child(2) {
+      grid-area: 1/1/2/2;
+      height: 256px;
+    }
+  }
+
+  // Сетка последних 3-х блоков приемуществ
+  .page-advantages__more-about-list {
+    width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

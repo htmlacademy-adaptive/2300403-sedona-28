@@ -23,3 +23,21 @@
   text-decoration: none;
   color: #ffffff;
 }
+
+// Вид на планшете
+@media (min-width: $tablet-width) {
+  .section-main-booking {
+    margin: 0 auto;
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Вид на десктопе
+@media (min-width: $desktop-width) {
+  .section-main-booking {
+    width: 1200px;
+  }
+}

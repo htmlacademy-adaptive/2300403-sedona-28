@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -29,7 +30,8 @@
       </label>
       <ol class="page-header__menu-list header-menu-list">
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="index.html">Главная</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Фото и видео</a></li>
+        <li class="page-header__menu-item"><a class="page-header__menu-link page-header__menu-link--active"
+            href="#">Фото и видео</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="form.html">Форма Отзыва</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
       </ol>
@@ -44,7 +46,7 @@
       <div class="welcome-images">
         <!-- Текст с цитатой в виде изображения -->
         <ul class="welcome-images__list">
-          <li class="welcome-images__item welcome-images__sedona-image"><span class="visually-hidden">SEDONA</span></li>
+          <li class="welcome-images__item welcome-images__sedona-image"><span class="">SEDONA</span></li>
         </ul>
         <!-- Декоротивный угол фона -->
         <div class="page-intro__bottom-decoration"></div>
@@ -62,57 +64,73 @@
         <li class="catalog-photos__item">
           <img class="catalog-photos__item-photo" src="img/road-catalog-photo.jpg" width="280" height="280"
             alt="Фотография дороги на фоне заката.">
-          <b class="catalog-photos__item-title">Неродные просторы</b>
-          <p class="catalog-photos__item-text">Автор фото: Борис</p>
-          <div class="catalog-photos__item-likes">
-            <svg class="catalog-photos__item-like-image" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
-              fill="none" viewBox="0 0 23 21">
-              <path fill="#000"
-                d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
-                opacity=".3" />
-            </svg><b class="catalog-photos__item-like-amount">1350</b>
+          <div class="catalog-photos__item-description-wrap">
+            <div class="catalog-photos__item-description">
+              <b class="catalog-photos__item-title">Неродные просторы</b>
+              <p class="catalog-photos__item-text">Автор фото: Борис</p>
+            </div>
+            <div class="catalog-photos__item-likes">
+              <svg class="catalog-photos__item-like-image" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
+                fill="none" viewBox="0 0 23 21">
+                <path class="catalog-photos__item-like-image-path" fill="#000000"
+                  d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
+                  opacity=".3" />
+              </svg><b class="catalog-photos__item-like-amount">1350</b>
+            </div>
           </div>
         </li>
         <li class="catalog-photos__item">
           <img class="catalog-photos__item-photo" src="img/cactus-catalog-photo.jpg" width="280" height="280"
             alt="Фотография дороги на фоне заката.">
-          <b class="catalog-photos__item-title">Местная растительность</b>
-          <p class="catalog-photos__item-text">Автор фото: Сергей</p>
-          <div class="catalog-photos__item-likes">
-            <svg class="catalog-photos__item-like-image" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
-              fill="none" viewBox="0 0 23 21">
-              <path fill="#000"
-                d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
-                opacity=".3" />
-            </svg><b class="catalog-photos__item-like-amount">143</b>
+          <div class="catalog-photos__item-description-wrap">
+            <div class="catalog-photos__item-description">
+              <b class="catalog-photos__item-title">Местная растительность</b>
+              <p class="catalog-photos__item-text">Автор фото: Сергей</p>
+            </div>
+            <div class="catalog-photos__item-likes">
+              <svg class="catalog-photos__item-like-image" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
+                fill="none" viewBox="0 0 23 21">
+                <path class="catalog-photos__item-like-image-path" fill="#000000"
+                  d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
+                  opacity=".3" />
+              </svg><b class="catalog-photos__item-like-amount">143</b>
+            </div>
           </div>
         </li>
         <li class="catalog-photos__item">
           <img class="catalog-photos__item-photo" src="img/forest-with-road-catalog-photo.jpg" width="280" height="280"
             alt="Фотография дороги на фоне заката.">
-          <b class="catalog-photos__item-title">Дорога на север</b>
-          <p class="catalog-photos__item-text">Автор фото: Петр</p>
-          <div class="catalog-photos__item-likes">
-            <svg class="catalog-photos__item-like-image" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
-              fill="none" viewBox="0 0 23 21">
-              <path fill="#000"
-                d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
-                opacity=".3" />
-            </svg><b class="catalog-photos__item-like-amount">96</b>
+          <div class="catalog-photos__item-description-wrap">
+            <div class="catalog-photos__item-description">
+              <b class="catalog-photos__item-title">Дорога на север</b>
+              <p class="catalog-photos__item-text">Автор фото: Петр</p>
+            </div>
+            <div class="catalog-photos__item-likes">
+              <svg class="catalog-photos__item-like-image" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
+                fill="none" viewBox="0 0 23 21">
+                <path class="catalog-photos__item-like-image-path" fill="#000000"
+                  d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
+                  opacity=".3" />
+              </svg><b class="catalog-photos__item-like-amount">96</b>
+            </div>
           </div>
         </li>
         <li class="catalog-photos__item">
           <img class="catalog-photos__item-photo" src="img/bridge-catalog-photo.jpg" width="280" height="280"
             alt="Фотография дороги на фоне заката.">
-          <b class="catalog-photos__item-title">Мост дьявола</b>
-          <p class="catalog-photos__item-text">Автор фото: Антон</p>
-          <div class="catalog-photos__item-likes">
-            <svg class="catalog-photos__item-like-image" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
-              fill="none" viewBox="0 0 23 21">
-              <path fill="#000"
-                d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
-                opacity=".3" />
-            </svg><b class="catalog-photos__item-like-amount">254</b>
+          <div class="catalog-photos__item-description-wrap">
+            <div class="catalog-photos__item-description">
+              <b class="catalog-photos__item-title">Мост дьявола</b>
+              <p class="catalog-photos__item-text">Автор фото: Антон</p>
+            </div>
+            <div class="catalog-photos__item-likes">
+              <svg class="catalog-photos__item-like-image" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
+                fill="none" viewBox="0 0 23 21">
+                <path class="catalog-photos__item-like-image-path" fill="#000000"
+                  d="m12.964 3.78-.628 3.045-.627 2.625h9.096v2.205L17.773 18.9h-9.41V8.4l4.6-4.62ZM2.09 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.418.315-.627.84-.627 1.47v10.5c0 1.155.94 2.1 2.09 2.1h9.41c.836 0 1.568-.525 1.881-1.26l3.137-7.455c.104-.21.104-.525.104-.735v-2.1H23c0-1.155-.94-2.1-2.09-2.1h-6.587l1.045-4.83v-.315c0-.42-.209-.84-.418-1.155L13.8 0ZM4.182 8.4H0V21h4.182V8.4Z"
+                  opacity=".3" />
+              </svg><b class="catalog-photos__item-like-amount">254</b>
+            </div>
           </div>
         </li>
       </ul>
@@ -120,9 +138,11 @@
 
     <section class="catalog-video">
       <h2 class="visually-hidden">Видеоролик-презентация города Седона.</h2>
-      <b class="catalog-video__title">Все еще сомневаетесь?</b>
-      <p class="catalog-video__text">Смотрите видеопрезентацию и <br>скорее за билетами, пока они не <br>подорожали в
-        очередной раз!</p>
+      <div class="catalog-video__description">
+        <b class="catalog-video__title">Все еще сомневаетесь?</b>
+        <p class="catalog-video__text">Смотрите видеопрезентацию и <br>скорее за билетами, пока они не <br>подорожали в
+          очередной раз!</p>
+      </div>
       <a class="catalog-video__video-link" href="#"><img class="catalog-video__preview-image"
           src="img/video-preview-catalog.jpg" width="280" height="177" alt="Превью видеоролика."></a>
     </section>
