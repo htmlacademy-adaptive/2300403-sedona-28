@@ -1,7 +1,42 @@
+.catalog-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .catalog-video__title {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
+}
+
+.catalog-video__text {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-video {
+    min-width: 648px;
+    min-height: 687px;
+  }
+
+  .catalog-video__preview-image {
+    min-width: 648px;
+    min-height: 500px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-video {
+    min-width: 800px;
+    min-height: 685px;
+  }
+
+  .catalog-video__preview-image {
+    min-width: 800px;
+    min-height: 500px;
+  }
 }

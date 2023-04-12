@@ -1,8 +1,35 @@
 .welcome-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+
   min-width: 320px;
   min-height: 389px;
   background-image: url("../../img/rocks-intro-background.jpg");
   background-color: rgba(222, 239, 255, 0.72);
   background-repeat: no-repeat;
-  padding: 90px 19px 85px 19px;
+}
+
+.welcome-images__list {
+  margin: 0;
+  list-style: none;
+}
+
+// Вид на планшете
+@media (min-width: $tablet-width) {
+  .welcome-images {
+    min-width: 768px;
+    min-height: 518px;
+    background-position: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .welcome-images {
+    min-width: 1200px;
+    min-height: 518px;
+  }
+
 }

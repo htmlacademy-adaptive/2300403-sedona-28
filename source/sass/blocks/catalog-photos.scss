@@ -2,11 +2,20 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
 }
 
 .catalog-photos__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.catalog-photos__item-description-wrap {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  padding-left: 20px;
 }
 
 .catalog-photos__item-title {
@@ -17,6 +26,7 @@
 
 .catalog-photos__item-text {
   text-transform: none;
+  margin: 0;
 }
 
 .catalog-photos__item-likes {
@@ -33,4 +43,179 @@
   margin: 0;
   padding: 0;
   line-height: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-photos__list {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    grid-template-rows: 480px 347px 347px;
+    justify-content: center;
+  }
+
+  .catalog-photos__item-description-wrap {
+    background-color: #f2f2f2;
+    max-height: 40px;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .catalog-photos__item {
+    &:nth-child(1) {
+      grid-area: 1/1/1/3;
+      align-self: end;
+
+      & .catalog-photos__item-description-wrap {
+        min-width: 608px;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-area: 2/1/3/2;
+      align-self: end;
+
+      & .catalog-photos__item-photo {
+        max-height: 267px;
+      }
+
+      & .catalog-photos__item-description-wrap {
+        min-width: 284px;
+      }
+    }
+
+
+    &:nth-child(3) {
+      grid-area: 2/2/3/3;
+      align-self: end;
+
+      & .catalog-photos__item-photo {
+        max-height: 267px;
+      }
+
+      & .catalog-photos__item-description-wrap {
+        min-width: 284px;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-area: 3/1/4/2;
+      align-self: end;
+
+      & .catalog-photos__item-photo {
+        max-height: 267px;
+      }
+
+      & .catalog-photos__item-description-wrap {
+        min-width: 284px;
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-photos__list {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 267px;
+    justify-content: center;
+  }
+
+  .catalog-photos__item-description-wrap {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    color: #ffffff;
+  }
+
+  .catalog-photos__item-title {
+    color: #ffffff;
+  }
+
+  .catalog-photos__item-like-image-path {
+    fill: #ffffff;
+    opacity: 1;
+  }
+
+  .catalog-photos__item {
+
+    // Первая потофграфия
+    &:nth-child(1) {
+      grid-area: 1/1/2/4;
+      display: grid;
+      grid-template-columns: 1200px;
+      grid-template-rows: 400px;
+
+      & .catalog-photos__item-photo {
+        align-self: center;
+        justify-self: center;
+        grid-area: 1/1/2/2;
+      }
+
+      & .catalog-photos__item-description-wrap {
+        grid-area: 1/1/2/2;
+        align-self: end;
+      }
+
+    }
+
+    // Второая фотография
+    &:nth-child(2) {
+      grid-area: 2/1/3/2;
+      display: grid;
+      grid-template-columns: 400px;
+      grid-template-rows: 267px;
+
+      & .catalog-photos__item-photo {
+        align-self: center;
+        justify-self: center;
+        grid-area: 1/1/2/2;
+      }
+
+      & .catalog-photos__item-description-wrap {
+        grid-area: 1/1/2/2;
+        align-self: end;
+      }
+
+    }
+
+    // Третяя фотография
+    &:nth-child(3) {
+      grid-area: 2/2/3/3;
+      display: grid;
+      grid-template-columns: 400px;
+      grid-template-rows: 267px;
+
+      & .catalog-photos__item-photo {
+        align-self: center;
+        justify-self: center;
+        grid-area: 1/1/2/2;
+      }
+
+      & .catalog-photos__item-description-wrap {
+        grid-area: 1/1/2/2;
+        align-self: end;
+      }
+    }
+
+    // Четвертая фотография
+    &:nth-child(4) {
+      grid-area: 2/3/3/4;
+      display: grid;
+      grid-template-columns: 400px;
+      grid-template-rows: 267px;
+
+      & .catalog-photos__item-photo {
+        align-self: center;
+        justify-self: center;
+        grid-area: 1/1/2/2;
+      }
+
+      & .catalog-photos__item-description-wrap {
+        grid-area: 1/1/2/2;
+        align-self: end;
+      }
+    }
+  }
 }

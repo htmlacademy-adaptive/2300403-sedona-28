@@ -1,13 +1,99 @@
-.page-header__menu-list {
-  background-color: #81b3d2;
-  list-style: none;
+// Позиционирование логотипа
+.page-header__logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -92.5px;
 }
 
-.page-header__menu-link {
-  text-decoration: none;
-  color: #ffffff;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+.page-header__logo-image {
+  height: 96px;
+}
+
+@media (min-width: $mobile-width) {
+  .page-header-navigation__burger-menu-checkbox {
+    display: none;
+  }
+
+  .page-header__menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #81b3d2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .page-header__menu-item {
+    display: flex;
+    width: 320px;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    margin-bottom: 1px;
+    box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+
+  }
+
+  .page-header__menu-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+
+
+// Вид на планшете
+@media (min-width: $tablet-width) {
+  .page-header__menu-list {
+
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+
+  .page-header__menu-item {
+    width: 153px;
+    height: 56px;
+    box-shadow: none;
+  }
+
+  .page-header__menu-item:nth-child(2) {
+    margin-right: 153px;
+  }
+
+  .page-header__menu-link {
+    color: #000000;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .page-header__menu-link--active {
+    color: #766357;
+  }
+
+  .page-header-navigation__burger-menu-label {
+    display: none;
+  }
+
+}
+
+// Вид на десктопе
+@media (min-width: $desktop-width) {
+  .page-header__menu-item {
+    width: 240px;
+    height: 56px;
+    box-shadow: none;
+  }
+
+  .page-header__menu-item:nth-child(2) {
+    margin-right: 240px;
+  }
 }

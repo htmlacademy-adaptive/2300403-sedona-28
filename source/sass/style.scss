@@ -1,21 +1,30 @@
-@use "./blocks/fonts.scss";
-@use "./blocks/visually-hidden.scss";
-@use "./blocks/page-header.scss";
-@use "./blocks/welcome-images.scss";
-@use "./blocks/page-advantages.scss";
-@use "./blocks/section-main-booking.scss";
-@use "./blocks/footer-developer-information.scss";
-@use "./blocks/page-intro.scss";
-@use "./blocks/footer.scss";
-@use "./blocks/socials-list.scss";
-@use "./blocks/catalog-photos.scss";
-@use "./blocks/catalog-video.scss";
-@use "./blocks/feedback-form.scss";
-@use "./blocks/sent-form-window.scss";
-@use "./blocks/error-form-window.scss";
+@import "./variables.scss";
+@import "./blocks/fonts.scss";
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/welcome-images.scss";
+@import "./blocks/page-advantages.scss";
+@import "./blocks/section-main-booking.scss";
+@import "./blocks/footer-developer-information.scss";
+@import "./blocks/page-intro.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/socials-list.scss";
+@import "./blocks/catalog-photos.scss";
+@import "./blocks/catalog-video.scss";
+@import "./blocks/feedback-form.scss";
+@import "./blocks/sent-form-window.scss";
+@import "./blocks/error-form-window.scss";
+
+html {
+  height: 100%;
+}
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
   background: #ffffff;
 
   font-family: "PT Sans", sans-serif;
@@ -24,4 +33,8 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   color: #333333;
+}
+
+main {
+  flex-grow: 1;
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -30,7 +31,8 @@
       <ol class="page-header__menu-list header-menu-list">
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="index.html">Главная</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="catalog.html">Фото и видео</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Форма Отзыва</a></li>
+        <li class="page-header__menu-item"><a class="page-header__menu-link page-header__menu-link--active"
+            href="#">Форма Отзыва</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
       </ol>
     </nav>
@@ -44,7 +46,7 @@
         <!-- Текст с цитатой в виде изображения -->
         <ul class="welcome-images__list">
           <li class="welcome-images__item welcome-images__sedona-image">
-            <span class="visually-hidden">Sedona</span>
+            <span class="">Sedona</span>
           </li>
         </ul>
         <!-- Декоротивный угол фона -->
@@ -104,12 +106,12 @@
                 value="more-positive" checked>
               <label class="feedback-form__impression-label" for="more-positive">Скорее положительное</label>
             </li>
-            <li class="feedback-form__impression-list">
+            <li class="feedback-form__impression-item">
               <input class="feedback-form__impression-input" type="radio" id="more-negative" name="impression"
                 value="more-negative">
               <label class="feedback-form__impression-label" for="more-negative">Скорее отрицательное</label>
             </li>
-            <li class="feedback-form__impression-list">
+            <li class="feedback-form__impression-item">
               <input class="feedback-form__impression-input" id="hard-to-answer" type="radio" name="impression"
                 value="hard-to-answer">
               <label class="feedback-form__impression-label" for="hard-to-answer">Затрудняюсь ответить</label>

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -28,7 +29,8 @@
         </svg>
       </label>
       <ol class="page-header__menu-list header-menu-list">
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Главная</a></li>
+        <li class="page-header__menu-item"><a class="page-header__menu-link page-header__menu-link--active"
+            href="#">Главная</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="catalog.html">Фото и видео</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="form.html">Форма Отзыва</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
@@ -43,10 +45,10 @@
       <div class="welcome-images">
         <!-- Текст с цитатой в виде изображения -->
         <ul class="welcome-images__list">
-          <li class="welcome-images__item welcome-images__welcome-image"><span class="visually-hidden">Welcome to the
+          <li class="welcome-images__item welcome-images__welcome-image"><span class="">Welcome to the
               gorgeous</span></li>
-          <li class="welcome-images__item welcome-images__sedona-image"><span class="visually-hidden">Sedona</span></li>
-          <li class="welcome-images__item welcome-images__quote-image "><span class="visually-hidden">"Because the Grand
+          <li class="welcome-images__item welcome-images__sedona-image"><span class="">Sedona</span></li>
+          <li class="welcome-images__item welcome-images__quote-image "><span class="">"Because the Grand
               Canyon
               sucks!"</span></li>
         </ul>
@@ -100,19 +102,23 @@
             alt="Фотография каньона.">
         </li>
         <li class="page-advantages__item">
-          <b class="page-advantages__item-bold-text">Небольшая площадь</b>
-          <p class="page-advantages__item-text">— №3 —</p>
-          <p class="page-advantages__item-text">Все интересные места находятся <br>очень близко</p>
-        </li>
-        <li class="page-advantages__item">
-          <b class="page-advantages__item-bold-text">Красивая дорога</b>
-          <p class="page-advantages__item-text">— №4 —</p>
-          <p class="page-advantages__item-text">Ехать в седону из лас-вегаса <br>совсем не скучно!</p>
-        </li>
-        <li class="page-advantages__item">
-          <b class="page-advantages__item-bold-text">Мало туристов</b>
-          <p class="page-advantages__item-text">— №5 —</p>
-          <p class="page-advantages__item-text">Большинство едет в гранд каньон <br>и толпится там</p>
+          <ul class="page-advantages__more-about-list">
+            <li class="page-advantages__more-about-item">
+              <b class="page-advantages__item-bold-text">Небольшая площадь</b>
+              <p class="page-advantages__item-text">— №3 —</p>
+              <p class="page-advantages__item-text">Все интересные места находятся <br>очень близко</p>
+            </li>
+            <li class="page-advantages__more-about-item">
+              <b class="page-advantages__item-bold-text">Красивая дорога</b>
+              <p class="page-advantages__item-text">— №4 —</p>
+              <p class="page-advantages__item-text">Ехать в седону из лас-вегаса <br>совсем не скучно!</p>
+            </li>
+            <li class="page-advantages__more-about-item">
+              <b class="page-advantages__item-bold-text">Мало туристов</b>
+              <p class="page-advantages__item-text">— №5 —</p>
+              <p class="page-advantages__item-text">Большинство едет в гранд каньон <br>и толпится там</p>
+            </li>
+          </ul>
         </li>
       </ol>
     </section>
