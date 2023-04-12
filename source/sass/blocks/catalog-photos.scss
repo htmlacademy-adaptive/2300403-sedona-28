@@ -2,7 +2,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .catalog-photos__item {
@@ -111,9 +110,7 @@
         min-width: 284px;
       }
     }
-
   }
-
 }
 
 @media (min-width: $desktop-width) {
@@ -157,7 +154,6 @@
         grid-area: 1/1/2/2;
         align-self: end;
       }
-
     }
 
     // Второая фотография
@@ -177,7 +173,6 @@
         grid-area: 1/1/2/2;
         align-self: end;
       }
-
     }
 
     // Третяя фотография
