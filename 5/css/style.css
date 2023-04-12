@@ -1,0 +1,895 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../../fonts/ptsans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../../fonts/ptsansbold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header__logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -92.5px;
+}
+
+.page-header__logo-image {
+  height: 96px;
+}
+
+@media (min-width: 320px) {
+  .page-header-navigation__burger-menu-checkbox {
+    display: none;
+  }
+
+  .page-header__menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #81b3d2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-header__menu-item {
+    display: flex;
+    width: 320px;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    margin-bottom: 1px;
+    box-shadow: 0 1px 0 #01010133, inset 0 1px 0 #ffffff33;
+  }
+
+  .page-header__menu-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@media (min-width: 768px) {
+  .page-header__menu-list {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+
+  .page-header__menu-item {
+    width: 153px;
+    height: 56px;
+    box-shadow: none;
+  }
+
+  .page-header__menu-item:nth-child(2) {
+    margin-right: 153px;
+  }
+
+  .page-header__menu-link {
+    color: #000000;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .page-header__menu-link--active {
+    color: #766357;
+  }
+
+  .page-header-navigation__burger-menu-label {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header__menu-item {
+    width: 240px;
+    height: 56px;
+    box-shadow: none;
+  }
+
+  .page-header__menu-item:nth-child(2) {
+    margin-right: 240px;
+  }
+}
+.welcome-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  min-width: 320px;
+  min-height: 389px;
+  background-image: url("../../img/rocks-intro-background.jpg");
+  background-color: rgba(222, 239, 255, 0.72);
+  background-repeat: no-repeat;
+}
+
+.welcome-images__list {
+  margin: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .welcome-images {
+    min-width: 768px;
+    min-height: 518px;
+    background-position: center;
+  }
+}
+@media (min-width: 1200px) {
+  .welcome-images {
+    min-width: 1200px;
+    min-height: 518px;
+  }
+}
+.page-advantages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-advantages__item-text-wrap {
+  background-color: #81b3d2;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.page-advantages__item:nth-last-child(1) {
+  background-color: #eeeeee;
+}
+
+.page-advantages__item-bold-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.page-advantages__item:nth-child(-n+2) .page-advantages__item-bold-text {
+  color: #ffffff;
+}
+
+.page-advantages__sub-item-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.page-advantages__sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-advantages__more-about-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .page-advantages__item:first-child {
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+    grid-template-rows: 256px 331px;
+  }
+  .page-advantages__item:first-child .page-advantages__item-photo {
+    height: 256px;
+    grid-area: 1/2/4/4;
+  }
+  .page-advantages__item:first-child .page-advantages__sub-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: 2/1/3/4;
+  }
+
+  .page-advantages__item:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 512px 256px;
+    grid-template-rows: 256px;
+  }
+  .page-advantages__item:nth-of-type(2) .page-advantages__item-text-wrap {
+    grid-area: 1/2/1/3;
+  }
+  .page-advantages__item:nth-of-type(2) .page-advantages__item-photo:nth-child(2) {
+    grid-area: 1/1/2/2;
+    height: 256px;
+  }
+
+  .page-advantages__more-about-list {
+    width: 768px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  .page-advantages__item:first-child {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 256px 330px;
+  }
+  .page-advantages__item:first-child .page-advantages__item-photo {
+    height: 256px;
+    grid-area: 1/2/4/4;
+  }
+  .page-advantages__item:first-child .page-advantages__sub-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: 2/1/3/4;
+  }
+
+  .page-advantages__item:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 800px 400px;
+    grid-template-rows: 256px;
+  }
+  .page-advantages__item:nth-of-type(2) .page-advantages__item-text-wrap {
+    grid-area: 1/2/1/3;
+  }
+  .page-advantages__item:nth-of-type(2) .page-advantages__item-photo:nth-child(2) {
+    grid-area: 1/1/2/2;
+    height: 256px;
+  }
+
+  .page-advantages__more-about-list {
+    width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.section-main-booking b {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.section-main-booking__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 284px;
+  height: 58px;
+  background-color: #81b3d2;
+}
+
+.section-main-booking__button-link {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .section-main-booking {
+    margin: 0 auto;
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .section-main-booking {
+    width: 1200px;
+  }
+}
+.footer-developer-information__link {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  width: 129px;
+}
+
+.footer-developer-information__text {
+  width: 89px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  margin-right: 12px;
+}
+
+.page-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-intro__bold-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.page-intro__text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__hashtag-link {
+  text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    width: 768px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    width: 1200px;
+  }
+}
+.socials-list {
+  display: flex;
+  justify-content: space-between;
+  width: 156px;
+  list-style: none;
+  padding: 0;
+}
+
+.catalog-photos__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-photos__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog-photos__item-description-wrap {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  padding-left: 20px;
+}
+
+.catalog-photos__item-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  color: #000000;
+}
+
+.catalog-photos__item-text {
+  text-transform: none;
+  margin: 0;
+}
+
+.catalog-photos__item-likes {
+  display: flex;
+  align-items: end;
+}
+
+.catalog-photos__item-like-image {
+  margin-right: 14px;
+}
+
+.catalog-photos__item-like-amount {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 14px;
+}
+
+@media (min-width: 768px) {
+  .catalog-photos__list {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    grid-template-rows: 480px 347px 347px;
+    justify-content: center;
+  }
+
+  .catalog-photos__item-description-wrap {
+    background-color: #f2f2f2;
+    max-height: 40px;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .catalog-photos__item:nth-child(1) {
+    grid-area: 1/1/1/3;
+    align-self: end;
+  }
+  .catalog-photos__item:nth-child(1) .catalog-photos__item-description-wrap {
+    min-width: 608px;
+  }
+  .catalog-photos__item:nth-child(2) {
+    grid-area: 2/1/3/2;
+    align-self: end;
+  }
+  .catalog-photos__item:nth-child(2) .catalog-photos__item-photo {
+    max-height: 267px;
+  }
+  .catalog-photos__item:nth-child(2) .catalog-photos__item-description-wrap {
+    min-width: 284px;
+  }
+  .catalog-photos__item:nth-child(3) {
+    grid-area: 2/2/3/3;
+    align-self: end;
+  }
+  .catalog-photos__item:nth-child(3) .catalog-photos__item-photo {
+    max-height: 267px;
+  }
+  .catalog-photos__item:nth-child(3) .catalog-photos__item-description-wrap {
+    min-width: 284px;
+  }
+  .catalog-photos__item:nth-child(4) {
+    grid-area: 3/1/4/2;
+    align-self: end;
+  }
+  .catalog-photos__item:nth-child(4) .catalog-photos__item-photo {
+    max-height: 267px;
+  }
+  .catalog-photos__item:nth-child(4) .catalog-photos__item-description-wrap {
+    min-width: 284px;
+  }
+}
+@media (min-width: 1200px) {
+  .catalog-photos__list {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 267px;
+    justify-content: center;
+  }
+
+  .catalog-photos__item-description-wrap {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+  }
+
+  .catalog-photos__item-title {
+    color: #ffffff;
+  }
+
+  .catalog-photos__item-like-image-path {
+    fill: #ffffff;
+    opacity: 1;
+  }
+
+  .catalog-photos__item:nth-child(1) {
+    grid-area: 1/1/2/4;
+    display: grid;
+    grid-template-columns: 1200px;
+    grid-template-rows: 400px;
+  }
+  .catalog-photos__item:nth-child(1) .catalog-photos__item-photo {
+    align-self: center;
+    justify-self: center;
+    grid-area: 1/1/2/2;
+  }
+  .catalog-photos__item:nth-child(1) .catalog-photos__item-description-wrap {
+    grid-area: 1/1/2/2;
+    align-self: end;
+  }
+  .catalog-photos__item:nth-child(2) {
+    grid-area: 2/1/3/2;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 267px;
+  }
+  .catalog-photos__item:nth-child(2) .catalog-photos__item-photo {
+    align-self: center;
+    justify-self: center;
+    grid-area: 1/1/2/2;
+  }
+  .catalog-photos__item:nth-child(2) .catalog-photos__item-description-wrap {
+    grid-area: 1/1/2/2;
+    align-self: end;
+  }
+  .catalog-photos__item:nth-child(3) {
+    grid-area: 2/2/3/3;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 267px;
+  }
+  .catalog-photos__item:nth-child(3) .catalog-photos__item-photo {
+    align-self: center;
+    justify-self: center;
+    grid-area: 1/1/2/2;
+  }
+  .catalog-photos__item:nth-child(3) .catalog-photos__item-description-wrap {
+    grid-area: 1/1/2/2;
+    align-self: end;
+  }
+  .catalog-photos__item:nth-child(4) {
+    grid-area: 2/3/3/4;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 267px;
+  }
+  .catalog-photos__item:nth-child(4) .catalog-photos__item-photo {
+    align-self: center;
+    justify-self: center;
+    grid-area: 1/1/2/2;
+  }
+  .catalog-photos__item:nth-child(4) .catalog-photos__item-description-wrap {
+    grid-area: 1/1/2/2;
+    align-self: end;
+  }
+}
+.catalog-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog-video__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.catalog-video__text {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .catalog-video {
+    min-width: 648px;
+    min-height: 687px;
+  }
+
+  .catalog-video__preview-image {
+    min-width: 648px;
+    min-height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .catalog-video {
+    min-width: 800px;
+    min-height: 685px;
+  }
+
+  .catalog-video__preview-image {
+    min-width: 800px;
+    min-height: 500px;
+  }
+}
+.feedback-form__introduce,
+.feedback-form__contacts,
+.feedback-form__impression,
+.feedback-form__attractions,
+.feedback-form__description {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback-form__introduce-legend,
+.feedback-form__contacts-legend,
+.feedback-form__impression-legend,
+.feedback-form__attractions-legend,
+.feedback-form__description-label {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-align: center;
+}
+
+.feedback-form__introduce-list,
+.feedback-form__contacts-list,
+.feedback-form__impression-list,
+.feedback-form__attractions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback-form__introduce-input::placeholder {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.feedback-form__introduce-input,
+.feedback-form__contacts-input,
+.feedback-form__description-input {
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.feedback-form__contacts-input::placeholder,
+.feedback-form__description-input::placeholder {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.feedback-form__description-input {
+  min-width: 279px;
+  min-height: 150px;
+  padding: 16px;
+  resize: none;
+}
+
+.feedback-form__impression-label,
+.feedback-form__attractions-label {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: none;
+}
+
+.feedback-form__button {
+  min-width: 280px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: none;
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.feedback-form__required-field-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+}
+
+@media (min-width: 768px) {
+  .feedback-form {
+    display: grid;
+    row-gap: 48px;
+    grid-template-columns: 324px 324px;
+    grid-template-rows: 338px 162px 189px 320px;
+    justify-content: center;
+  }
+
+  .feedback-form__introduce {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .feedback-form__contacts {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .feedback-form__impression {
+    width: 648px;
+    grid-area: 2/1/3/3;
+    display: grid;
+  }
+  .feedback-form__impression-legend {
+    margin: 0 auto;
+  }
+  .feedback-form__impression-list {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 280px 280px;
+    grid-template-rows: 48px 48px;
+    gap: 16px;
+  }
+
+  .feedback-form__attractions {
+    width: 648px;
+    grid-area: 3/1/4/3;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+  }
+  .feedback-form__attractions-legend {
+    margin: 0 auto;
+  }
+  .feedback-form__attractions-list {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 240px 240px;
+    grid-template-rows: 46px 46px;
+    row-gap: 16px;
+  }
+
+  .feedback-form__description {
+    grid-area: 4/1/5/3;
+    align-self: start;
+    justify-self: center;
+    display: grid;
+  }
+  .feedback-form__description-label {
+    margin: 0 auto;
+  }
+  .feedback-form__description-input {
+    width: 616px;
+    height: 128px;
+  }
+
+  .feedback-form__button {
+    grid-area: 4/1/5/2;
+    align-self: end;
+  }
+
+  .feedback-form__required-field-text {
+    grid-area: 4/2/5/3;
+    align-self: end;
+    justify-self: end;
+  }
+}
+@media (min-width: 1200px) {
+  .feedback-form {
+    display: grid;
+    row-gap: 56px;
+    grid-template-columns: 494px 466px;
+    grid-template-rows: 338px 134px 189px 320px;
+    justify-content: center;
+  }
+
+  .feedback-form__impression {
+    display: grid;
+    width: 960px;
+  }
+  .feedback-form__impression-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    column-gap: 28px;
+  }
+
+  .feedback-form__attractions {
+    width: 960px;
+    display: grid;
+  }
+  .feedback-form__attractions-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 108px;
+    column-gap: 64px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feedback-form__description-input {
+    width: 736px;
+    height: 128px;
+  }
+
+  .feedback-form__button {
+    margin-left: 96px;
+    width: 384px;
+  }
+
+  .feedback-form__required-field-text {
+    margin-right: 96px;
+  }
+}
+.sent-form-window__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.sent-form-window__button {
+  min-width: 280px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: none;
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.error-form-window__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.error-form-window__button {
+  min-width: 280px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: none;
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  background: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+main {
+  flex-grow: 1;
+}
+/*# sourceMappingURL=style.css.map */
