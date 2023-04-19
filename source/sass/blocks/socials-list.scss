@@ -1,7 +1,46 @@
 .socials-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 156px;
   list-style: none;
   padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.socials-list__item-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.footer__hashtag {
+  margin-bottom: 30px;
+}
+
+// Состояния иконок социальных сетей при наведении курсора
+.socials-list__item-image:hover .socials-list__item-image-background {
+  fill: #669ec0;
+}
+
+// Состояние иконок социальных сетей  при нажатии
+.socials-list__item-image:active {
+  & .socials-list__item-image-background {
+    fill: #5496bd;
+  }
+
+  & .socials-list__item-image-icon {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .socials-list {
+    margin: 0;
+  }
+
+  .footer__hashtag {
+    margin: 0;
+  }
 }

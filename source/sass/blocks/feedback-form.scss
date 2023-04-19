@@ -1,33 +1,43 @@
-.feedback-form__introduce,
-.feedback-form__contacts,
-.feedback-form__impression,
-.feedback-form__attractions,
-.feedback-form__description {
-  border: none;
-  padding: 0;
-  margin: 0;
+// Общие настройки блока формы сайта
+.feedback-form {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.feedback-form__introduce-legend,
-.feedback-form__contacts-legend,
-.feedback-form__impression-legend,
-.feedback-form__attractions-legend,
-.feedback-form__description-label {
-  font-family: "PT Sans", sans-serif;
+// Декоративная серая полоса
+.feedback-form > fieldset {
+  border-top: solid 1px #e5e5e5;
+}
+
+//
+//
+// Настройки элемента "Представьтесь"
+.feedback-form__introduce {
+  border: none;
+  padding: 20px;
+  position: relative;
+}
+
+.feedback-form__introduce-legend {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
   text-align: center;
+  display: block;
+  padding: 0;
 }
 
-.feedback-form__introduce-list,
-.feedback-form__contacts-list,
-.feedback-form__impression-list,
-.feedback-form__attractions-list {
+.feedback-form__introduce-list {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.feedback-form__introduce-label {
+  padding-left: 16px;
 }
 
 .feedback-form__introduce-input::placeholder {
@@ -38,14 +48,264 @@
   color: #000000;
 }
 
-.feedback-form__introduce-input,
-.feedback-form__contacts-input,
+.feedback-form__introduce-input {
+  border: none;
+  background-color: #f2f2f2;
+  width: 248px;
+  height: 26px;
+  padding: 16px;
+}
+
+//
+//
+// Настройки элемента "Контактная информация"
+.feedback-form__contacts {
+  border: none;
+  padding: 20px;
+  position: relative;
+}
+
+.feedback-form__contacts-legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-align: center;
+  display: block;
+}
+
+.feedback-form__contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Иконка формы ввода телефона
+.feedback-form__contacts-item:nth-child(1)::after {
+  position: absolute;
+  right: 20px;
+  content: "";
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url("../../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// Иконка формы ввода email
+.feedback-form__contacts-item:nth-child(2)::after {
+  position: absolute;
+  right: 20px;
+  content: "";
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url("../../img/mail-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback-form__contacts-label {
+  padding-left: 16px;
+}
+
+.feedback-form__contacts-input {
+  border: none;
+  background-color: #f2f2f2;
+  width: 248px;
+  height: 26px;
+  padding: 16px;
+  position: relative;
+}
+
+.feedback-form__contacts-input::placeholder {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+//
+//
+// Настройки элемента "Ваше общее впечатление"
+.feedback-form__impression {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  border: none;
+  padding: 20px;
+  position: relative;
+  margin: 0;
+}
+
+.feedback-form__impression-legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-align: center;
+  display: block;
+  align-self: center;
+}
+
+.feedback-form__impression-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Стилизация радиокнопок "Ваше общее впечатление"
+.feedback-form__impression-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+// Фокус на элементе "Ваше общее впечатление"
+.feedback-form__impression-item:focus-within {
+  outline: solid 1px #000000;
+}
+
+.feedback-form__impression-label {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  width: 218px;
+  padding-left: 62px;
+  position: relative;
+
+  line-height: 26px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+  text-transform: none;
+}
+
+.feedback-form__impression-label::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.feedback-form__impression-input:checked ~ .feedback-form__impression-label::after {
+  position: absolute;
+  left: 15px;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+//
+//
+// Настройки элемента "Посещенные достопремечательности"
+.feedback-form__attractions {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  border: none;
+  padding: 20px;
+  position: relative;
+  margin: 0;
+}
+
+.feedback-form__attractions-legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-align: center;
+  display: block;
+  align-self: center;
+}
+
+.feedback-form__attractions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Стилизация чекбоксов "Посещенные достопримечательности"
+.feedback-form__attractions-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+
+// Фокус на элементе "Посещенные достопремечательности"
+.feedback-form__attractions-item:focus-within {
+  outline: solid 1px #000000;
+}
+
+.feedback-form__attractions-label {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding-left: 62px;
+  position: relative;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: none;
+}
+
+.feedback-form__attractions-label::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.feedback-form__attractions-input:checked ~ .feedback-form__attractions-label::after {
+  position: absolute;
+  left: 13px;
+  content: url("../../img/tick.svg");
+  width: 22px;
+  height: 16px;
+}
+
+//
+//
+// Настройки элемента "Опишите свои эмоции"
+.feedback-form__description {
+  border: none;
+  padding: 20px;
+  position: relative;
+  margin: 0;
+}
+
+.feedback-form__description-label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-align: center;
+  display: block;
+  align-self: center;
+}
+
 .feedback-form__description-input {
   border: none;
   background-color: #f2f2f2;
+  width: 248px;
+  min-height: 118px;
+  padding: 16px;
+  resize: none;
 }
 
-.feedback-form__contacts-input::placeholder,
 .feedback-form__description-input::placeholder {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -54,28 +314,15 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
-.feedback-form__description-input {
-  min-width: 279px;
-  min-height: 150px;
-  padding: 16px;
-  resize: none;
-}
-
-.feedback-form__impression-label,
-.feedback-form__attractions-label {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  color: #000000;
-  text-transform: none;
-}
-
+//
+//
+// Настройки элемента "Кнопка: Отправить отзыв"
 .feedback-form__button {
   min-width: 280px;
   height: 58px;
   background-color: #81b3d2;
   border: none;
+  padding: 0;
 
   text-transform: uppercase;
   font-family: "PT Sans", sans-serif;
@@ -85,41 +332,134 @@
   color: #ffffff;
 }
 
+//
+//
+// Настройки элемента "Кнопка: Отправить отзыв"
 .feedback-form__required-field-text {
+  align-self: end;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
+  color: rgba(51, 51, 51, 0.6);
+  padding-right: 20px;
 }
 
 // Вид на планшете
 @media (min-width: $tablet-width) {
+
+  // Отключение декоративных полей мобильной версии на планшете
+  .feedback-form > fieldset {
+    border: none;
+  }
+
   .feedback-form {
+    width: 768px;
     display: grid;
     row-gap: 48px;
     grid-template-columns: 324px 324px;
     grid-template-rows: 338px 162px 189px 320px;
     justify-content: center;
+    padding: 0;
   }
 
+  // Декоративная вертикальная серая полоса справа от "Представьтесь"
+  .feedback-form__introduce::after {
+    position: absolute;
+    top: 0;
+    right: -43px;
+    content: "";
+    width: 1px;
+    height: 338px;
+    background-color: #dbdbdb;
+  }
+
+  // Настройки элемента "Представьтесь" на планшете
   .feedback-form__introduce {
     align-self: start;
-    justify-self: center;
+    justify-self: start;
+    padding: 0;
+    margin: 0;
   }
 
+  .feedback-form__introduce-legend {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  // Настройки элемента "Контактная информация" на планшете
   .feedback-form__contacts {
     align-self: start;
-    justify-self: center;
+    justify-self: end;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feedback-form__contacts-legend {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  // Позиционирование иконки "телефон" элемента "Контактная информация" на планшете
+  .feedback-form__contacts-item:nth-child(1)::after {
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    background-image: url("../../img/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // Позиционирование иконки "email" элемента "Контактная информация" на планшете
+  .feedback-form__contacts-item:nth-child(2)::after {
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    background-image: url("../../img/mail-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // Декоративная гоирзонтальная серая полоса слева от "Впечатления"
+  .feedback-form__impression::before {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Декоративная гоирзонтальная серая полоса справа от "Впечатления"
+  .feedback-form__impression::after {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Настройки элемента "Ваше общее впечатление" на планшете
+  .feedback-form__impression-legend {
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0 auto;
   }
 
   .feedback-form__impression {
-    width: 648px;
+    width: 576px;
+    padding: 0 36px;
     grid-area: 2/1/3/3;
     display: grid;
-
-    &-legend {
-      margin: 0 auto;
-    }
 
     &-list {
       display: grid;
@@ -131,16 +471,44 @@
     }
   }
 
-  .feedback-form__attractions {
-    width: 648px;
-    grid-area: 3/1/4/3;
-    align-self: center;
-    justify-self: center;
-    display: grid;
+  .feedback-form__impression-item:not(:last-child) {
+    margin-bottom: 0;
+  }
 
-    &-legend {
-      margin: 0 auto;
-    }
+  // Декоративная гоирзонтальная серая полоса слева от "Посещенные достопримечательности"
+  .feedback-form__attractions::before {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Декоративная гоирзонтальная серая полоса справа от "Посещенные достопримечательности"
+  .feedback-form__attractions::after {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Настройки элемента "Посещенные достопремечательности" на планшете
+  .feedback-form__attractions-legend {
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0 auto;
+  }
+
+  .feedback-form__attractions {
+    width: 576px;
+    padding: 0 36px;
+    grid-area: 3/1/4/3;
+    display: grid;
 
     &-list {
       display: grid;
@@ -152,15 +520,46 @@
     }
   }
 
+  .feedback-form__attractions-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+
+  // Декоративная гоирзонтальная серая полоса слева от "Опишите свои эмоции"
+  .feedback-form__description::before {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Декоративная гоирзонтальная серая полоса справа от "Опишите свои эмоции"
+  .feedback-form__description::after {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Настройки элемента "Опишите свои эмоции" на планшете
+  .feedback-form__description-label {
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0 auto;
+  }
+
   .feedback-form__description {
     grid-area: 4/1/5/3;
     align-self: start;
     justify-self: center;
     display: grid;
-
-    &-label {
-      margin: 0 auto;
-    }
+    padding: 0;
 
     &-input {
       width: 616px;
@@ -180,8 +579,10 @@
   }
 }
 
+// Вид на десктопе
 @media (min-width: $desktop-width) {
   .feedback-form {
+    width: 960px;
     display: grid;
     row-gap: 56px;
     grid-template-columns: 494px 466px;
@@ -189,21 +590,127 @@
     justify-content: center;
   }
 
+  // Декоративная вертикальная серая полоса справа от "Представьтесь"
+  .feedback-form__introduce::after {
+    position: absolute;
+    top: 0;
+    right: -63px;
+    content: "";
+    width: 1px;
+    height: 338px;
+    background-color: #dbdbdb;
+  }
+
+  // Настройки элемента "Представьтесь" на десктопе
+  .feedback-form__introduce {
+    padding: 0;
+    justify-self: start;
+  }
+
+  .feedback-form__introduce-input {
+    width: 398px;
+  }
+
+  // Настройки элемента "Контактная информация" на десктопе
+  .feedback-form__contacts {
+    padding: 0;
+    justify-self: end;
+  }
+
+  .feedback-form__contacts-input {
+    width: 370px;
+  }
+
+  // Позиционирование иконки "телефон" элемента "Контактная информация" на десктопе
+  .feedback-form__contacts-item:nth-child(1)::after {
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    background-image: url("../../img/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // Позиционирование иконки "email" элемента "Контактная информация" на десктопе
+  .feedback-form__contacts-item:nth-child(2)::after {
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    background-image: url("../../img/mail-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // Декоративная гоирзонтальная серая полоса слева от "Впечатления"
+  .feedback-form__impression::before {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Декоративная гоирзонтальная серая полоса справа от "Впечатления"
+  .feedback-form__impression::after {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Настройки элемента "Ваше общее впечатление" на десктопе
   .feedback-form__impression {
     display: grid;
     width: 960px;
+    padding: 0;
 
     &-list {
       display: grid;
       grid-template-columns: auto auto auto;
-      grid-template-rows: auto;
+      grid-template-rows: 80px;
       column-gap: 28px;
+      align-items: center;
     }
   }
 
+  // Декоративная гоирзонтальная серая полоса слева от "Посещенные достопримечательности"
+  .feedback-form__attractions::before {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Декоративная гоирзонтальная серая полоса справа от "Посещенные достопримечательности"
+  .feedback-form__attractions::after {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Настройки элемента "Посещенные достопремечательности" на десктопе
   .feedback-form__attractions {
     width: 960px;
     display: grid;
+    padding: 0;
 
     &-list {
       display: grid;
@@ -213,6 +720,38 @@
       justify-content: center;
       align-items: center;
     }
+  }
+
+  .feedback-form__attractions-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  // Декоративная гоирзонтальная серая полоса слева от "Опишите свои эмоции"
+  .feedback-form__description::before {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Декоративная гоирзонтальная серая полоса справа от "Опишите свои эмоции"
+  .feedback-form__description::after {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  // Настройки элемента "Опишите свои эмоции" на десктопе
+  .feedback-form__description {
+    width: 960px;
+    justify-content: center;
   }
 
   .feedback-form__description-input {

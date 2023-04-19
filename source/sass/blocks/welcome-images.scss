@@ -1,34 +1,107 @@
 .welcome-images {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   color: #ffffff;
 
-  min-width: 320px;
-  min-height: 389px;
+  width: 320px;
   background-image: url("../../img/rocks-intro-background.jpg");
   background-color: rgba(222, 239, 255, 0.72);
   background-repeat: no-repeat;
 }
 
 .welcome-images__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+// Отступы и минимальная высота блока изображений при 3-х блоках внутри на смартфоне
+.welcome-images__list--standart-position {
+  min-height: 214px;
+  padding: 90px 0 28px 0;
+}
+
+// Отступы блока изображений при 1-м блок внутри на смартфоне
+.welcome-images__list--sedona-only-position {
+  padding: 52px 0 10px 0;
+}
+
+// Изображение "Welcome to the gorgeus"
+.welcome-images__welcome-image {
+  content: url("../../img/welcome-icon.svg");
+  width: 157px;
+  height: 52px;
+}
+
+// Изображение "SEDONA"
+.welcome-images__sedona-image {
+  content: url("../../img/sedona-icon.svg");
+  width: 282px;
+  height: 49px;
+}
+
+// Изображение "BECAUSE THE GRAND CANYON SUCKS!"
+.welcome-images__quote-image {
+  content: url("../../img/because-the-grand-canyon-sucks-icon.svg");
+  width: 173px;
+  height: 46px;
 }
 
 // Вид на планшете
 @media (min-width: $tablet-width) {
   .welcome-images {
-    min-width: 768px;
-    min-height: 518px;
+    width: 768px;
     background-position: center;
+  }
+
+  // Отступы и минимальная высота блока изображений при 3-х блоках внутри на планшете
+  .welcome-images__list--standart-position {
+    min-height: 350px;
+    padding: 77px 0 34px 0;
+  }
+
+  // Отступы блока изображений при 1-м блок внутри на планшете
+  .welcome-images__list--sedona-only-position {
+    padding: 95px 0 60px 0;
+  }
+
+  // Изображение "Welcome to the gorgeus"
+  .welcome-images__welcome-image {
+    width: 257px;
+    height: 85px;
+  }
+
+  // Изображение "SEDONA"
+  .welcome-images__sedona-image {
+    width: 461px;
+    height: 80px;
+  }
+
+  // Изображение "BECAUSE THE GRAND CANYON SUCKS!"
+  .welcome-images__quote-image {
+    width: 295px;
+    height: 80px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .welcome-images {
     min-width: 1200px;
-    min-height: 518px;
+  }
+
+  // Отступы блока изображений при 3-х блоках внутри на десктопе
+  .welcome-images__list--standart-position {
+    padding: 78px 0 33px 0;
+  }
+
+  // Отступы блока изображений при 1-м блок внутри на десктопе
+  .welcome-images__list--sedona-only-position {
+    padding: 101px 0 63px 0;
   }
 }

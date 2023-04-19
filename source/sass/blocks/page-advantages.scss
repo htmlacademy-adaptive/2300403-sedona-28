@@ -1,20 +1,41 @@
 .page-advantages__list {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .page-advantages__item-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #81b3d2;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
+  text-align: center;
+  padding: 33px 18px 40px 18px;
+}
+
+.page-advantages__item-text {
+  margin: 0;
+}
+
+.page-advantages__item-text:first-of-type {
+  margin-bottom: 17px;
 }
 
 .page-advantages__item:nth-last-child(1) {
   background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 18px 28px 18px;
 }
 
 .page-advantages__item-bold-text {
@@ -23,6 +44,7 @@
   font-size: 18px;
   line-height: 26px;
   color: #000000;
+  margin-bottom: 11px;
 }
 
 .page-advantages__item:nth-child(-n+2) .page-advantages__item-bold-text {
@@ -37,22 +59,109 @@
   color: #000000;
 }
 
+.page-advantages__sub-item-text {
+  & br {
+    display: none;
+  }
+}
+
 .page-advantages__sub-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  margin-left: 46px;
+  padding: 20px 18px 46px 18px;
+}
+
+// Иконки саблиста первого приемущества
+.page-advantages__sub-item {
+  position: relative;
+  width: 237px;
+
+  &:first-child::before {
+    position: absolute;
+    left: -58px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/list-icon-house.svg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+  }
+
+  &:nth-child(2)::before {
+    position: absolute;
+    left: -58px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/list-icon-burger.svg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+  }
+
+  &:nth-child(3)::before {
+    position: absolute;
+    left: -58px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/list-icon-gift-box.svg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+  }
+}
+
+.page-advantages__item-photo {
+  display: block;
 }
 
 // Вид последних 3-х приемуществ
 .page-advantages__more-about-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   list-style: none;
   padding: 0;
 }
 
+.page-advantages__more-about-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 284px;
+  padding: 26px 0;
+
+  &:not(:last-child) {
+    border-bottom: solid 1px #d6d6d6;
+  }
+
+  & .page-advantages__item-text {
+    width: 246px;
+  }
+}
+
 // Вид на планшете
 @media (min-width: $tablet-width) {
+  .page-advantages__list {
+    width: 768px;
+  }
+
+  .page-advantages__item-text {
+    width: 190px;
+  }
+
+  .page-advantages__item-text-wrap {
+
+    padding: 52px 33px 31px 33px;
+  }
+
+  .page-advantages__item-bold-text {
+    width: 128px;
+  }
+
+  .page-advantages__sub-item {
+    width: 256px;
+  }
 
   // Сетка первого блока приемуществ
   .page-advantages__item:first-child {
@@ -68,8 +177,73 @@
     .page-advantages__sub-list {
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      align-items: end;
       grid-area: 2/1/3/4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    .page-advantages__sub-item {
+      &-title {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 26px;
+      }
+
+      &:nth-child(1) .page-advantages__sub-item-text {
+        width: 194px;
+        margin: 14px auto;
+      }
+
+      &:nth-child(2) .page-advantages__sub-item-text {
+        width: 156px;
+        margin: 14px auto;
+      }
+
+
+      &:nth-child(3) .page-advantages__sub-item-text {
+        width: 182px;
+        margin: 14px auto;
+      }
+
+      // Позиционирование иконок саблиста на планшете
+      &:first-child::before {
+        position: absolute;
+        top: -82px;
+        left: 86px;
+        content: "";
+        width: 77px;
+        height: 72px;
+        background-image: url("../../img/list-icon-house.svg");
+        background-repeat: no-repeat;
+        background-size: 77px 72px;
+      }
+
+      &:nth-child(2)::before {
+        position: absolute;
+        top: -82px;
+        left: 86px;
+        content: "";
+        width: 80px;
+        height: 68px;
+        background-image: url("../../img/list-icon-burger.svg");
+        background-repeat: no-repeat;
+        background-size: 80px 68px;
+      }
+
+      &:nth-child(3)::before {
+        position: absolute;
+        top: -84px;
+        left: 86px;
+        content: "";
+        width: 66px;
+        height: 75px;
+        background-image: url("../../img/list-icon-gift-box.svg");
+        background-repeat: no-repeat;
+        background-size: 66px 75px;
+      }
     }
   }
 
@@ -90,21 +264,69 @@
   }
 
   // Сетка последних 3-х блоков приемуществ
+  .page-advantages__item:nth-last-child(1) {
+    padding: 0;
+  }
+
   .page-advantages__more-about-list {
     width: 768px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: start;
+
+    & .page-advantages__more-about-item {
+      border-bottom: none;
+      padding: 41px 33px 63px 33px;
+    }
+  }
+
+
+  .page-advantages__more-about-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    & .page-advantages__item-text {
+      width: 190px;
+    }
+
+    &:nth-child(2) .page-advantages__item-text {
+      width: 175px;
+    }
+  }
+
+  .page-advantages__more-about-item .page-advantages__item-bold-text {
+    font-size: 21px;
+    line-height: 26px;
   }
 }
 
 // Вид на десктопе
 @media (min-width: $desktop-width) {
+  .page-advantages__list {
+    width: 1200px;
+  }
+
+  .page-advantages__item-text-wrap {
+
+    padding: 52px 50px 51px 50px;
+  }
+
+  .page-advantages__sub-item {
+    width: 400px;
+  }
 
   // Сетка первого блока приемуществ
   .page-advantages__item:first-child {
     display: grid;
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: 256px 330px;
+
+    .page-advantages__item-text {
+      width: 290px;
+    }
 
     .page-advantages__item-photo {
 
@@ -115,8 +337,67 @@
     .page-advantages__sub-list {
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      align-items: end;
       grid-area: 2/1/3/4;
+    }
+
+    .page-advantages__sub-item {
+      &:nth-child(1) .page-advantages__sub-item-text {
+        width: 300px;
+        margin: 14px auto;
+      }
+
+      &:nth-child(2) .page-advantages__sub-item-text {
+        width: 300px;
+        margin: 14px auto;
+      }
+
+
+      &:nth-child(3) .page-advantages__sub-item-text {
+        width: 300px;
+        margin: 14px auto;
+
+        & br {
+          display: block;
+        }
+      }
+
+      // Позиционирование иконок саблиста на десктопе
+      &:first-child::before {
+        position: absolute;
+        top: -82px;
+        left: 160px;
+        content: "";
+        width: 77px;
+        height: 72px;
+        background-image: url("../../img/list-icon-house.svg");
+        background-repeat: no-repeat;
+        background-size: 77px 72px;
+      }
+
+      &:nth-child(2)::before {
+        position: absolute;
+        top: -82px;
+        left: 160px;
+        content: "";
+        width: 80px;
+        height: 68px;
+        background-image: url("../../img/list-icon-burger.svg");
+        background-repeat: no-repeat;
+        background-size: 80px 68px;
+      }
+
+      &:nth-child(3)::before {
+        position: absolute;
+        top: -84px;
+        left: 160px;
+        content: "";
+        width: 66px;
+        height: 75px;
+        background-image: url("../../img/list-icon-gift-box.svg");
+        background-repeat: no-repeat;
+        background-size: 66px 75px;
+      }
     }
   }
 
@@ -125,6 +406,10 @@
     display: grid;
     grid-template-columns: 800px 400px;
     grid-template-rows: 256px;
+
+    .page-advantages__item-text {
+      width: 234px;
+    }
 
     .page-advantages__item-text-wrap {
       grid-area: 1/2/1/3;
@@ -141,5 +426,17 @@
     width: 1200px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .page-advantages__more-about-item {
+    padding: 52px 50px;
+
+    & .page-advantages__item-text {
+      width: 300px;
+    }
+
+    &:nth-child(2) .page-advantages__item-text {
+      width: 276px;
+    }
   }
 }

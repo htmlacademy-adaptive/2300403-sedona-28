@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 33px 82px;
 }
 
 .footer__hashtag-link {
@@ -13,16 +14,40 @@
   color: #000000;
 }
 
+// Состояние блока "Разработано" при наведении и нажатии
+.footer-developer-information__link {
+
+  // Состояние при наведении
+  &:hover .footer-developer-information__text {
+    color: #81b3d2;
+  }
+
+  &:hover .footer-developer-information__logo-fill {
+    fill: #81b3d2;
+  }
+
+  // Состояние при нажатии
+  &:active .footer-developer-information__text {
+    color: #b3b3b3;
+  }
+
+  &:active .footer-developer-information__logo-fill {
+    fill: #b3b3b3;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .footer {
-    width: 768px;
+    min-width: 642px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 36px 60px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .footer {
-    width: 1200px;
+    min-width: 960px;
+    padding: 36px 120px;
   }
 }

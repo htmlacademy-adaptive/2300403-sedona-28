@@ -1,3 +1,8 @@
+.page-header-navigation {
+  position: relative;
+  min-width: 320px;
+}
+
 // Позиционирование логотипа
 .page-header__logo {
   position: absolute;
@@ -10,12 +15,80 @@
 }
 
 @media (min-width: $mobile-width) {
-  .page-header-navigation__burger-menu-checkbox {
+
+  // Работа кнопки выпадающего меню
+  // Фокусировка на иконке меню
+  .page-header-navigation:focus-within .burger-icon {
+    outline: solid 1px #000000;
+  }
+
+  .page-header {
+    background-color: #ffffff;
+    width: 320px;
+    height: 56px;
+  }
+
+  // Переносим бургер в правый верхний угол
+  .page-header-navigation__burger-menu-label {
+    width: 60px;
+    height: 56px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  .burger-icon {
+    position: absolute;
+    right: 0;
+    padding: 17px 20px;
+  }
+
+  // Cостояния бургера при наведении курсора
+  .burger-icon:hover {
+    opacity: 0.6;
+  }
+
+  // Состояние бургера при нажатии
+  .burger-icon:active {
+    opacity: 0.3;
+  }
+
+  // При нажатии скрываем бургер, показываем крестик, показываем меню
+  // Скрываем бургер
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label .burger-icon {
     display: none;
   }
 
-  .page-header__menu-list {
+  // Показываем крестик
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: url("../../img/burger-cross-icon.svg");
+    width: 22.2px;
+    height: 22.2px;
+    padding: 17px 20px;
+  }
+
+  // Состояние крестика при наведении курсора
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label:hover {
+    opacity: 0.6;
+  }
+
+  // Состояние крестика при нажатии
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label:active {
+    opacity: 0.3;
+  }
+
+  // Показываем меню
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header__menu-list {
     display: flex;
+  }
+
+  .page-header__menu-list {
+    position: absolute;
+    left: 0;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -27,12 +100,22 @@
 
   .page-header__menu-item {
     display: flex;
-    width: 320px;
+    min-width: 320px;
     justify-content: center;
     align-items: center;
     height: 55px;
     margin-bottom: 1px;
     box-shadow: 0 1px 0 #01010133, inset 0 1px 0 #ffffff33;
+  }
+
+  // Градиент на нижний элемент меню
+  .page-header__menu-item:last-child::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    min-width: 320px;
+    height: 7px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
   }
 
   .page-header__menu-link {
@@ -47,8 +130,19 @@
 
 // Вид на планшете
 @media (min-width: $tablet-width) {
-  .page-header__menu-list {
 
+  // Удаление нажнего градиента мобильного меню
+  .page-header__menu-item:last-child::after {
+    display: none;
+  }
+
+  .page-header-navigation {
+    position: static;
+  }
+
+  .page-header__menu-list {
+    position: static;
+    display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
@@ -56,7 +150,7 @@
   }
 
   .page-header__menu-item {
-    width: 153px;
+    min-width: 153px;
     height: 56px;
     box-shadow: none;
   }
@@ -69,6 +163,18 @@
     color: #000000;
     font-size: 14px;
     line-height: 21px;
+    padding: 15px;
+  }
+
+  // Состояние сслыки при наведении курсора
+  .page-header__menu-link:hover {
+    color: #81b3d2;
+  }
+
+  // Состояние сслыки меню при нажатии
+  .page-header__menu-link:active {
+    color: #000000;
+    opacity: 0.3;
   }
 
   .page-header__menu-link--active {
