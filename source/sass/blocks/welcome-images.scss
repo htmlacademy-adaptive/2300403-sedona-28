@@ -6,7 +6,7 @@
   color: #ffffff;
 
   width: 320px;
-  background-image: url("../../img/rocks-intro-background.jpg");
+  background-image: url("../img/rocks-intro-background.jpg");
   background-color: rgba(222, 239, 255, 0.72);
   background-repeat: no-repeat;
 }
@@ -34,21 +34,21 @@
 
 // Изображение "Welcome to the gorgeus"
 .welcome-images__welcome-image {
-  content: url("../../img/welcome-icon.svg");
+  content: url("../img/welcome-icon.svg");
   width: 157px;
   height: 52px;
 }
 
 // Изображение "SEDONA"
 .welcome-images__sedona-image {
-  content: url("../../img/sedona-icon.svg");
+  content: url("../img/sedona-icon.svg");
   width: 282px;
   height: 49px;
 }
 
 // Изображение "BECAUSE THE GRAND CANYON SUCKS!"
 .welcome-images__quote-image {
-  content: url("../../img/because-the-grand-canyon-sucks-icon.svg");
+  content: url("../img/because-the-grand-canyon-sucks-icon.svg");
   width: 173px;
   height: 46px;
 }

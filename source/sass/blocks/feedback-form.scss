@@ -7,7 +7,7 @@
 }
 
 // Декоративная серая полоса
-.feedback-form > fieldset {
+.feedback-form>fieldset {
   border-top: solid 1px #e5e5e5;
 }
 
@@ -88,7 +88,7 @@
   width: 58px;
   height: 58px;
   background-color: #e6e6e6;
-  background-image: url("../../img/phone-icon.svg");
+  background-image: url("../img/phone-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -101,7 +101,7 @@
   width: 58px;
   height: 58px;
   background-color: #e6e6e6;
-  background-image: url("../../img/mail-icon.svg");
+  background-image: url("../img/mail-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -193,7 +193,7 @@
   border-radius: 50%;
 }
 
-.feedback-form__impression-input:checked ~ .feedback-form__impression-label::after {
+.feedback-form__impression-input:checked~.feedback-form__impression-label::after {
   position: absolute;
   left: 15px;
   content: "";
@@ -269,10 +269,10 @@
   border-radius: 4px;
 }
 
-.feedback-form__attractions-input:checked ~ .feedback-form__attractions-label::after {
+.feedback-form__attractions-input:checked~.feedback-form__attractions-label::after {
   position: absolute;
   left: 13px;
-  content: url("../../img/tick.svg");
+  content: url("../img/tick.svg");
   width: 22px;
   height: 16px;
 }
@@ -349,7 +349,7 @@
 @media (min-width: $tablet-width) {
 
   // Отключение декоративных полей мобильной версии на планшете
-  .feedback-form > fieldset {
+  .feedback-form>fieldset {
     border: none;
   }
 
@@ -408,7 +408,7 @@
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../../img/phone-icon.svg");
+    background-image: url("../img/phone-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -421,7 +421,7 @@
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../../img/mail-icon.svg");
+    background-image: url("../img/mail-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -629,7 +629,7 @@
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../../img/phone-icon.svg");
+    background-image: url("../img/phone-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -642,7 +642,7 @@
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../../img/mail-icon.svg");
+    background-image: url("../img/mail-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
