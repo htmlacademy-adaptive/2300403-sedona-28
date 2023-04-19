@@ -5,22 +5,61 @@
   align-items: center;
 }
 
+.catalog-video__description {
+  width: 266px;
+  text-align: center;
+  padding: 17px 26px 38px 26px;
+}
+
 .catalog-video__title {
+  display: block;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
+  margin-bottom: 38px;
 }
 
 .catalog-video__text {
   margin: 0;
 }
 
+.catalog-video__video-link {
+  position: relative;
+}
+
+.catalog-video__video-link::before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -24px;
+  margin-top: -27px;
+  content: url("../../img/video-triangle-icon.svg");
+  width: 48px;
+  height: 54px;
+}
+
+.catalog-video__preview-image {
+  display: block;
+}
+
 @media (min-width: $tablet-width) {
   .catalog-video {
     min-width: 648px;
     min-height: 687px;
+  }
+
+  .catalog-video__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .catalog-video__description {
+    width: 445px;
+    text-align: center;
+    padding: 57px 162px 66px 161px;
   }
 
   .catalog-video__preview-image {
@@ -33,6 +72,10 @@
   .catalog-video {
     min-width: 800px;
     min-height: 685px;
+  }
+
+  .catalog-video__description {
+    padding: 62px 378px 64px 377px;
   }
 
   .catalog-video__preview-image {

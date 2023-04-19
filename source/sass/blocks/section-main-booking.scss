@@ -1,4 +1,19 @@
-.section-main-booking b {
+.section-main-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-main-booking__button-wrap {
+  width: 284px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 38px 18px 49px 18px;
+}
+
+.section-main-booking__button-title {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 21px;
@@ -24,14 +39,45 @@
   color: #ffffff;
 }
 
+.section-main-booking-map {
+  width: 320px;
+  height: 350px;
+  background-image: url("../../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 // Вид на планшете
 @media (min-width: $tablet-width) {
   .section-main-booking {
-    margin: 0 auto;
     width: 768px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  }
+
+  .section-main-booking__button-wrap {
+    width: 458px;
+    padding: 60px 155px 55px 155px;
+  }
+
+  .section-main-booking__button-title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .section-main-booking__button-description {
+    white-space: pre;
+    margin-bottom: 44px;
+  }
+
+  .section-main-booking__button {
+    width: 458px;
+  }
+
+  .section-main-booking-map {
+    width: 768px;
+    height: 350px;
+    background-image: url("../../img/map-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -39,5 +85,17 @@
 @media (min-width: $desktop-width) {
   .section-main-booking {
     width: 1200px;
+  }
+
+  .section-main-booking__button-wrap {
+    padding: 60px 371px 66px 371px;
+  }
+
+  .section-main-booking-map {
+    width: 1200px;
+    height: 350px;
+    background-image: url("../../img/map-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

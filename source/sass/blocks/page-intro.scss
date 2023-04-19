@@ -5,12 +5,26 @@
   align-items: center;
 }
 
+.page-intro__text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .page-intro__bold-text {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
+  text-align: center;
+  margin: 0;
+  margin-top: 39px;
+  margin-bottom: 35px;
+
+  width: 257px;
+  padding: 0 14px;
 }
 
 .page-intro__text {
@@ -18,4 +32,66 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 32px;
+
+  width: 284px;
+  padding: 0 14px;
+}
+
+// Декоративный угол (нижний)
+.page-intro__text-decoration {
+  width: 320px;
+  height: 37px;
+  background-image: url("../../img/intro-triangle-text.svg");
+  background-repeat: no-repeat;
+  background-color: #81b3d2;
+  background-position: center bottom;
+}
+
+// Декоративный угол (верхний)
+.page-intro__bottom-decoration {
+  height: 57px;
+  width: 320px;
+  background-image: url("../../img/intro-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: $tablet-width) {
+
+  // Декоративный угол (верхний)
+  .page-intro__bottom-decoration {
+    width: 768px;
+    bottom: -133px;
+  }
+
+  // Декоративный угол (нижний)
+  .page-intro__text-decoration {
+    display: none;
+  }
+
+  .page-intro__bold-text {
+    width: 492px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  // Модификатор стиля на странице формы
+  .page-intro__bold-text--form-size {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .page-intro__text {
+    width: 492px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-intro__bottom-decoration {
+    width: 1200px;
+    bottom: -133px;
+  }
 }
