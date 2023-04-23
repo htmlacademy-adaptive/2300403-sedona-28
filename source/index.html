@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -15,7 +17,7 @@
   <header class="page-header">
     <h1 class="visually-hidden">Информационно-туристический ресурс города Седона, штат Аризона, США.</h1>
     <a class="page-header__logo" href="#">
-      <img class="page-header__logo-image" src="img/logo.png" width="185" height="96" alt="Логотип города Седона.">
+      <img class="page-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип города Седона.">
     </a>
     <nav class="page-header-navigation">
       <!-- Чекбоксу задаем visually-hidden для работы выпадающего меню -->
@@ -74,8 +76,13 @@
             <p class="page-advantages__item-text">— №1 —</p>
             <p class="page-advantages__item-text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img class="page-advantages__item-photo" src="img/photo-city.jpg" width="320" height="260"
-            alt="Здание с флагами США.">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+            <img class="page-advantages__item-photo" src="img/photo-city-mobile.jpg" width="320" height="260"
+              srcset="img/photo-city-mobile@2x.jpg 2x" alt="Здание с флагами США.">
+          </picture>
           <ul class="page-advantages__sub-list">
             <li class="page-advantages__sub-item">
               <!-- Иконка дома перед "Жилье" -->
@@ -103,8 +110,14 @@
             <p class="page-advantages__item-text">— №2 —</p>
             <p class="page-advantages__item-text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <img class="page-advantages__item-photo" src="img/photo-bridge.jpg" width="320" height="260"
-            alt="Фотография каньона.">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+            <img class="page-advantages__item-photo" src="img/photo-bridge-mobile.jpg" width="320" height="260"
+              srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография каньона.">
+          </picture>
         </li>
         <li class="page-advantages__item">
           <ul class="page-advantages__more-about-list">

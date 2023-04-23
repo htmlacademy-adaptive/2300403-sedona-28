@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -15,7 +17,7 @@
   <header class="page-header">
     <h1 class="visually-hidden">Информационно-туристический ресурс города Седона, штат Аризона, США.</h1>
     <a class="page-header__logo" href="#">
-      <img class="page-header__logo-image" src="img/logo.png" width="185" height="96" alt="Логотип города Седона.">
+      <img class="page-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип города Седона.">
     </a>
     <nav class="page-header-navigation">
       <!-- Чекбоксу задаем visually-hidden для работы выпадающего меню -->
@@ -66,8 +68,16 @@
       <h2 class="visually-hidden">Галерея фотографий из города Седона.</h2>
       <ul class="catalog-photos__list">
         <li class="catalog-photos__item">
-          <img class="catalog-photos__item-photo" src="img/road-catalog-photo.jpg" width="280" height="280"
-            alt="Фотография дороги на фоне заката.">
+          <div class="catalog-photos__item-photo-wrap">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/road-catalog-photo-desktop.jpg 1x, img/road-catalog-photo-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/road-catalog-photo-tablet.jpg 1x, img/road-catalog-photo-tablet@2x.jpg 2x">
+              <img class="catalog-photos__item-photo" src="img/road-catalog-photo-mobile.jpg" width="280" height="280"
+                srcset="img/road-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
+            </picture>
+          </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
               <b class="catalog-photos__item-title">Неродные просторы</b>
@@ -84,8 +94,16 @@
           </div>
         </li>
         <li class="catalog-photos__item">
-          <img class="catalog-photos__item-photo" src="img/cactus-catalog-photo.jpg" width="280" height="280"
-            alt="Фотография дороги на фоне заката.">
+          <div class="catalog-photos__item-photo-wrap">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/cactus-catalog-photo-desktop.jpg 1x, img/cactus-catalog-photo-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/cactus-catalog-photo-tablet.jpg 1x, img/cactus-catalog-photo-tablet@2x.jpg 2x">
+              <img class="catalog-photos__item-photo" src="img/cactus-catalog-photo-mobile.jpg" width="280" height="280"
+                srcset="img/cactus-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
+            </picture>
+          </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
               <b class="catalog-photos__item-title">Местная растительность</b>
@@ -102,8 +120,17 @@
           </div>
         </li>
         <li class="catalog-photos__item">
-          <img class="catalog-photos__item-photo" src="img/forest-with-road-catalog-photo.jpg" width="280" height="280"
-            alt="Фотография дороги на фоне заката.">
+          <div class="catalog-photos__item-photo-wrap">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/forest-with-road-catalog-photo-desktop.jpg 1x, img/forest-with-road-catalog-photo-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/forest-with-road-catalog-photo-tablet.jpg 1x, img/forest-with-road-catalog-photo-tablet@2x.jpg 2x">
+              <img class="catalog-photos__item-photo" src="img/forest-with-road-catalog-photo-mobile.jpg" width="280"
+                srcset="img/forest-with-road-catalog-photo-mobile@2x.jpg 2x" height="280"
+                alt="Фотография дороги на фоне заката.">
+            </picture>
+          </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
               <b class="catalog-photos__item-title">Дорога на север</b>
@@ -120,8 +147,16 @@
           </div>
         </li>
         <li class="catalog-photos__item">
-          <img class="catalog-photos__item-photo" src="img/bridge-catalog-photo.jpg" width="280" height="280"
-            alt="Фотография дороги на фоне заката.">
+          <div class="catalog-photos__item-photo-wrap">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/bridge-catalog-photo-desktop.jpg 1x, img/bridge-catalog-photo-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/bridge-catalog-photo-tablet.jpg 1x, img/bridge-catalog-photo-tablet@2x.jpg 2x">
+              <img class="catalog-photos__item-photo" src="img/bridge-catalog-photo-mobile.jpg" width="280" height="280"
+                srcset="img/bridge-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
+            </picture>
+          </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
               <b class="catalog-photos__item-title">Мост дьявола</b>
@@ -147,8 +182,16 @@
         <p class="catalog-video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
       </div>
-      <a class="catalog-video__video-link" href="#"><img class="catalog-video__preview-image"
-          src="img/video-preview-catalog.jpg" width="280" height="177" alt="Превью видеоролика."></a>
+      <a class="catalog-video__video-link" href="#">
+        <picture>
+          <source media="(min-width: 1200px)"
+            srcset="img/video-preview-catalog-desktop.jpg 1x, img/video-preview-catalog-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/video-preview-catalog-tablet.jpg 1x, img/video-preview-catalog-tablet@2x.jpg 2x">
+          <img class="catalog-video__preview-image" src="img/video-preview-catalog-mobile.jpg" width="280" height="177"
+            srcset="img/video-preview-catalog-mobile@2x.jpg 2x" alt="Превью видеоролика.">
+        </picture>
+      </a>
     </section>
 
   </main>

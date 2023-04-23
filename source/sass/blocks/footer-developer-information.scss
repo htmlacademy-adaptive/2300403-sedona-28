@@ -4,11 +4,11 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  width: 129px;
+  min-width: 129px;
 }
 
 .footer-developer-information__text {
-  width: 89px;
+  min-width: 89px;
   margin: 0;
   padding: 0;
   color: #000000;
