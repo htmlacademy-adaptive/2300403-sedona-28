@@ -55,12 +55,12 @@
 
   // При нажатии скрываем бургер, показываем крестик, показываем меню
   // Скрываем бургер
-  .page-header-navigation__burger-menu-checkbox:checked~.page-header-navigation__burger-menu-label .burger-icon {
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label .burger-icon {
     display: none;
   }
 
   // Показываем крестик
-  .page-header-navigation__burger-menu-checkbox:checked~.page-header-navigation__burger-menu-label::before {
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -71,17 +71,17 @@
   }
 
   // Состояние крестика при наведении курсора
-  .page-header-navigation__burger-menu-checkbox:checked~.page-header-navigation__burger-menu-label:hover {
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label:hover {
     opacity: 0.6;
   }
 
   // Состояние крестика при нажатии
-  .page-header-navigation__burger-menu-checkbox:checked~.page-header-navigation__burger-menu-label:active {
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label:active {
     opacity: 0.3;
   }
 
   // Показываем меню
-  .page-header-navigation__burger-menu-checkbox:checked~.page-header__menu-list {
+  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header__menu-list {
     display: flex;
   }
 
