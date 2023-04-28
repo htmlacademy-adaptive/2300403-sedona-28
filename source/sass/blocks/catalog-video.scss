@@ -36,7 +36,9 @@
   top: 50%;
   margin-left: -24px;
   margin-top: -27px;
-  content: url("../img/video-triangle-icon.svg");
+  content: "";
+  background-image: url("../img/stack.svg#video-triangle-icon");
+  background-position: center;
   width: 48px;
   height: 54px;
 }

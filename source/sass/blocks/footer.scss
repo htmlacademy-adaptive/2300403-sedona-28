@@ -14,26 +14,84 @@
   color: #000000;
 }
 
+// Иконки социальных сетей
+// Фон иконок
+.socials-list__item-link {
+  width: 48px;
+  height: 48px;
+  background-color: #81b3d2;
+
+  // Иконка вКонтакте
+  &--vkontakte::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/stack.svg#vkontakte-icon");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+  }
+
+  //Иконка Телеграм
+  &--telegram::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/stack.svg#telegram-icon");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+  }
+
+  // Иконка ЮТуб
+  &--youtube::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/stack.svg#youtube-icon");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+  }
+
+  // Состояния иконок при наведении и нажатии
+  // Фон иконок при наведении
+  &:hover {
+    background-color: #669ec0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  // Фон и иконка при нажатии
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &--vkontakte:active::before,
+  &--telegram:active::before,
+  &--youtube:active::before {
+    opacity: 0.3;
+  }
+}
+
 // Состояние блока "Разработано" при наведении и нажатии
 .footer-developer-information__link {
+  color: #000000;
 
-  // Состояние при наведении
-  &:hover .footer-developer-information__text {
+  &:hover {
     color: #81b3d2;
   }
 
-  &:hover .footer-developer-information__logo-fill {
-    fill: #81b3d2;
-  }
-
-  // Состояние при нажатии
-  &:active .footer-developer-information__text {
+  &:active {
     color: #b3b3b3;
   }
+}
 
-  &:active .footer-developer-information__logo-fill {
-    fill: #b3b3b3;
-  }
+// Цвет родителя для текста логотипа разработчика
+.footer-developer-information__text {
+  color: currentColor;
 }
 
 @media (min-width: $tablet-width) {

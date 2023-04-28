@@ -88,22 +88,24 @@
   width: 58px;
   height: 58px;
   background-color: #e6e6e6;
-  background-image: url("../img/phone-icon.svg");
+  background-image: url("../img/stack.svg#phone-icon");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 18px;
 }
 
 // Иконка формы ввода email
-.feedback-form__contacts-item:nth-child(2)::after {
+.feedback-form__contacts-item:nth-child(2n)::after {
   position: absolute;
   right: 20px;
   content: "";
   width: 58px;
   height: 58px;
   background-color: #e6e6e6;
-  background-image: url("../img/mail-icon.svg");
+  background-image: url("../img/stack.svg#mail-icon");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 16px 12px;
 }
 
 .feedback-form__contacts-label {
@@ -113,9 +115,10 @@
 .feedback-form__contacts-input {
   border: none;
   background-color: #f2f2f2;
-  width: 248px;
+  width: 190px;
   height: 26px;
   padding: 16px;
+  padding-right: 74px;
   position: relative;
 }
 
@@ -358,7 +361,6 @@
     display: grid;
     row-gap: 48px;
     grid-template-columns: 324px 324px;
-    grid-template-rows: 338px 162px 189px 320px;
     justify-content: center;
     padding: 0;
   }
@@ -380,6 +382,7 @@
     justify-self: start;
     padding: 0;
     margin: 0;
+    min-height: 338px;
   }
 
   .feedback-form__introduce-legend {
@@ -401,29 +404,31 @@
   }
 
   // Позиционирование иконки "телефон" элемента "Контактная информация" на планшете
-  .feedback-form__contacts-item:nth-child(1)::after {
+  .feedback-form__contacts-item:nth-child(1n)::after {
     position: absolute;
     right: 0;
     content: "";
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../img/phone-icon.svg");
+    background-image: url("../img/stack.svg#phone-icon");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 18px;
   }
 
   // Позиционирование иконки "email" элемента "Контактная информация" на планшете
-  .feedback-form__contacts-item:nth-child(2)::after {
+  .feedback-form__contacts-item:nth-child(2n)::after {
     position: absolute;
     right: 0;
     content: "";
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../img/mail-icon.svg");
+    background-image: url("../img/stack.svg#mail-icon");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 16px 12px;
   }
 
   // Декоративная гоирзонтальная серая полоса слева от "Впечатления"
@@ -509,15 +514,15 @@
     padding: 0 36px;
     grid-area: 3/1/4/3;
     display: grid;
+  }
 
-    &-list {
-      display: grid;
-      justify-self: center;
-      align-self: center;
-      grid-template-columns: 240px 240px;
-      grid-template-rows: 46px 46px;
-      row-gap: 16px;
-    }
+  .feedback-form__attractions-list {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 240px 240px;
+    grid-template-rows: 46px 46px;
+    row-gap: 16px;
   }
 
   .feedback-form__attractions-item:not(:last-child) {
@@ -560,11 +565,11 @@
     justify-self: center;
     display: grid;
     padding: 0;
+  }
 
-    &-input {
-      width: 616px;
-      height: 128px;
-    }
+  .feedback-form__description-input {
+    width: 616px;
+    height: 128px;
   }
 
   .feedback-form__button {
@@ -586,7 +591,6 @@
     display: grid;
     row-gap: 56px;
     grid-template-columns: 494px 466px;
-    grid-template-rows: 338px 134px 189px 320px;
     justify-content: center;
   }
 
@@ -629,20 +633,20 @@
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../img/phone-icon.svg");
+    background-image: url("../img/stack.svg#phone-icon");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   // Позиционирование иконки "email" элемента "Контактная информация" на десктопе
-  .feedback-form__contacts-item:nth-child(2)::after {
+  .feedback-form__contacts-item:nth-child(2n)::after {
     position: absolute;
     right: 0;
     content: "";
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-    background-image: url("../img/mail-icon.svg");
+    background-image: url("../img/stack.svg#mail-icon");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -674,14 +678,14 @@
     display: grid;
     width: 960px;
     padding: 0;
+  }
 
-    &-list {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      grid-template-rows: 80px;
-      column-gap: 28px;
-      align-items: center;
-    }
+  .feedback-form__impression-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px;
+    column-gap: 28px;
+    align-items: center;
   }
 
   // Декоративная гоирзонтальная серая полоса слева от "Посещенные достопримечательности"
@@ -711,15 +715,15 @@
     width: 960px;
     display: grid;
     padding: 0;
+  }
 
-    &-list {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      grid-template-rows: 108px;
-      column-gap: 64px;
-      justify-content: center;
-      align-items: center;
-    }
+  .feedback-form__attractions-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 108px;
+    column-gap: 64px;
+    justify-content: center;
+    align-items: center;
   }
 
   .feedback-form__attractions-item:not(:last-child) {

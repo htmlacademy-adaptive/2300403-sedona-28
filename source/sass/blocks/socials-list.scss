@@ -26,11 +26,11 @@
 
 // Состояние иконок социальных сетей  при нажатии
 .socials-list__item-image:active {
-  & .socials-list__item-image-background {
+  .socials-list__item-image-background {
     fill: #5496bd;
   }
 
-  & .socials-list__item-image-icon {
+  .socials-list__item-image-icon {
     opacity: 0.3;
   }
 }
