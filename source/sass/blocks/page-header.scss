@@ -1,94 +1,35 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-header-navigation {
+  order: 1;
+  width: 320px;
   position: relative;
-  min-width: 320px;
 }
 
 // Позиционирование логотипа
 .page-header__logo {
-  position: absolute;
-  left: 50%;
-  margin-left: -92.5px;
-}
+  order: 2;
+  height: 56px;
+  background-color: #ffffff;
 
-.page-header__logo-image {
-  height: 96px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: $mobile-width) {
-
-  // Работа кнопки выпадающего меню
-  // Фокусировка на иконке меню
-  .page-header-navigation:focus-within .burger-icon {
-    outline: solid 1px #000000;
-  }
-
   .page-header {
     background-color: #ffffff;
     width: 320px;
-    height: 56px;
   }
 
-  // Переносим бургер в правый верхний угол
-  .page-header-navigation__burger-menu-label {
-    width: 60px;
-    height: 56px;
-    position: absolute;
-    right: 0;
-    z-index: 1;
-  }
-
-  .burger-icon {
-    position: absolute;
-    right: 0;
-    padding: 17px 20px;
-  }
-
-  // Cостояния бургера при наведении курсора
-  .burger-icon:hover {
-    opacity: 0.6;
-  }
-
-  // Состояние бургера при нажатии
-  .burger-icon:active {
-    opacity: 0.3;
-  }
-
-  // При нажатии скрываем бургер, показываем крестик, показываем меню
-  // Скрываем бургер
-  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label .burger-icon {
-    display: none;
-  }
-
-  // Показываем крестик
-  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: url("../img/burger-cross-icon.svg");
-    width: 22.2px;
-    height: 22.2px;
-    padding: 17px 20px;
-  }
-
-  // Состояние крестика при наведении курсора
-  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label:hover {
-    opacity: 0.6;
-  }
-
-  // Состояние крестика при нажатии
-  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header-navigation__burger-menu-label:active {
-    opacity: 0.3;
-  }
-
-  // Показываем меню
-  .page-header-navigation__burger-menu-checkbox:checked ~ .page-header__menu-list {
-    display: flex;
-  }
-
+  // Если .page-header-navigation БЕЗ --nojs (используется JS), тогда список меню вне потока, перекрывая контент
   .page-header__menu-list {
     position: absolute;
     left: 0;
-    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -98,24 +39,97 @@
     margin: 0;
   }
 
+  // Если .page-header-navigation--nojs (не использует JS), тогда список меню в потоке, не перекрывая контент
+  .page-header-navigation--nojs .page-header__menu-list {
+    position: relative;
+  }
+
+  // Кнопка меню мобильной версии
+  .page-header__menu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 56px;
+    height: 56px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+
+  // Кнопка "крестик" для закрытия меню (page-header-navigation--opened)
+  .page-header-navigation--opened .page-header__menu-button::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 22.2px;
+    height: 22.2px;
+    background-image: url("../img/stack.svg#cross-icon");
+  }
+
+  .page-header-navigation--opened .page-header__menu-button:hover::before {
+    opacity: 0.6;
+  }
+
+  .page-header-navigation--opened .page-header__menu-button:active::before {
+    opacity: 0.3;
+  }
+
+  // Кнопка "бурегер" для открытия меню
+  .page-header-navigation--closed .page-header__menu-button {
+    top: 0;
+    right: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16.9px;
+      left: 16.55px;
+      width: 22.9px;
+      height: 22.2px;
+      background-image: url("../img/stack.svg#burger-icon");
+    }
+
+    &:hover::before {
+      opacity: 0.6;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+
+  // Когда меню закрыто, все пункты меню спрятаны
+  .page-header-navigation--closed .page-header__menu-list {
+    display: none;
+  }
+
   .page-header__menu-item {
     display: flex;
     min-width: 320px;
     justify-content: center;
     align-items: center;
-    height: 55px;
+    min-height: 55px;
     margin-bottom: 1px;
     box-shadow: 0 1px 0 #01010133, inset 0 1px 0 #ffffff33;
-  }
 
-  // Градиент на нижний элемент меню
-  .page-header__menu-item:last-child::after {
-    position: absolute;
-    bottom: 0;
-    content: "";
-    min-width: 320px;
-    height: 7px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    // Убираем нижнюю декоративную полосу с последнего элемента списка
+    &:last-child {
+      box-shadow: 0 0 0 #01010133, inset 0 1px 0 #ffffff33;
+      margin-bottom: 0;
+    }
+
+    // Градиент на нижний элемент меню
+    &:last-child::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      min-width: 320px;
+      height: 7px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
   }
 
   .page-header__menu-link {
@@ -131,13 +145,34 @@
 // Вид на планшете
 @media (min-width: $tablet-width) {
 
+  // Отключение пнопки мобильного меню
+  .page-header__menu-button {
+    display: none;
+  }
+
+  // Перебиваем порядок отображения меню при --nojs на планшете
+  .page-header-navigation--nojs .page-header__menu-list {
+    position: static;
+  }
+
   // Удаление нажнего градиента мобильного меню
   .page-header__menu-item:last-child::after {
     display: none;
   }
 
+  .page-header {
+    width: 768px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -92.5px;
+  }
+
   .page-header-navigation {
     position: static;
+    width: 768px;
   }
 
   .page-header__menu-list {
@@ -145,17 +180,19 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     background-color: #ffffff;
+    flex-wrap: wrap;
   }
 
   .page-header__menu-item {
     min-width: 153px;
-    height: 56px;
+    min-height: 56px;
     box-shadow: none;
   }
 
-  .page-header__menu-item:nth-child(2) {
+  .page-header__menu-item:nth-child(2),
+  .page-header__menu-item:nth-child(6) {
     margin-right: 153px;
   }
 
@@ -188,13 +225,22 @@
 
 // Вид на десктопе
 @media (min-width: $desktop-width) {
+  .page-header {
+    width: 1200px;
+  }
+
+  .page-header-navigation {
+    width: 1200px;
+  }
+
   .page-header__menu-item {
     width: 240px;
     height: 56px;
     box-shadow: none;
   }
 
-  .page-header__menu-item:nth-child(2) {
+  .page-header__menu-item:nth-child(2),
+  .page-header__menu-item:nth-child(6) {
     margin-right: 240px;
   }
 }

@@ -44,6 +44,9 @@
 }
 
 .catalog-photos__item-like-image {
+  opacity: 0.3;
+  width: 23px;
+  height: 21px;
   margin-right: 14px;
 }
 
@@ -69,6 +72,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    min-width: 284px;
   }
 
   .catalog-photos__item {
@@ -81,10 +85,11 @@
 
       border-top: none;
 
-      & .catalog-photos__item-description-wrap {
+      .catalog-photos__item-description-wrap {
         min-width: 608px;
       }
     }
+
 
     .catalog-photos__item-photo-wrap {
       height: auto;
@@ -92,43 +97,43 @@
       line-height: 0;
     }
 
-    &:nth-child(2) {
+    &:nth-of-type(2) {
       grid-area: 2/1/3/2;
       align-self: end;
 
-      & .catalog-photos__item-photo-wrap {
+      .catalog-photos__item-photo-wrap {
         max-height: 267px;
       }
 
-      & .catalog-photos__item-description-wrap {
+      .catalog-photos__item-description-wrap {
         min-width: 284px;
       }
     }
 
 
-    &:nth-child(3) {
+    &:nth-of-type(3) {
       grid-area: 2/2/3/3;
       align-self: end;
 
-      & .catalog-photos__item-photo-wrap {
+      .catalog-photos__item-photo-wrap {
         max-height: 267px;
       }
 
-      & .catalog-photos__item-description-wrap {
+      .catalog-photos__item-description-wrap {
         min-width: 284px;
         background-color: #eaeaea;
       }
     }
 
-    &:nth-child(4) {
+    &:nth-of-type(4) {
       grid-area: 3/1/4/2;
       align-self: end;
 
-      & .catalog-photos__item-photo-wrap {
+      .catalog-photos__item-photo-wrap {
         max-height: 267px;
       }
 
-      & .catalog-photos__item-description-wrap {
+      .catalog-photos__item-description-wrap {
         min-width: 284px;
       }
     }
@@ -144,21 +149,32 @@
     overflow: hidden;
   }
 
-  .catalog-photos__item-description-wrap {
-    background-color: rgba($color: #000000, $alpha: 0.3);
-    color: #ffffff;
-  }
-
   .catalog-photos__item-title {
     color: #ffffff;
   }
 
-  .catalog-photos__item-like-image-path {
+  .catalog-photos__item-like-image {
     fill: #ffffff;
     opacity: 1;
   }
 
+  // Свойства grid карточки фотографии
+  .catalog-photos__item-photo-wrap {
+    align-self: center;
+    justify-self: center;
+    grid-area: 1/1/2/2;
+  }
+
+  .catalog-photos__item-description-wrap {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    color: #ffffff;
+
+    grid-area: 1/1/2/2;
+    align-self: end;
+  }
+
   .catalog-photos__item {
+    display: grid;
 
     // Первая потофграфия
     &:nth-child(1) {
@@ -167,51 +183,51 @@
       grid-template-columns: 1200px;
       grid-template-rows: 400px;
 
-      & .catalog-photos__item-photo-wrap {
+      .catalog-photos__item-photo-wrap {
         align-self: center;
         justify-self: center;
         grid-area: 1/1/2/2;
       }
 
-      & .catalog-photos__item-description-wrap {
+      .catalog-photos__item-description-wrap {
         grid-area: 1/1/2/2;
         align-self: end;
       }
     }
 
     // Второая фотография
-    &:nth-child(2) {
+    &:nth-of-type(2) {
       grid-area: 2/1/3/2;
       display: grid;
       grid-template-columns: 400px;
       grid-template-rows: 267px;
 
-      & .catalog-photos__item-photo-wrap {
+      .catalog-photos__item-photo-wrap {
         align-self: center;
         justify-self: center;
         grid-area: 1/1/2/2;
       }
 
-      & .catalog-photos__item-description-wrap {
+      .catalog-photos__item-description-wrap {
         grid-area: 1/1/2/2;
         align-self: end;
       }
     }
 
     // Третяя фотография
-    &:nth-child(3) {
+    &:nth-of-type(3) {
       grid-area: 2/2/3/3;
       display: grid;
       grid-template-columns: 400px;
       grid-template-rows: 267px;
 
-      & .catalog-photos__item-photo-wrap {
+      .catalog-photos__item-photo-wrap {
         align-self: center;
         justify-self: center;
         grid-area: 1/1/2/2;
       }
 
-      & .catalog-photos__item-description-wrap {
+      .catalog-photos__item-description-wrap {
         grid-area: 1/1/2/2;
         align-self: end;
         background-color: rgba($color: #000000, $alpha: 0.3);
@@ -219,19 +235,19 @@
     }
 
     // Четвертая фотография
-    &:nth-child(4) {
+    &:nth-of-type(4) {
       grid-area: 2/3/3/4;
       display: grid;
       grid-template-columns: 400px;
       grid-template-rows: 267px;
 
-      & .catalog-photos__item-photo-wrap {
+      .catalog-photos__item-photo-wrap {
         align-self: center;
         justify-self: center;
         grid-area: 1/1/2/2;
       }
 
-      & .catalog-photos__item-description-wrap {
+      .catalog-photos__item-description-wrap {
         grid-area: 1/1/2/2;
         align-self: end;
       }
