@@ -193,8 +193,8 @@
     box-shadow: none;
   }
 
-  .page-header__menu-item:nth-child(2),
-  .page-header__menu-item:nth-child(6) {
+  // Отступ у второго элемента меню в планшетной версии
+  .page-header__menu-item--indent {
     margin-right: 153px;
   }
 
@@ -241,8 +241,8 @@
     box-shadow: none;
   }
 
-  .page-header__menu-item:nth-child(2),
-  .page-header__menu-item:nth-child(6) {
+  // Отступ у второго элемента меню в десктопной версии
+  .page-header__menu-item--indent {
     margin-right: 240px;
   }
 }
