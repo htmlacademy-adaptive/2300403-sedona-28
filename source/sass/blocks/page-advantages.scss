@@ -54,10 +54,10 @@
   line-height: 26px;
   color: #000000;
   margin-bottom: 11px;
-}
 
-.page-advantages__item:nth-child(-n+2) .page-advantages__item-bold-text {
-  color: #ffffff;
+  &--white-color {
+    color: #ffffff;
+  }
 }
 
 .page-advantages__sub-item-title {
@@ -86,7 +86,7 @@
   position: relative;
   width: 237px;
 
-  &:first-child::before {
+  &--housing::before {
     position: absolute;
     left: -58px;
     content: "";
@@ -97,7 +97,7 @@
     background-size: 40px 40px;
   }
 
-  &:nth-child(2)::before {
+  &--hamburger::before {
     position: absolute;
     left: -58px;
     content: "";
@@ -108,7 +108,7 @@
     background-size: 40px 40px;
   }
 
-  &:nth-child(3)::before {
+  &--box::before {
     position: absolute;
     left: -58px;
     content: "";
@@ -213,24 +213,24 @@
     justify-content: end;
     padding: 60px 33px;
 
-    &:nth-child(1) .page-advantages__sub-item-text {
+    &--housing .page-advantages__sub-item-text {
       width: 194px;
       margin: 14px auto;
     }
 
-    &:nth-child(2n) .page-advantages__sub-item-text {
+    &--hamburger .page-advantages__sub-item-text {
       width: 156px;
       margin: 14px auto;
     }
 
 
-    &:nth-child(3n) .page-advantages__sub-item-text {
+    &--box .page-advantages__sub-item-text {
       width: 182px;
       margin: 14px auto;
     }
 
     // Позиционирование иконок саблиста на планшете
-    &:first-child::before {
+    &--housing::before {
       position: absolute;
       top: 58px;
       left: 86px;
@@ -243,7 +243,7 @@
       background-size: 77px 72px;
     }
 
-    &:nth-child(2n)::before {
+    &--hamburger::before {
       position: absolute;
       top: 68px;
       left: 86px;
@@ -255,7 +255,7 @@
       background-size: 80px 68px;
     }
 
-    &:nth-child(3n)::before {
+    &--box::before {
       position: absolute;
       top: 60px;
       left: 94px;
@@ -315,10 +315,6 @@
     .page-advantages__item-text {
       width: 190px;
     }
-
-    &:nth-child(2) .page-advantages__item-text {
-      width: 175px;
-    }
   }
 
   .page-advantages__more-about-item .page-advantages__item-bold-text {
@@ -370,24 +366,24 @@
     min-height: 182px;
     padding: 69px 50px;
 
-    &:nth-child(1) .page-advantages__sub-item-text {
+    &--housing .page-advantages__sub-item-text {
       width: 300px;
       margin: 14px auto;
     }
 
-    &:nth-child(2n) .page-advantages__sub-item-text {
+    &--hamburger .page-advantages__sub-item-text {
       width: 300px;
       margin: 14px auto;
     }
 
 
-    &:nth-child(3n) .page-advantages__sub-item-text {
+    &--box .page-advantages__sub-item-text {
       width: 300px;
       margin: 14px auto;
     }
 
     // Позиционирование иконок саблиста на десктопе
-    &:first-child::before {
+    &--housing::before {
       position: absolute;
       top: 60px;
       left: 160px;
@@ -399,7 +395,7 @@
       background-size: 77px 72px;
     }
 
-    &:nth-child(2n)::before {
+    &--hamburger::before {
       position: absolute;
       top: 70px;
       left: 160px;
@@ -411,7 +407,7 @@
       background-size: 80px 68px;
     }
 
-    &:nth-child(3n)::before {
+    &--box::before {
       position: absolute;
       top: 70px;
       left: 160px;
@@ -422,10 +418,6 @@
       background-repeat: no-repeat;
       background-size: 66px 75px;
     }
-  }
-
-  .page-advantages__sub-list:nth-child(3n) br {
-    display: block;
   }
 
   // Сетка второго блока преимуществ

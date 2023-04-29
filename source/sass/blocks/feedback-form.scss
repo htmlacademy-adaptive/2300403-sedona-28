@@ -81,7 +81,7 @@
 }
 
 // Иконка формы ввода телефона
-.feedback-form__contacts-item:nth-child(1)::after {
+.feedback-form__contacts-item--phone::after {
   position: absolute;
   right: 20px;
   content: "";
@@ -95,7 +95,7 @@
 }
 
 // Иконка формы ввода email
-.feedback-form__contacts-item:nth-child(2n)::after {
+.feedback-form__contacts-item--email::after {
   position: absolute;
   right: 20px;
   content: "";
@@ -404,7 +404,7 @@
   }
 
   // Позиционирование иконки "телефон" элемента "Контактная информация" на планшете
-  .feedback-form__contacts-item:nth-child(1n)::after {
+  .feedback-form__contacts-item--phone::after {
     position: absolute;
     right: 0;
     content: "";
@@ -418,7 +418,7 @@
   }
 
   // Позиционирование иконки "email" элемента "Контактная информация" на планшете
-  .feedback-form__contacts-item:nth-child(2n)::after {
+  .feedback-form__contacts-item--email::after {
     position: absolute;
     right: 0;
     content: "";
@@ -622,11 +622,11 @@
   }
 
   .feedback-form__contacts-input {
-    width: 370px;
+    width: 312px;
   }
 
   // Позиционирование иконки "телефон" элемента "Контактная информация" на десктопе
-  .feedback-form__contacts-item:nth-child(1)::after {
+  .feedback-form__contacts-item--phone::after {
     position: absolute;
     right: 0;
     content: "";
@@ -639,7 +639,7 @@
   }
 
   // Позиционирование иконки "email" элемента "Контактная информация" на десктопе
-  .feedback-form__contacts-item:nth-child(2n)::after {
+  .feedback-form__contacts-item--email::after {
     position: absolute;
     right: 0;
     content: "";
