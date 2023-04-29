@@ -62,18 +62,20 @@
       <h2 class="visually-hidden">Общая информация о городе Седона.</h2>
       <ol class="page-advantages__list">
         <li class="page-advantages__item">
-          <div class="page-advantages__item-text-wrap">
-            <b class="page-advantages__item-bold-text">Настоящий городок</b>
-            <p class="page-advantages__item-text">— №1 —</p>
-            <p class="page-advantages__item-text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <div class="page-advantages__item-with-photo">
+            <div class="page-advantages__item-text-wrap">
+              <b class="page-advantages__item-bold-text">Настоящий городок</b>
+              <p class="page-advantages__item-text">— №1 —</p>
+              <p class="page-advantages__item-text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+              <img class="page-advantages__item-photo" src="img/photo-city-mobile.jpg" width="320" height="260"
+                srcset="img/photo-city-mobile@2x.jpg 2x" alt="Здание с флагами США.">
+            </picture>
           </div>
-          <picture>
-            <source media="(min-width: 1200px)"
-              srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
-            <img class="page-advantages__item-photo" src="img/photo-city-mobile.jpg" width="320" height="260"
-              srcset="img/photo-city-mobile@2x.jpg 2x" alt="Здание с флагами США.">
-          </picture>
           <ul class="page-advantages__sub-list">
             <li class="page-advantages__sub-item">
               <!-- Иконка дома перед "Жилье" -->
@@ -96,19 +98,21 @@
           </ul>
         </li>
         <li class="page-advantages__item">
-          <div class="page-advantages__item-text-wrap">
-            <b class="page-advantages__item-bold-text">Там есть мост дьявола</b>
-            <p class="page-advantages__item-text">— №2 —</p>
-            <p class="page-advantages__item-text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          <div class="page-advantages__item-with-photo page-advantages__item-with-photo--reverse">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="page-advantages__item-photo" src="img/photo-bridge-mobile.jpg" width="320" height="260"
+                srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография каньона.">
+            </picture>
+            <div class="page-advantages__item-text-wrap">
+              <b class="page-advantages__item-bold-text">Там есть мост дьявола</b>
+              <p class="page-advantages__item-text">— №2 —</p>
+              <p class="page-advantages__item-text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            </div>
           </div>
-          <picture>
-            <source media="(min-width: 1200px)"
-              srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-            <img class="page-advantages__item-photo" src="img/photo-bridge-mobile.jpg" width="320" height="260"
-              srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография каньона.">
-          </picture>
         </li>
         <li class="page-advantages__item">
           <ul class="page-advantages__more-about-list">
