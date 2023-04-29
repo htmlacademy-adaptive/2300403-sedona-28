@@ -59,7 +59,9 @@
   }
 
   // Кнопка "крестик" для закрытия меню (page-header-navigation--opened)
+  // Крестик скрыт без JS
   .page-header-navigation--opened .page-header__menu-button::before {
+    display: none;
     content: "";
     position: absolute;
     top: 15px;
