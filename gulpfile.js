@@ -2,15 +2,15 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
-import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
-import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import { stacksvg } from 'gulp-stacksvg';
-import { deleteAsync } from 'del';
+import svgstore from 'gulp-svgstore';
+import del from 'del';
+import browser from 'browser-sync';
 
 // Styles
 
@@ -27,11 +27,10 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-//HTML
+// HTML
 
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
@@ -46,49 +45,49 @@ const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh())
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/img'))
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
-    .pipe(gulp.dest('build/img'));
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
     }))
-    .pipe(gulp.dest('build/img'));
-
+    .pipe(gulp.dest('build/img'))
 }
 
 // SVG
-const svg = () => {
-  return gulp.src(['source/img/*.svg', '!source/img/stack.svg'])
+
+const svg = () =>
+  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
 
-// Создание стека, вместо спрайта SVG
-function makeStack() {
-  return gulp.src(['source/img/*.svg', '!source/img/stack.svg'])
-    .pipe(svgo())
-    .pipe(stacksvg({ output: `stack` }))
-    .pipe(gulp.dest('build/img'));
-}
-
-//Copy
+// Copy
 
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    'source/*.webmanifest',
   ], {
     base: 'source'
   })
@@ -96,10 +95,10 @@ const copy = (done) => {
   done();
 }
 
-//Clean
+// Clean
 
 const clean = () => {
-  return deleteAsync('build');
+  return del('build');
 };
 
 // Server
@@ -116,7 +115,7 @@ const server = (done) => {
   done();
 }
 
-//Reload
+// Reload
 
 const reload = (done) => {
   browser.reload();
@@ -128,7 +127,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
@@ -142,13 +141,13 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    makeStack,
+    sprite,
     createWebp
   ),
 );
 
-
 // Default
+
 export default gulp.series(
   clean,
   copy,
@@ -158,7 +157,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    makeStack,
+    sprite,
     createWebp
   ),
   gulp.series(
