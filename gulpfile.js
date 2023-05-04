@@ -8,6 +8,8 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
+import { stacksvg } from 'gulp-stacksvg';
 
 // Styles
 
@@ -31,19 +33,43 @@ export const html = () => {
     .pipe(gulp.dest('build'));
 }
 
-
-
-
 // Images
+
 export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'));
 }
 
 const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'));
+}
+
+// WebP
+
+export const createWebp = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'));
+
+}
+
+// SVG
+export const svg = () => {
+  return gulp.src(['source/img/*.svg', '!source/img/stack.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+}
+
+// Создание стека, вместо спрайта SVG
+export function makeStack() {
+  return gulp.src(['source/img/*.svg', '!source/img/stack.svg'])
+    .pipe(svgo())
+    .pipe(stacksvg({ output: `stack` }))
+    .pipe(gulp.dest('build/img'));
 }
 
 // Server
