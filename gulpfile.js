@@ -8,7 +8,7 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
+import { stacksvg } from "gulp-stacksvg"; //Стек, вместо спрайта
 import del from 'del';
 import browser from 'browser-sync';
 
@@ -72,16 +72,13 @@ const svg = () =>
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-//  Sprite
 
-const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+//Stack
+
+function makeStack() {
+  return gulp.src([`source/*.svg`, '!source/stack.svg'])
+    .pipe(stacksvg({ output: `stack` }))
+    .pipe(gulp.dest(`build/img`))
 }
 
 // Copy
@@ -144,7 +141,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
+    makeStack,
     createWebp
   ),
 );
@@ -160,7 +157,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite,
+    makeStack,
     createWebp
   ),
   gulp.series(
