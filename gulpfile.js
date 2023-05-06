@@ -8,7 +8,7 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import { stacksvg } from "gulp-stacksvg"; //Стек, вместо спрайта
+import { stacksvg } from 'gulp-stacksvg';
 import del from 'del';
 import browser from 'browser-sync';
 
@@ -75,8 +75,9 @@ const svg = () =>
 
 //Stack
 
-function makeStack() {
-  return gulp.src([`source/*.svg`, '!source/stack.svg'])
+export function makeStack() {
+  return gulp.src(`source/img/*.svg`)
+    .pipe(svgo())
     .pipe(stacksvg({ output: `stack` }))
     .pipe(gulp.dest(`build/img`))
 }

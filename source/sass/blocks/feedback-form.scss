@@ -81,31 +81,19 @@
 }
 
 // Иконка формы ввода телефона
-.feedback-form__contacts-item--phone::after {
-  position: absolute;
-  right: 20px;
-  content: "";
-  width: 58px;
-  height: 58px;
-  background-color: #e6e6e6;
+.feedback-form__contacts-input--phone {
   background-image: url("../img/stack.svg#phone-icon");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px;
+  background-size: 58px;
+  background-position: right;
 }
 
 // Иконка формы ввода email
-.feedback-form__contacts-item--email::after {
-  position: absolute;
-  right: 20px;
-  content: "";
-  width: 58px;
-  height: 58px;
-  background-color: #e6e6e6;
+.feedback-form__contacts-input--email {
   background-image: url("../img/stack.svg#mail-icon");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 12px;
+  background-position: right;
+  background-size: 58px;
 }
 
 .feedback-form__contacts-label {
@@ -403,34 +391,6 @@
     line-height: 26px;
   }
 
-  // Позиционирование иконки "телефон" элемента "Контактная информация" на планшете
-  .feedback-form__contacts-item--phone::after {
-    position: absolute;
-    right: 0;
-    content: "";
-    width: 58px;
-    height: 58px;
-    background-color: #e6e6e6;
-    background-image: url("../img/stack.svg#phone-icon");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 18px;
-  }
-
-  // Позиционирование иконки "email" элемента "Контактная информация" на планшете
-  .feedback-form__contacts-item--email::after {
-    position: absolute;
-    right: 0;
-    content: "";
-    width: 58px;
-    height: 58px;
-    background-color: #e6e6e6;
-    background-image: url("../img/stack.svg#mail-icon");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 16px 12px;
-  }
-
   // Декоративная гоирзонтальная серая полоса слева от "Впечатления"
   .feedback-form__impression::before {
     position: absolute;
@@ -623,32 +583,6 @@
 
   .feedback-form__contacts-input {
     width: 312px;
-  }
-
-  // Позиционирование иконки "телефон" элемента "Контактная информация" на десктопе
-  .feedback-form__contacts-item--phone::after {
-    position: absolute;
-    right: 0;
-    content: "";
-    width: 58px;
-    height: 58px;
-    background-color: #e6e6e6;
-    background-image: url("../img/stack.svg#phone-icon");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  // Позиционирование иконки "email" элемента "Контактная информация" на десктопе
-  .feedback-form__contacts-item--email::after {
-    position: absolute;
-    right: 0;
-    content: "";
-    width: 58px;
-    height: 58px;
-    background-color: #e6e6e6;
-    background-image: url("../img/stack.svg#mail-icon");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   // Декоративная гоирзонтальная серая полоса слева от "Впечатления"
