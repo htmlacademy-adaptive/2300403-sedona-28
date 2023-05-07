@@ -321,6 +321,22 @@
   font-size: 21px;
   line-height: 26px;
   color: #ffffff;
+
+  cursor: pointer;
+
+  // Состояния кнопки "Отправить отзыв"
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 //
@@ -533,12 +549,10 @@
   }
 
   .feedback-form__button {
-    grid-area: 4/1/5/2;
     align-self: end;
   }
 
   .feedback-form__required-field-text {
-    grid-area: 4/2/5/3;
     align-self: end;
     justify-self: end;
   }
