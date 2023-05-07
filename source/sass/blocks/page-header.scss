@@ -139,12 +139,12 @@
 
     // Наведение курсора на элемент меню
     &:hover {
-      background-color: #669EC0;
+      background-color: #669ec0;
     }
 
     // Нажатие курсора на элемент меню
     &:active {
-      background-color: #5496BD;
+      background-color: #5496bd;
 
       // Цвет текста элемента меню при нажатии
       & .page-header__menu-link {
@@ -226,7 +226,6 @@
 
   // Состояния элементов меню, версия для планшета
   .page-header__menu-item--condition {
-
     &:hover {
       background-color: #ffffff;
 
