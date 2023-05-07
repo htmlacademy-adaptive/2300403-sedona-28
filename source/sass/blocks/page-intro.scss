@@ -44,19 +44,21 @@
 .page-intro__text-decoration {
   width: 320px;
   height: 37px;
-  background-image: url("../img/intro-triangle-text.svg");
+  background-image: url("../img/stack.svg#intro-triangle-text");
   background-repeat: no-repeat;
   background-color: #81b3d2;
   background-position: center bottom;
+  background-size: 320px;
 }
 
 // Декоративный угол (верхний)
 .page-intro__bottom-decoration {
   height: 57px;
   width: 320px;
-  background-image: url("../img/intro-triangle.svg");
+  background-image: url("../img/stack.svg#intro-triangle");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom center;
+  background-size: 1200px;
 }
 
 @media (min-width: $tablet-width) {

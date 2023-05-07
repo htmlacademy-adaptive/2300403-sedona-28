@@ -59,7 +59,9 @@
   }
 
   // Кнопка "крестик" для закрытия меню (page-header-navigation--opened)
+  // Крестик скрыт без JS
   .page-header-navigation--opened .page-header__menu-button::before {
+    display: none;
     content: "";
     position: absolute;
     top: 15px;
@@ -191,8 +193,8 @@
     box-shadow: none;
   }
 
-  .page-header__menu-item:nth-child(2),
-  .page-header__menu-item:nth-child(6) {
+  // Отступ у второго элемента меню в планшетной версии
+  .page-header__menu-item--indent {
     margin-right: 153px;
   }
 
@@ -239,8 +241,8 @@
     box-shadow: none;
   }
 
-  .page-header__menu-item:nth-child(2),
-  .page-header__menu-item:nth-child(6) {
+  // Отступ у второго элемента меню в десктопной версии
+  .page-header__menu-item--indent {
     margin-right: 240px;
   }
 }

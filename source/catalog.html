@@ -9,7 +9,7 @@
   <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -25,8 +25,8 @@
       <button class="page-header__menu-button" type="button"></button>
       <ol class="page-header__menu-list">
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="index.html">Главная</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link page-header__menu-link--active"
-            href="#">Фото и видео</a></li>
+        <li class="page-header__menu-item page-header__menu-item--indent"><a
+            class="page-header__menu-link page-header__menu-link--active">Фото и видео</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="form.html">Форма Отзыва</a></li>
         <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
       </ol>
@@ -57,16 +57,16 @@
     <section class="catalog-photos">
       <h2 class="visually-hidden">Галерея фотографий из города Седона.</h2>
       <ul class="catalog-photos__list">
-        <li class="catalog-photos__item">
+        <li class="catalog-photos__item catalog-photos__item--big-image">
           <div class="catalog-photos__item-photo-wrap">
             <picture>
               <!-- WebP изображения -->
               <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/road-catalog-photo/webp/road-catalog-photo-desktop.webp, img/road-catalog-photo/webp/road-catalog-photo-desktop@2x.webp 2x">
+                srcset="img/road-catalog-photo-desktop.webp, img/road-catalog-photo-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/road-catalog-photo/webp/road-catalog-photo-tablet.webp, img/road-catalog-photo/webp/road-catalog-photo-tablet@2x.webp 2x">
+                srcset="img/road-catalog-photo-tablet.webp, img/road-catalog-photo-tablet@2x.webp 2x">
               <source type="image/webp"
-                srcset="img/road-catalog-photo/webp/road-catalog-photo-mobile.webp, img/road-catalog-photo/webp/road-catalog-photo-mobile@2x.webp 2x">
+                srcset="img/road-catalog-photo-mobile.webp, img/road-catalog-photo-mobile@2x.webp 2x">
               <!-- JPEG изображения -->
               <source media="(min-width: 1200px)"
                 srcset="img/road-catalog-photo-desktop.jpg 1x, img/road-catalog-photo-desktop@2x.jpg 2x">
@@ -88,7 +88,7 @@
             </div>
           </div>
         </li>
-        <li class="catalog-photos__item">
+        <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
             <picture>
               <source media="(min-width: 1200px)"
@@ -111,7 +111,7 @@
             </div>
           </div>
         </li>
-        <li class="catalog-photos__item">
+        <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
             <picture>
               <source media="(min-width: 1200px)"
@@ -123,7 +123,7 @@
                 alt="Фотография дороги на фоне заката.">
             </picture>
           </div>
-          <div class="catalog-photos__item-description-wrap">
+          <div class="catalog-photos__item-description-wrap catalog-photos__item-description-wrap--color">
             <div class="catalog-photos__item-description">
               <b class="catalog-photos__item-title">Дорога на север</b>
               <p class="catalog-photos__item-text">Автор фото: Петр</p>
@@ -135,7 +135,7 @@
             </div>
           </div>
         </li>
-        <li class="catalog-photos__item">
+        <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
             <picture>
               <source media="(min-width: 1200px)"
