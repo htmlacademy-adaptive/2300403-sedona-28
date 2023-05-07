@@ -134,6 +134,25 @@
     }
   }
 
+  // Состояния элементов меню, мобильная версия
+  .page-header__menu-item--condition {
+
+    // Наведение курсора на элемент меню
+    &:hover {
+      background-color: #669EC0;
+    }
+
+    // Нажатие курсора на элемент меню
+    &:active {
+      background-color: #5496BD;
+
+      // Цвет текста элемента меню при нажатии
+      & .page-header__menu-link {
+        opacity: 0.3;
+      }
+    }
+  }
+
   .page-header__menu-link {
     text-decoration: none;
     color: #ffffff;
@@ -205,21 +224,30 @@
     padding: 15px;
   }
 
-  // Состояние сслыки при наведении курсора
-  .page-header__menu-link:hover {
-    color: #81b3d2;
+  // Состояния элементов меню, версия для планшета
+  .page-header__menu-item--condition {
+
+    &:hover {
+      background-color: #ffffff;
+
+      & .page-header__menu-link {
+        color: #81b3d2;
+      }
+    }
+
+    // Состояние сслыки меню при нажатии
+    &:active .page-header__menu-link {
+      color: #000000;
+      opacity: 0.3;
+    }
+
+    // Состояние ссылки меню активной страницы
+    .page-header__menu-link--active {
+      color: #766357;
+    }
   }
 
-  // Состояние сслыки меню при нажатии
-  .page-header__menu-link:active {
-    color: #000000;
-    opacity: 0.3;
-  }
-
-  .page-header__menu-link--active {
-    color: #766357;
-  }
-
+  // Отключение кнопок меню мобильной версии на версии для планшета
   .page-header-navigation__burger-menu-label {
     display: none;
   }
