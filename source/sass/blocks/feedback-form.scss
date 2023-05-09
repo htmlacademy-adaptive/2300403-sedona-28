@@ -210,6 +210,14 @@
   border-radius: 50%;
 }
 
+.feedback-form__impression-label:hover:before {
+  background-color: #e5e5e5;
+}
+
+.feedback-form__impression-label:active:before {
+  background-color: #d5d5d5;
+}
+
 .feedback-form__impression-input:checked ~ .feedback-form__impression-label::after {
   position: absolute;
   left: 15px;
@@ -218,6 +226,10 @@
   height: 16px;
   background-color: #333333;
   border-radius: 50%;
+}
+
+.feedback-form__impression-input:checked ~ .feedback-form__impression-label:active:after {
+  background-color: rgba(51, 51, 51, 0.3);
 }
 
 //
@@ -286,12 +298,27 @@
   border-radius: 4px;
 }
 
+.feedback-form__attractions-label:hover:before {
+  background-color: #e5e5e5;
+}
+
+
 .feedback-form__attractions-input:checked ~ .feedback-form__attractions-label::after {
   position: absolute;
   left: 13px;
-  content: url("../img/tick.svg");
+  content: "";
   width: 22px;
   height: 16px;
+
+  background-image: url("../img/stack.svg#tick");
+  background-repeat: no-repeat;
+  background-size: 22px 16px;
+  background-position: center;
+}
+
+
+.feedback-form__attractions-input:checked ~ .feedback-form__attractions-label:active:after {
+  opacity: 0.3;
 }
 
 //
