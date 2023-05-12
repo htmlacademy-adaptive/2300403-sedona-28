@@ -11,7 +11,6 @@ import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
 import del from 'del';
 import browser from 'browser-sync';
-import minify from 'gulp-htmlmin';
 import htmlmin from 'gulp-htmlmin';
 
 // Styles
@@ -37,12 +36,11 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 
-
-
 // Scripts
 
 const scripts = () => {
   return gulp.src('source/js/script.js')
+    .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
