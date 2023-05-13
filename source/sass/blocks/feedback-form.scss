@@ -119,6 +119,7 @@
 // Убираем стрелочки в полеввода
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
+  /* stylelint-disable-next-line */
   -webkit-appearance: none;
 }
 
