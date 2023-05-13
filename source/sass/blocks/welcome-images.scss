@@ -4,14 +4,11 @@
   justify-content: space-between;
   align-items: center;
   color: #ffffff;
-
   width: 320px;
-
   background-color: rgba(222, 239, 255, 0.72);
   background-image: url("../img/rocks-intro-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% bottom;
-
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/rocks-intro-background-mobile@2x.jpg");
@@ -65,12 +62,10 @@
 @media (min-width: $tablet-width) {
   .welcome-images {
     width: 768px;
-
     background-color: rgba(222, 239, 255, 0.72);
     background-image: url("../img/rocks-intro-background-tablet.jpg.jpg");
     background-repeat: no-repeat;
     background-position: 50% bottom;
-
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/rocks-intro-background-tablet@2x.jpg");
@@ -111,12 +106,10 @@
 @media (min-width: $desktop-width) {
   .welcome-images {
     width: 1200px;
-
     background-color: rgba(222, 239, 255, 0.72);
     background-image: url("../img/rocks-intro-background-desktop.jpg.jpg");
     background-repeat: no-repeat;
     background-position: 50% bottom;
-
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/rocks-intro-background-desktop@2x.jpg");
