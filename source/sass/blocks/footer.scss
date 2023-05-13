@@ -5,6 +5,10 @@
   padding: 33px 82px;
 }
 
+.footer__hashtag {
+  margin-bottom: 30px;
+}
+
 .footer__hashtag-link {
   text-decoration: none;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -38,6 +42,10 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 36px 60px;
+  }
+
+  .footer__hashtag {
+    margin: 0;
   }
 }
 
