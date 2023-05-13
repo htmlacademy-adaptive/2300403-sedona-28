@@ -116,6 +116,12 @@
   padding-left: 16px;
 }
 
+// Убираем стрелочки в полеввода
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .feedback-form__contacts-input {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
