@@ -1,7 +1,14 @@
+.sent-form-window--disable {
+  display: none;
+}
+
+.sent-form-window--enable {
+  display: flex;
+}
+
 .sent-form-window {
   width: 320px;
   min-height: 280px;
-  display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;

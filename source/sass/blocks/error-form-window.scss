@@ -1,7 +1,14 @@
+.error-form-window--disable {
+  display: none;
+}
+
+.error-form-window--enable {
+  display: flex;
+}
+
 .error-form-window {
   width: 320px;
   min-height: 280px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
