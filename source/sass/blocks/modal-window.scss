@@ -1,12 +1,12 @@
-.sent-form-window--disable {
+.modal-window--disable {
   display: none;
 }
 
-.sent-form-window--enable {
+.modal-window--enable {
   display: flex;
 }
 
-.sent-form-window {
+.modal-window {
   width: 320px;
   min-height: 280px;
   flex-direction: column;
@@ -15,7 +15,7 @@
   background-color: #ffffff;
 }
 
-.sent-form-window__text-wrap {
+.modal-window__text-wrap {
   width: 244px;
   min-height: 147px;
   display: flex;
@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-.sent-form-window__title {
+.modal-window__title {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -32,11 +32,11 @@
   color: #000000;
 }
 
-.sent-form-window__text {
+.modal-window__text {
   text-align: center;
 }
 
-.sent-form-window__button-wrap {
+.modal-window__button-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +45,11 @@
   background-color: #f2f2f2;
 }
 
-.sent-form-window__button {
+.modal-window__button-wrap--form-error {
+  background-color: transparent;
+}
+
+.modal-window__button {
   width: 280px;
   min-height: 58px;
   background-color: #81b3d2;
@@ -73,28 +77,50 @@
 }
 
 @media (min-width: $tablet-width) {
-  .sent-form-window {
+  .modal-window {
     width: 640px;
     min-height: 347px;
   }
 
-  .sent-form-window__text-wrap {
+  .modal-window__text-wrap {
     width: 444px;
     min-width: 110px;
   }
 
-  .sent-form-window__title {
+  .modal-window__title {
     font-size: 30px;
     line-height: 26px;
   }
 
-  .sent-form-window__button-wrap {
+  .modal-window__button-wrap {
     width: 640px;
     min-height: 146px;
   }
 
-  .sent-form-window__button {
+  .modal-window__button {
     width: 458px;
     min-height: 58px;
+  }
+
+  // Стилизация для модального окна ошибки
+  .modal-window--form-error {
+    width: 400px;
+    min-height: 347px;
+  }
+
+  .modal-window__text-wrap--form-error {
+    width: 307px;
+    min-height: 157px;
+  }
+
+  .modal-window__title--form-error {
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-window__button--form-error {
+    width: 272px;
+    margin-bottom: 49px;
   }
 }
