@@ -64,22 +64,24 @@
       <ul class="catalog-photos__list">
         <li class="catalog-photos__item catalog-photos__item--big-image">
           <div class="catalog-photos__item-photo-wrap">
-            <picture>
-              <!-- WebP изображения -->
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/road-catalog-photo-desktop.webp, img/road-catalog-photo-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/road-catalog-photo-tablet.webp, img/road-catalog-photo-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="img/road-catalog-photo-mobile.webp, img/road-catalog-photo-mobile@2x.webp 2x">
-              <!-- JPEG изображения -->
-              <source media="(min-width: 1200px)"
-                srcset="img/road-catalog-photo-desktop.jpg 1x, img/road-catalog-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/road-catalog-photo-tablet.jpg 1x, img/road-catalog-photo-tablet@2x.jpg 2x">
-              <img class="catalog-photos__item-photo" src="img/road-catalog-photo-mobile.jpg" width="280" height="280"
-                srcset="img/road-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
-            </picture>
+            <a class="catalog-photos__item-photo-link" href="#">
+              <picture>
+                <!-- WebP изображения -->
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/road-catalog-photo-desktop.webp, img/road-catalog-photo-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/road-catalog-photo-tablet.webp, img/road-catalog-photo-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/road-catalog-photo-mobile.webp, img/road-catalog-photo-mobile@2x.webp 2x">
+                <!-- JPEG изображения -->
+                <source media="(min-width: 1200px)"
+                  srcset="img/road-catalog-photo-desktop.jpg 1x, img/road-catalog-photo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/road-catalog-photo-tablet.jpg 1x, img/road-catalog-photo-tablet@2x.jpg 2x">
+                <img class="catalog-photos__item-photo" src="img/road-catalog-photo-mobile.jpg" width="280" height="280"
+                  srcset="img/road-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
+              </picture>
+            </a>
           </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
@@ -95,14 +97,17 @@
         </li>
         <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/cactus-catalog-photo-desktop.jpg 1x, img/cactus-catalog-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/cactus-catalog-photo-tablet.jpg 1x, img/cactus-catalog-photo-tablet@2x.jpg 2x">
-              <img class="catalog-photos__item-photo" src="img/cactus-catalog-photo-mobile.jpg" width="280" height="280"
-                srcset="img/cactus-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
-            </picture>
+            <a class="catalog-photos__item-photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/cactus-catalog-photo-desktop.jpg 1x, img/cactus-catalog-photo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/cactus-catalog-photo-tablet.jpg 1x, img/cactus-catalog-photo-tablet@2x.jpg 2x">
+                <img class="catalog-photos__item-photo" src="img/cactus-catalog-photo-mobile.jpg" width="280"
+                  height="280" srcset="img/cactus-catalog-photo-mobile@2x.jpg 2x"
+                  alt="Фотография дороги на фоне заката.">
+              </picture>
+            </a>
           </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
@@ -118,15 +123,17 @@
         </li>
         <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/forest-with-road-catalog-photo-desktop.jpg 1x, img/forest-with-road-catalog-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/forest-with-road-catalog-photo-tablet.jpg 1x, img/forest-with-road-catalog-photo-tablet@2x.jpg 2x">
-              <img class="catalog-photos__item-photo" src="img/forest-with-road-catalog-photo-mobile.jpg" width="280"
-                srcset="img/forest-with-road-catalog-photo-mobile@2x.jpg 2x" height="280"
-                alt="Фотография дороги на фоне заката.">
-            </picture>
+            <a class="catalog-photos__item-photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/forest-with-road-catalog-photo-desktop.jpg 1x, img/forest-with-road-catalog-photo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/forest-with-road-catalog-photo-tablet.jpg 1x, img/forest-with-road-catalog-photo-tablet@2x.jpg 2x">
+                <img class="catalog-photos__item-photo" src="img/forest-with-road-catalog-photo-mobile.jpg" width="280"
+                  srcset="img/forest-with-road-catalog-photo-mobile@2x.jpg 2x" height="280"
+                  alt="Фотография дороги на фоне заката.">
+              </picture>
+            </a>
           </div>
           <div class="catalog-photos__item-description-wrap catalog-photos__item-description-wrap--color">
             <div class="catalog-photos__item-description">
@@ -142,14 +149,17 @@
         </li>
         <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/bridge-catalog-photo-desktop.jpg 1x, img/bridge-catalog-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/bridge-catalog-photo-tablet.jpg 1x, img/bridge-catalog-photo-tablet@2x.jpg 2x">
-              <img class="catalog-photos__item-photo" src="img/bridge-catalog-photo-mobile.jpg" width="280" height="280"
-                srcset="img/bridge-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
-            </picture>
+            <a class="catalog-photos__item-photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/bridge-catalog-photo-desktop.jpg 1x, img/bridge-catalog-photo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/bridge-catalog-photo-tablet.jpg 1x, img/bridge-catalog-photo-tablet@2x.jpg 2x">
+                <img class="catalog-photos__item-photo" src="img/bridge-catalog-photo-mobile.jpg" width="280"
+                  height="280" srcset="img/bridge-catalog-photo-mobile@2x.jpg 2x"
+                  alt="Фотография дороги на фоне заката.">
+              </picture>
+            </a>
           </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
