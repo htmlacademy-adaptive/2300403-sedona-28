@@ -160,27 +160,29 @@
     </section>
   </main>
   <!-- Всплывающее окно об отправке формы -->
-  <div class="modal-window modal-window--form-accepted modal-window--disable">
-    <div class="modal-window__text-wrap">
-      <b class="modal-window__title">Ваш отзыв отправлен!</b>
-      <p class="modal-window__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время
-        мы опубликуем его на сайте.</p>
-    </div>
-    <div class="modal-window__button-wrap">
-      <button class="modal-window__button" type="button">Закрыть окно</button>
+  <div class="modal-wrap ">
+    <div class="modal-wrap__content">
+      <div class="modal-wrap__content-text-wrap">
+        <b class="modal-wrap__content-title">Ваш отзыв отправлен!</b>
+        <p class="modal-wrap__content-text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
+          опубликуем его на сайте.</p>
+      </div>
+      <div class="modal-wrap__content-button-wrap">
+        <button class="modal-wrap__content-button">Закрыть окно</button>
+      </div>
     </div>
   </div>
   <!-- Всплывающее окно об ощибке -->
-  <div class="modal-window modal-window--form-error modal-window--disable">
-    <div class="modal-window__text-wrap modal-window__text-wrap--form-error">
-      <b class="modal-window__title modal-window__title--form-error">Что-то пошло
-        не так!</b>
-      <p class="modal-window__text modal-window__text--form-error">Проверьте поля, выделенные красным, скорее всего вы
-        забыли их заполнить
-      </p>
-    </div>
-    <div class="modal-window__button-wrap modal-window__button-wrap--form-error">
-      <button class="modal-window__button modal-window__button--form-error" type="button">Ок</button>
+  <div class="modal-wrap modal-wrap--disable">
+    <div class="modal-wrap__content modal-wrap__content--error-window">
+      <div class="modal-wrap__content-text-wrap modal-wrap__content-text-wrap--error-window">
+        <b class="modal-wrap__content-title modal-wrap__content-title--error-window">Что-то пошло не так!</b>
+        <p class="modal-wrap__content-text modal-wrap__content-text--error-window">Проверьте поля, выделенные красным,
+          скорее всего вы забыли их заполнить</p>
+      </div>
+      <div class="modal-wrap__content-button-wrap modal-wrap__content-button-wrap--error-window">
+        <button class="modal-wrap__content-button modal-wrap__content-button--error-window">Ок</button>
+      </div>
     </div>
   </div>
   <!-- Футер главной страницы -->
