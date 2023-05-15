@@ -14,7 +14,7 @@
 }
 
 .section-main-booking__button-title {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -28,10 +28,31 @@
   width: 284px;
   min-height: 58px;
   background-color: #81b3d2;
+
+  cursor: pointer;
+
+  // Состояния кнопки "Найти гостиницу"
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+
+    // Изменение цвета текста ссылки (псевдокнопки)
+    .section-main-booking__button-link {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 .section-main-booking__button-link {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -78,6 +99,11 @@
     background-image: url("../img/map-tablet.jpg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .section-main-booking__next-line-tablet::after {
+    content: "\A";
+    white-space: pre;
   }
 }
 

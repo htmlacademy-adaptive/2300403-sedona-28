@@ -11,15 +11,66 @@
   margin-bottom: 30px;
 }
 
+// Иконки социальных сетей
+// Фон иконок
 .socials-list__item-link {
   display: block;
   width: 48px;
   height: 48px;
+  background-color: #81b3d2;
+
+  // Иконка вКонтакте
+  &--vkontakte::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/stack.svg#vkontakte-icon");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  //Иконка Телеграм
+  &--telegram::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/stack.svg#telegram-icon");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  // Иконка ЮТуб
+  &--youtube::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/stack.svg#youtube-icon");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  // Состояния иконок при наведении и нажатии
+  // Фон иконок при наведении
+  &:hover {
+    background-color: #669ec0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  // Фон и иконка при нажатии
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &--vkontakte:active::before,
+  &--telegram:active::before,
+  &--youtube:active::before {
+    opacity: 0.3;
+  }
 }
 
-.footer__hashtag {
-  margin-bottom: 30px;
-}
 
 // Состояния иконок социальных сетей при наведении курсора
 .socials-list__item-image:hover .socials-list__item-image-background {
@@ -39,10 +90,6 @@
 
 @media (min-width: $tablet-width) {
   .socials-list {
-    margin: 0;
-  }
-
-  .footer__hashtag {
     margin: 0;
   }
 }

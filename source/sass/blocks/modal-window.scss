@@ -1,0 +1,185 @@
+.modal-wrap__accetped-window {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  &--disable {
+    display: none;
+  }
+}
+
+.modal-wrap__error-window {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  &--disable {
+    display: none;
+  }
+}
+
+.modal-wrap__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 320px;
+  min-height: 323px;
+  margin: auto;
+  background-color: #ffffff;
+
+  &--error-window {
+    min-height: 280px;
+  }
+}
+
+.modal-wrap__content-text-wrap {
+  width: 244px;
+  min-height: 162px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 27px;
+
+  &--error-window {
+    width: 237px;
+    min-height: 114px;
+  }
+}
+
+.modal-wrap__content-title {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.modal-wrap__content-text {
+  text-align: center;
+}
+
+// Перенос текста в мобильной версии
+.modal-wrap__content-text span::after {
+  content: "\A";
+  white-space: pre;
+}
+
+.modal-wrap__content-button-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  min-height: 98px;
+  background-color: #f2f2f2;
+
+  &--error-window {
+    width: auto;
+    min-height: auto;
+    background-color: transparent;
+    margin-bottom: 35px;
+  }
+}
+
+.modal-wrap__content-button {
+  width: 280px;
+  min-height: 58px;
+  background-color: #81b3d2;
+  border: none;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+
+  &--error-window {
+    width: 180px;
+  }
+
+  // Состояния кнопки "Закрыть окно"
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal-wrap__content {
+    width: 640px;
+    min-height: 347px;
+
+    &--error-window {
+      width: 400px;
+      min-height: 347px;
+    }
+  }
+
+  .modal-wrap__content-text-wrap {
+    width: 444px;
+    min-height: 120px;
+
+    &--error-window {
+      text-align: center;
+      width: 307px;
+      min-height: 188px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .modal-wrap__content-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 26px;
+    margin-bottom: 29px;
+
+    &--error-window {
+      line-height: 40px;
+    }
+  }
+
+  // Перенос текста в планшетной версии
+  .modal-wrap__content-title span::after {
+    content: "\A";
+    white-space: pre;
+  }
+
+  .modal-wrap__content-button-wrap {
+    width: 640px;
+    min-height: 146px;
+
+    &--error-window {
+      width: 400px;
+      min-height: auto;
+      margin-bottom: 49px;
+    }
+  }
+
+  .modal-wrap__content-button {
+    width: 458px;
+
+    &--error-window {
+      width: 272px;
+    }
+  }
+}

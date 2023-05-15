@@ -9,6 +9,8 @@
   <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/source/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/source/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -24,12 +26,15 @@
     <nav class="page-header-navigation page-header-navigation--opened page-header-navigation--nojs">
       <button class="page-header__menu-button" type="button"></button>
       <ol class="page-header__menu-list">
-        <li class="page-header__menu-item"><a class="page-header__menu-link page-header__menu-link--active">Главная</a>
+        <li class="page-header__menu-item page-header__menu-item--condition"><a
+            class="page-header__menu-link page-header__menu-link--active">Главная</a>
         </li>
-        <li class="page-header__menu-item page-header__menu-item--indent"><a class="page-header__menu-link"
-            href="catalog.html">Фото и видео</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="form.html">Форма Отзыва</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition page-header__menu-item--indent"><a
+            class="page-header__menu-link" href="catalog.html">Фото и видео</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition"><a class="page-header__menu-link"
+            href="form.html">Форма Отзыва</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition"><a class="page-header__menu-link"
+            href="#">HTML Academy</a></li>
       </ol>
     </nav>
   </header>
@@ -41,10 +46,10 @@
       <div class="welcome-images">
         <!-- Текст с цитатой в виде изображения -->
         <ul class="welcome-images__list welcome-images__list--standart-position">
-          <li class="welcome-images__item welcome-images__welcome-image"><span class="">Welcome to the
+          <li class="welcome-images__item welcome-images__welcome-image"><span class="visually-hidden">Welcome to the
               gorgeous</span></li>
-          <li class="welcome-images__item welcome-images__sedona-image"><span class="">Sedona</span></li>
-          <li class="welcome-images__item welcome-images__quote-image "><span class="">"Because the Grand
+          <li class="welcome-images__item welcome-images__sedona-image"><span class="visually-hidden">Sedona</span></li>
+          <li class="welcome-images__item welcome-images__quote-image "><span class="visually-hidden">"Because the Grand
               Canyon
               sucks!"</span></li>
         </ul>
@@ -68,7 +73,8 @@
               <b class="page-advantages__item-bold-text page-advantages__item-bold-text--white-color">Настоящий
                 городок</b>
               <p class="page-advantages__item-text">— №1 —</p>
-              <p class="page-advantages__item-text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+              <p class="page-advantages__item-text">Седона не аттракцион для туристов,<span
+                  class="page-advantages__next-line-desktop"></span> там течет своя жизнь</p>
             </div>
             <picture>
               <source media="(min-width: 1200px)"
@@ -95,7 +101,8 @@
             <li class="page-advantages__sub-item page-advantages__sub-item--box">
               <!-- Иконка подарочной коробки перед "Сувениры" -->
               <b class="page-advantages__sub-item-title page-advantages__sub-item-title--image">Сувениры</b>
-              <p class="page-advantages__sub-item-text">Не только китайского, но и местного производства!</p>
+              <p class="page-advantages__sub-item-text">Не только китайского,<span
+                  class="page-advantages__next-line-desktop"></span> но и местного производства!</p>
             </li>
           </ul>
         </li>
@@ -127,7 +134,8 @@
             <li class="page-advantages__more-about-item">
               <b class="page-advantages__item-bold-text">Красивая дорога</b>
               <p class="page-advantages__item-text">— №4 —</p>
-              <p class="page-advantages__item-text">Ехать в седону из лас-вегаса совсем не скучно!</p>
+              <p class="page-advantages__item-text">Ехать в седону из лас-вегаса совсем<span
+                  class="page-advantages__next-line-tablet"></span> не скучно!</p>
             </li>
             <li class="page-advantages__more-about-item">
               <b class="page-advantages__item-bold-text">Мало туристов</b>
@@ -144,7 +152,8 @@
       <!-- Блок бронирования -->
       <div class="section-main-booking__button-wrap">
         <b class="section-main-booking__button-title">Заинтересовались?</b>
-        <p class="section-main-booking__button-description">Укажите предполагаемые даты поездки,
+        <p class="section-main-booking__button-description">Укажите предполагаемые даты поездки,<span
+            class="section-main-booking__next-line-tablet"></span>
           и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <div class="section-main-booking__button">
           <a class="section-main-booking__button-link" href="#">Найти
@@ -180,8 +189,9 @@
       </li>
     </ul>
     <div class="footer-developer-information">
-      <a class="footer-developer-information__link" href="#">
+      <a class="footer-developer-information__link" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="footer-developer-information__text">Разработано</p>
+        <span class="visually-hidden">Логотип HTML Academy</span>
         <svg width="29" height="35">
           <use href="img/stack.svg#htmlacademy"></use>
         </svg>
