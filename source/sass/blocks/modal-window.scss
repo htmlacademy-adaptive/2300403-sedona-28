@@ -1,17 +1,31 @@
-// Начало нового
-.modal-wrap {
+.modal-wrap__accetped-window {
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
+
+  &--disable {
+    display: none;
+  }
 }
 
-.modal-wrap--disable {
-  display: none;
+.modal-wrap__error-window {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  &--disable {
+    display: none;
+  }
 }
 
 .modal-wrap__content {
