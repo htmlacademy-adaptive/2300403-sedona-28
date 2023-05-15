@@ -11,8 +11,6 @@
   border-top: solid 1px #e5e5e5;
 }
 
-//
-//
 // Настройки элемента "Представьтесь"
 .feedback-form__introduce {
   border: none;
@@ -36,12 +34,17 @@
   margin: 0;
 }
 
+.feedback-form__introduce-item {
+  display: flex;
+  flex-direction: column;
+}
+
 .feedback-form__introduce-label {
   padding-left: 16px;
 }
 
 .feedback-form__introduce-input::placeholder {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -49,15 +52,28 @@
 }
 
 .feedback-form__introduce-input {
-  border: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  border: solid 4px #f2f2f2;
   background-color: #f2f2f2;
-  width: 248px;
-  height: 26px;
+  width: 240px;
+  height: 18px;
   padding: 16px;
+
+  &:hover {
+    border: solid 4px #e5e5e5;
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
+  }
 }
 
-//
-//
 // Настройки элемента "Контактная информация"
 .feedback-form__contacts {
   border: none;
@@ -80,6 +96,11 @@
   margin: 0;
 }
 
+.feedback-form__contacts-item {
+  display: flex;
+  flex-direction: column;
+}
+
 // Иконка формы ввода телефона
 .feedback-form__contacts-input--phone {
   background-image: url("../img/stack.svg#phone-icon");
@@ -100,7 +121,20 @@
   padding-left: 16px;
 }
 
+// Убираем стрелочки в полеввода
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* stylelint-disable-next-line */
+  -webkit-appearance: none;
+}
+
 .feedback-form__contacts-input {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+
   border: none;
   background-color: #f2f2f2;
   width: 190px;
@@ -108,6 +142,10 @@
   padding: 16px;
   padding-right: 74px;
   position: relative;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
 }
 
 .feedback-form__contacts-input::placeholder {
@@ -118,15 +156,12 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
-//
-//
 // Настройки элемента "Ваше общее впечатление"
 .feedback-form__impression {
   width: 280px;
   display: flex;
   flex-direction: column;
   align-items: start;
-
   border: none;
   padding: 20px;
   position: relative;
@@ -166,7 +201,6 @@
   width: 218px;
   padding-left: 62px;
   position: relative;
-
   line-height: 26px;
   font-weight: 700;
   font-size: 18px;
@@ -184,6 +218,14 @@
   border-radius: 50%;
 }
 
+.feedback-form__impression-label:hover::before {
+  background-color: #e5e5e5;
+}
+
+.feedback-form__impression-label:active::before {
+  background-color: #d5d5d5;
+}
+
 .feedback-form__impression-input:checked ~ .feedback-form__impression-label::after {
   position: absolute;
   left: 15px;
@@ -194,15 +236,16 @@
   border-radius: 50%;
 }
 
-//
-//
+.feedback-form__impression-input:checked ~ .feedback-form__impression-label:active::after {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
 // Настройки элемента "Посещенные достопремечательности"
 .feedback-form__attractions {
   width: 280px;
   display: flex;
   flex-direction: column;
   align-items: start;
-
   border: none;
   padding: 20px;
   position: relative;
@@ -242,7 +285,6 @@
   min-height: 46px;
   padding-left: 62px;
   position: relative;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -260,16 +302,27 @@
   border-radius: 4px;
 }
 
+.feedback-form__attractions-label:hover::before {
+  background-color: #e5e5e5;
+}
+
+
 .feedback-form__attractions-input:checked ~ .feedback-form__attractions-label::after {
   position: absolute;
   left: 13px;
-  content: url("../img/tick.svg");
+  content: "";
   width: 22px;
   height: 16px;
+  background-image: url("../img/stack.svg#tick");
+  background-repeat: no-repeat;
+  background-size: 22px 16px;
+  background-position: center;
 }
 
-//
-//
+.feedback-form__attractions-input:checked ~ .feedback-form__attractions-label:active::after {
+  opacity: 0.3;
+}
+
 // Настройки элемента "Опишите свои эмоции"
 .feedback-form__description {
   border: none;
@@ -289,24 +342,31 @@
 }
 
 .feedback-form__description-input {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
   border: none;
   background-color: #f2f2f2;
   width: 248px;
   min-height: 118px;
   padding: 16px;
   resize: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
 }
 
 .feedback-form__description-input::placeholder {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-//
-//
 // Настройки элемента "Кнопка: Отправить отзыв"
 .feedback-form__button {
   min-width: 280px;
@@ -314,21 +374,33 @@
   background-color: #81b3d2;
   border: none;
   padding: 0;
-
   text-transform: uppercase;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: #ffffff;
+  cursor: pointer;
+
+  // Состояния кнопки "Отправить отзыв"
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
-//
-//
 // Настройки элемента "Кнопка: Отправить отзыв"
 .feedback-form__required-field-text {
   align-self: end;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
@@ -533,12 +605,10 @@
   }
 
   .feedback-form__button {
-    grid-area: 4/1/5/2;
     align-self: end;
   }
 
   .feedback-form__required-field-text {
-    grid-area: 4/2/5/3;
     align-self: end;
     justify-self: end;
   }
@@ -572,7 +642,7 @@
   }
 
   .feedback-form__introduce-input {
-    width: 398px;
+    width: 390px;
   }
 
   // Настройки элемента "Контактная информация" на десктопе

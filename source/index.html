@@ -9,6 +9,8 @@
   <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/source/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/source/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -24,12 +26,15 @@
     <nav class="page-header-navigation page-header-navigation--opened page-header-navigation--nojs">
       <button class="page-header__menu-button" type="button"></button>
       <ol class="page-header__menu-list">
-        <li class="page-header__menu-item"><a class="page-header__menu-link page-header__menu-link--active">Главная</a>
+        <li class="page-header__menu-item page-header__menu-item--condition"><a
+            class="page-header__menu-link page-header__menu-link--active">Главная</a>
         </li>
-        <li class="page-header__menu-item page-header__menu-item--indent"><a class="page-header__menu-link"
-            href="catalog.html">Фото и видео</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="form.html">Форма Отзыва</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition page-header__menu-item--indent"><a
+            class="page-header__menu-link" href="catalog.html">Фото и видео</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition"><a class="page-header__menu-link"
+            href="form.html">Форма Отзыва</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition"><a class="page-header__menu-link"
+            href="#">HTML Academy</a></li>
       </ol>
     </nav>
   </header>
@@ -180,8 +185,9 @@
       </li>
     </ul>
     <div class="footer-developer-information">
-      <a class="footer-developer-information__link" href="#">
+      <a class="footer-developer-information__link" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="footer-developer-information__text">Разработано</p>
+        <span class="visually-hidden">Логотип HTML Academy</span>
         <svg width="29" height="35">
           <use href="img/stack.svg#htmlacademy"></use>
         </svg>

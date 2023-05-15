@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #81b3d2;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -48,7 +48,7 @@
 }
 
 .page-advantages__item-bold-text {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -61,17 +61,11 @@
 }
 
 .page-advantages__sub-item-title {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
-}
-
-.page-advantages__sub-item-text {
-  br {
-    display: none;
-  }
 }
 
 .page-advantages__sub-list {
@@ -205,7 +199,6 @@
   }
 
   .page-advantages__sub-item {
-    // min-height: ;
     width: 190px;
     min-height: 211px;
     display: flex;
@@ -305,7 +298,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 190px;
     min-height: 174px;
     border-bottom: none;
@@ -344,7 +336,6 @@
     }
 
     .page-advantages__item-photo {
-
       height: 256px;
       grid-area: 1/2/4/4;
     }
@@ -375,7 +366,6 @@
       width: 300px;
       margin: 14px auto;
     }
-
 
     &--box .page-advantages__sub-item-text {
       width: 300px;
@@ -444,7 +434,7 @@
   .page-advantages__more-about-list {
     width: 1200px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
   }
 
   .page-advantages__more-about-item {

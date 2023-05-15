@@ -9,6 +9,8 @@
   <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/source/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/source/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -16,7 +18,7 @@
   <!-- Хедер страницы каталога с навигацией -->
   <header class="page-header">
     <h1 class="visually-hidden">Информационно-туристический ресурс города Седона, штат Аризона, США.</h1>
-    <a class="page-header__logo" href="#">
+    <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип города Седона.">
     </a>
     <!-- Состояния открытого (модификатор opened) и закрытого (модификатор closed) меню  -->
@@ -24,11 +26,14 @@
     <nav class="page-header-navigation page-header-navigation--opened page-header-navigation--nojs">
       <button class="page-header__menu-button" type="button"></button>
       <ol class="page-header__menu-list">
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="index.html">Главная</a></li>
-        <li class="page-header__menu-item page-header__menu-item--indent"><a
+        <li class="page-header__menu-item page-header__menu-item--condition"><a class="page-header__menu-link"
+            href="index.html">Главная</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition page-header__menu-item--indent"><a
             class="page-header__menu-link page-header__menu-link--active">Фото и видео</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="form.html">Форма Отзыва</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition"><a class="page-header__menu-link"
+            href="form.html">Форма Отзыва</a></li>
+        <li class="page-header__menu-item page-header__menu-item--condition"><a class="page-header__menu-link"
+            href="#">HTML Academy</a></li>
       </ol>
     </nav>
   </header>
@@ -59,22 +64,24 @@
       <ul class="catalog-photos__list">
         <li class="catalog-photos__item catalog-photos__item--big-image">
           <div class="catalog-photos__item-photo-wrap">
-            <picture>
-              <!-- WebP изображения -->
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/road-catalog-photo-desktop.webp, img/road-catalog-photo-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/road-catalog-photo-tablet.webp, img/road-catalog-photo-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="img/road-catalog-photo-mobile.webp, img/road-catalog-photo-mobile@2x.webp 2x">
-              <!-- JPEG изображения -->
-              <source media="(min-width: 1200px)"
-                srcset="img/road-catalog-photo-desktop.jpg 1x, img/road-catalog-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/road-catalog-photo-tablet.jpg 1x, img/road-catalog-photo-tablet@2x.jpg 2x">
-              <img class="catalog-photos__item-photo" src="img/road-catalog-photo-mobile.jpg" width="280" height="280"
-                srcset="img/road-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
-            </picture>
+            <a class="catalog-photos__item-photo-link" href="#">
+              <picture>
+                <!-- WebP изображения -->
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/road-catalog-photo-desktop.webp, img/road-catalog-photo-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/road-catalog-photo-tablet.webp, img/road-catalog-photo-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/road-catalog-photo-mobile.webp, img/road-catalog-photo-mobile@2x.webp 2x">
+                <!-- JPEG изображения -->
+                <source media="(min-width: 1200px)"
+                  srcset="img/road-catalog-photo-desktop.jpg 1x, img/road-catalog-photo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/road-catalog-photo-tablet.jpg 1x, img/road-catalog-photo-tablet@2x.jpg 2x">
+                <img class="catalog-photos__item-photo" src="img/road-catalog-photo-mobile.jpg" width="280" height="280"
+                  srcset="img/road-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
+              </picture>
+            </a>
           </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
@@ -90,14 +97,17 @@
         </li>
         <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/cactus-catalog-photo-desktop.jpg 1x, img/cactus-catalog-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/cactus-catalog-photo-tablet.jpg 1x, img/cactus-catalog-photo-tablet@2x.jpg 2x">
-              <img class="catalog-photos__item-photo" src="img/cactus-catalog-photo-mobile.jpg" width="280" height="280"
-                srcset="img/cactus-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
-            </picture>
+            <a class="catalog-photos__item-photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/cactus-catalog-photo-desktop.jpg 1x, img/cactus-catalog-photo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/cactus-catalog-photo-tablet.jpg 1x, img/cactus-catalog-photo-tablet@2x.jpg 2x">
+                <img class="catalog-photos__item-photo" src="img/cactus-catalog-photo-mobile.jpg" width="280"
+                  height="280" srcset="img/cactus-catalog-photo-mobile@2x.jpg 2x"
+                  alt="Фотография дороги на фоне заката.">
+              </picture>
+            </a>
           </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
@@ -113,15 +123,17 @@
         </li>
         <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/forest-with-road-catalog-photo-desktop.jpg 1x, img/forest-with-road-catalog-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/forest-with-road-catalog-photo-tablet.jpg 1x, img/forest-with-road-catalog-photo-tablet@2x.jpg 2x">
-              <img class="catalog-photos__item-photo" src="img/forest-with-road-catalog-photo-mobile.jpg" width="280"
-                srcset="img/forest-with-road-catalog-photo-mobile@2x.jpg 2x" height="280"
-                alt="Фотография дороги на фоне заката.">
-            </picture>
+            <a class="catalog-photos__item-photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/forest-with-road-catalog-photo-desktop.jpg 1x, img/forest-with-road-catalog-photo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/forest-with-road-catalog-photo-tablet.jpg 1x, img/forest-with-road-catalog-photo-tablet@2x.jpg 2x">
+                <img class="catalog-photos__item-photo" src="img/forest-with-road-catalog-photo-mobile.jpg" width="280"
+                  srcset="img/forest-with-road-catalog-photo-mobile@2x.jpg 2x" height="280"
+                  alt="Фотография дороги на фоне заката.">
+              </picture>
+            </a>
           </div>
           <div class="catalog-photos__item-description-wrap catalog-photos__item-description-wrap--color">
             <div class="catalog-photos__item-description">
@@ -137,14 +149,17 @@
         </li>
         <li class="catalog-photos__item catalog-photos__item--standart-image">
           <div class="catalog-photos__item-photo-wrap">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/bridge-catalog-photo-desktop.jpg 1x, img/bridge-catalog-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/bridge-catalog-photo-tablet.jpg 1x, img/bridge-catalog-photo-tablet@2x.jpg 2x">
-              <img class="catalog-photos__item-photo" src="img/bridge-catalog-photo-mobile.jpg" width="280" height="280"
-                srcset="img/bridge-catalog-photo-mobile@2x.jpg 2x" alt="Фотография дороги на фоне заката.">
-            </picture>
+            <a class="catalog-photos__item-photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/bridge-catalog-photo-desktop.jpg 1x, img/bridge-catalog-photo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/bridge-catalog-photo-tablet.jpg 1x, img/bridge-catalog-photo-tablet@2x.jpg 2x">
+                <img class="catalog-photos__item-photo" src="img/bridge-catalog-photo-mobile.jpg" width="280"
+                  height="280" srcset="img/bridge-catalog-photo-mobile@2x.jpg 2x"
+                  alt="Фотография дороги на фоне заката.">
+              </picture>
+            </a>
           </div>
           <div class="catalog-photos__item-description-wrap">
             <div class="catalog-photos__item-description">
@@ -201,8 +216,9 @@
       </li>
     </ul>
     <div class="footer-developer-information">
-      <a class="footer-developer-information__link" href="#">
+      <a class="footer-developer-information__link" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="footer-developer-information__text">Разработано</p>
+        <span class="visually-hidden">Логотип HTML Academy</span>
         <svg width="29" height="35">
           <use href="img/stack.svg#htmlacademy"></use>
         </svg>
