@@ -87,6 +87,11 @@
   .page-intro__text {
     width: 492px;
   }
+
+  .page-intro__next-line-tablet::after {
+    content: "\A";
+    white-space: pre;
+  }
 }
 
 @media (min-width: $desktop-width) {
