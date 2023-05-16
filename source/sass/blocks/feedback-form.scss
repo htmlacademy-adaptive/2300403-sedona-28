@@ -6,6 +6,20 @@
   align-items: center;
 }
 
+// Состояния input при :focus
+input:focus {
+  outline: none;
+  border: solid 4px #e5e5e5;
+  background-color: #ffffff;
+}
+
+// Состояния textarea при :focus
+textarea:focus {
+  outline: none;
+  border: solid 4px #e5e5e5;
+  background-color: #ffffff;
+}
+
 // Декоративная серая полоса
 .feedback-form > fieldset {
   border-top: solid 1px #e5e5e5;
@@ -101,24 +115,37 @@
   flex-direction: column;
 }
 
-// Иконка формы ввода телефона
-.feedback-form__contacts-input--phone {
+.feedback-form__contacts-label {
+  padding-left: 16px;
+}
+
+// Иконка формы ввода телефона, позиция на смартфоне
+.feedback-form__phone-icon {
+  content: "";
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  top: 67px;
+  right: 20px;
   background-image: url("../img/stack.svg#phone-icon");
   background-repeat: no-repeat;
   background-size: 58px;
   background-position: right;
 }
 
-// Иконка формы ввода email
-.feedback-form__contacts-input--email {
+
+// Иконка формы ввода email, позиция на смартфоне
+.feedback-form__email-icon {
+  content: "";
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  top: 146px;
+  right: 20px;
   background-image: url("../img/stack.svg#mail-icon");
   background-repeat: no-repeat;
-  background-position: right;
   background-size: 58px;
-}
-
-.feedback-form__contacts-label {
-  padding-left: 16px;
+  background-position: right;
 }
 
 // Убираем стрелочки в полеввода
@@ -135,16 +162,22 @@ input::-webkit-inner-spin-button {
   line-height: 26px;
   color: #000000;
 
-  border: none;
+  border: solid 4px #f2f2f2;
   background-color: #f2f2f2;
-  width: 190px;
-  height: 26px;
+  width: 182px;
+  height: 18px;
   padding: 16px;
   padding-right: 74px;
   position: relative;
 
   &:hover {
+    border: solid 4px #e5e5e5;
     background-color: #e5e5e5;
+  }
+
+  &:active {
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
   }
 }
 
@@ -347,15 +380,21 @@ input::-webkit-inner-spin-button {
   font-size: 18px;
   line-height: 26px;
   color: #000000;
-  border: none;
+  border: solid 4px #f2f2f2;
   background-color: #f2f2f2;
-  width: 248px;
-  min-height: 118px;
+  width: 240px;
+  min-height: 110px;
   padding: 16px;
   resize: none;
 
   &:hover {
+    border: solid 4px #e5e5e5;
     background-color: #e5e5e5;
+  }
+
+  &:active {
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
   }
 }
 
@@ -461,6 +500,18 @@ input::-webkit-inner-spin-button {
   .feedback-form__contacts-legend {
     font-size: 21px;
     line-height: 26px;
+  }
+
+  // Позиционирование иконки телефона на планшете
+  .feedback-form__phone-icon {
+    top: 47px;
+    right: 0;
+  }
+
+  // Позиционирование иконки email на планшете
+  .feedback-form__email-icon {
+    top: 126px;
+    right: 0;
   }
 
   // Декоративная гоирзонтальная серая полоса слева от "Впечатления"
@@ -600,8 +651,8 @@ input::-webkit-inner-spin-button {
   }
 
   .feedback-form__description-input {
-    width: 616px;
-    height: 128px;
+    width: 608px;
+    min-height: 120px;
   }
 
   .feedback-form__button {
@@ -653,6 +704,18 @@ input::-webkit-inner-spin-button {
 
   .feedback-form__contacts-input {
     width: 312px;
+  }
+
+  // Позиционирование иконки телефона на десктопе
+  .feedback-form__phone-icon {
+    top: 47px;
+    right: 0;
+  }
+
+  // Позиционирование иконки email на десктопе
+  .feedback-form__email-icon {
+    top: 126px;
+    right: 0;
   }
 
   // Декоративная гоирзонтальная серая полоса слева от "Впечатления"
@@ -763,8 +826,8 @@ input::-webkit-inner-spin-button {
   }
 
   .feedback-form__description-input {
-    width: 736px;
-    height: 128px;
+    width: 728px;
+    min-height: 120px;
   }
 
   .feedback-form__button {
