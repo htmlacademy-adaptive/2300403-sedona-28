@@ -663,6 +663,11 @@ input::-webkit-inner-spin-button {
     align-self: end;
     justify-self: end;
   }
+
+  .feedback-form__next-line-tablet::after {
+    content: "\A";
+    white-space: pre;
+  }
 }
 
 // Вид на десктопе
