@@ -110,10 +110,12 @@
 
   .page-header__menu-item {
     display: flex;
-    min-width: 320px;
     justify-content: center;
     align-items: center;
-    min-height: 55px;
+    min-width: 320px;
+    min-height: 26px;
+    padding-top: 17px;
+    padding-bottom: 12px;
     margin-bottom: 1px;
     box-shadow: 0 1px 0 #01010133, inset 0 1px 0 #ffffff33;
 
