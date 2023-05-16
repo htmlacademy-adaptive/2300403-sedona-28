@@ -212,6 +212,7 @@
     min-width: 153px;
     min-height: 56px;
     box-shadow: none;
+    padding: 0;
   }
 
   // Отступ у второго элемента меню в планшетной версии
@@ -224,6 +225,8 @@
     font-size: 14px;
     line-height: 21px;
     padding: 15px;
+    padding-top: 18px;
+    padding-left: 17px;
   }
 
   // Состояния элементов меню, версия для планшета

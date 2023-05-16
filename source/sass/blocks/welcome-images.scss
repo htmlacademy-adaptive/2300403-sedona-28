@@ -19,7 +19,7 @@
 .welcome-images__list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -42,20 +42,24 @@
   content: url("../img/stack.svg#welcome-icon");
   width: 157px;
   height: 52px;
+  margin-bottom: 31.38px;
 }
 
 // Изображение "SEDONA"
 .welcome-images__sedona-image {
   content: url("../img/stack.svg#sedona-icon");
   width: 282px;
-  height: 49px;
+  height: 48.8px;
+  margin-bottom: 33.64px;
 }
 
 // Изображение "BECAUSE THE GRAND CANYON SUCKS!"
 .welcome-images__quote-image {
   content: url("../img/stack.svg#because-the-grand-canyon-sucks-icon");
-  width: 173px;
-  height: 46px;
+  width: 180.31px;
+  height: 48.47px;
+  align-self: start;
+  padding-left: 45px;
 }
 
 // Вид на планшете
