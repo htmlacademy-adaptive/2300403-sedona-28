@@ -35,12 +35,14 @@
   justify-content: end;
   align-items: center;
   width: 320px;
-  min-height: 323px;
+  min-height: 287px;
   margin: auto;
   background-color: #ffffff;
+  padding-top: 36px;
 
   &--error-window {
-    min-height: 280px;
+    min-height: 235px;
+    padding-top: 45px;
   }
 }
 
@@ -127,11 +129,13 @@
 @media (min-width: $tablet-width) {
   .modal-wrap__content {
     width: 640px;
-    min-height: 347px;
+    min-height: 295px;
+    padding-top: 52px;
 
     &--error-window {
       width: 400px;
-      min-height: 347px;
+      min-height: 309px;
+      padding-top: 38px;
     }
   }
 
