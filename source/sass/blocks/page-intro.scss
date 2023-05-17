@@ -12,6 +12,10 @@
   align-items: center;
   padding-top: 34px;
 
+  &--catalog-position {
+    padding-top: 38px;
+  }
+
   &--form-position {
     padding-top: 37px;
   }
@@ -29,6 +33,10 @@
   width: 284px;
   padding: 0 14px;
 
+  &--catalog-position {
+    margin-bottom: 25px;
+  }
+
   &--form-position {
     margin-bottom: 25px;
   }
@@ -44,6 +52,10 @@
   margin-bottom: 16px;
   width: 284px;
   padding: 0 14px;
+
+  &--catalog-position {
+    margin-bottom: 36px;
+  }
 
   &--form-position {
     margin-bottom: 26px;
@@ -93,6 +105,10 @@
   .page-intro__text-wrap {
     padding-top: 48px;
 
+    &--catalog-position {
+      padding-top: 67px;
+    }
+
     &--form-position {
       padding-top: 63px;
     }
@@ -103,6 +119,14 @@
     font-size: 21px;
     line-height: 26px;
     margin-bottom: 30px;
+
+    // Модификатор стиля на странице каталога
+    &--catalog-size {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 26px;
+      margin-bottom: 32px;
+    }
 
     // Модификатор стиля на странице формы
     &--form-size {
@@ -118,6 +142,10 @@
   .page-intro__text {
     width: 492px;
     margin-bottom: 54px;
+
+    &--catalog-position {
+      margin-bottom: 80px;
+    }
 
     &--form-position {
       margin-bottom: 108px;
@@ -145,6 +173,10 @@
   .page-intro__text-wrap {
     padding-top: 60px;
 
+    &--catalog-position {
+      padding-top: 97px;
+    }
+
     &--form-position {
       padding-top: 114px;
     }
@@ -158,6 +190,10 @@
 
   .page-intro__text {
     margin-bottom: 42px;
+
+    &--catalog-position {
+      margin-bottom: 88px;
+    }
 
     &--form-position {
       margin-bottom: 68px;
