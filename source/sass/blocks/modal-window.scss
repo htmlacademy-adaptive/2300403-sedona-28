@@ -37,7 +37,7 @@
   width: 320px;
   margin: auto;
   background-color: #ffffff;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
   &--accepted-window {
     min-height: 287px;
@@ -46,7 +46,7 @@
 
   &--error-window {
     min-height: 200px;
-    padding: 45px 42px 35px 41px
+    padding: 45px 42px 35px 41px;
   }
 }
 
