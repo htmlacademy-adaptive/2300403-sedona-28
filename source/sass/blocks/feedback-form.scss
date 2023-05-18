@@ -6,19 +6,7 @@
   align-items: center;
 }
 
-// Состояния input при :focus
-input:focus {
-  outline: none;
-  border: solid 4px #e5e5e5;
-  background-color: #ffffff;
-}
 
-// Состояния textarea при :focus
-textarea:focus {
-  outline: none;
-  border: solid 4px #e5e5e5;
-  background-color: #ffffff;
-}
 
 // Декоративная серая полоса
 .feedback-form > fieldset {
@@ -79,6 +67,13 @@ textarea:focus {
   padding: 12px;
   width: 248px;
   height: 26px;
+
+  // Состояния input при :focus
+  &:focus {
+    outline: none;
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
+  }
 
   &--margin {
     margin-bottom: 16px;
@@ -178,6 +173,12 @@ input::-webkit-inner-spin-button {
   padding: 12px;
   padding-right: 74px;
   position: relative;
+
+  &:focus {
+    outline: none;
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
+  }
 
   &--margin {
     margin-bottom: 16px;
@@ -408,6 +409,13 @@ input::-webkit-inner-spin-button {
   min-height: 117px;
   padding: 12px;
   resize: none;
+
+  // Состояния textarea при :focus
+  &:focus {
+    outline: none;
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
+  }
 
   &:hover {
     border: solid 4px #e5e5e5;
