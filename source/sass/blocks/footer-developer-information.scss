@@ -5,12 +5,22 @@
   align-items: center;
   text-decoration: none;
   min-width: 129px;
+  color: #000000;
+
+  // Состояние блока "Разработано" при наведении и нажатии
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
 
 .footer-developer-information__text {
   min-width: 89px;
   margin: 0;
   padding: 0;
-  color: #000000;
+  color: currentColor;
   margin-right: 12px;
 }
