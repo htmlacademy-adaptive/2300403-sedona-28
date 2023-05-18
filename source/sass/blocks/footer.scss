@@ -7,6 +7,10 @@
   &--index-position {
     padding-top: 42px;
   }
+
+  &--form-position {
+    padding-top: 56px;
+  }
 }
 
 .footer__hashtag {
@@ -47,6 +51,10 @@
     justify-content: space-between;
     padding: 76px 0 36px 0;
 
+    &--form-position {
+      padding-top: 97px;
+    }
+
     &--index-position {
       padding-top: 36px;
     }
@@ -61,6 +69,10 @@
   .footer {
     min-width: 960px;
     padding: 120px 120px 36px 120px;
+
+    &--form-position {
+      padding-top: 97px;
+    }
 
     &--index-position {
       padding-top: 37px;

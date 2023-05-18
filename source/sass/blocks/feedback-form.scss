@@ -29,6 +29,8 @@ textarea:focus {
 .feedback-form__introduce {
   border: none;
   padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 38px;
   position: relative;
 }
 
@@ -40,6 +42,7 @@ textarea:focus {
   text-align: center;
   display: block;
   padding: 0;
+  margin-bottom: 20px;
 }
 
 .feedback-form__introduce-list {
@@ -71,11 +74,15 @@ textarea:focus {
   font-size: 18px;
   line-height: 26px;
   color: #000000;
-  border: solid 4px #f2f2f2;
   background-color: #f2f2f2;
-  width: 240px;
-  height: 18px;
-  padding: 16px;
+  border: solid 4px #f2f2f2;
+  padding: 12px;
+  width: 248px;
+  height: 26px;
+
+  &--margin {
+    margin-bottom: 16px;
+  }
 
   &:hover {
     border: solid 4px #e5e5e5;
@@ -92,6 +99,8 @@ textarea:focus {
 .feedback-form__contacts {
   border: none;
   padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 33px;
   position: relative;
 }
 
@@ -102,6 +111,7 @@ textarea:focus {
   color: #000000;
   text-align: center;
   display: block;
+  margin-bottom: 20px;
 }
 
 .feedback-form__contacts-list {
@@ -125,7 +135,7 @@ textarea:focus {
   width: 58px;
   height: 58px;
   position: absolute;
-  top: 67px;
+  top: 92px;
   right: 20px;
   background-image: url("../img/stack.svg#phone-icon");
   background-repeat: no-repeat;
@@ -140,7 +150,7 @@ textarea:focus {
   width: 58px;
   height: 58px;
   position: absolute;
-  top: 146px;
+  top: 187px;
   right: 20px;
   background-image: url("../img/stack.svg#mail-icon");
   background-repeat: no-repeat;
@@ -161,14 +171,17 @@ input::-webkit-inner-spin-button {
   font-size: 18px;
   line-height: 26px;
   color: #000000;
-
   border: solid 4px #f2f2f2;
   background-color: #f2f2f2;
-  width: 182px;
-  height: 18px;
-  padding: 16px;
+  width: 186px;
+  height: 26px;
+  padding: 12px;
   padding-right: 74px;
   position: relative;
+
+  &--margin {
+    margin-bottom: 16px;
+  }
 
   &:hover {
     border: solid 4px #e5e5e5;
@@ -197,6 +210,8 @@ input::-webkit-inner-spin-button {
   align-items: start;
   border: none;
   padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 23px;
   position: relative;
   margin: 0;
 }
@@ -209,6 +224,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   display: block;
   align-self: center;
+  margin-bottom: 20px;
 }
 
 .feedback-form__impression-list {
@@ -281,6 +297,8 @@ input::-webkit-inner-spin-button {
   align-items: start;
   border: none;
   padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 23px;
   position: relative;
   margin: 0;
 }
@@ -293,6 +311,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   display: block;
   align-self: center;
+  margin-bottom: 20px;
 }
 
 .feedback-form__attractions-list {
@@ -360,6 +379,8 @@ input::-webkit-inner-spin-button {
 .feedback-form__description {
   border: none;
   padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 50px;
   position: relative;
   margin: 0;
 }
@@ -372,6 +393,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   display: block;
   align-self: center;
+  margin-bottom: 20px;
 }
 
 .feedback-form__description-input {
@@ -382,9 +404,9 @@ input::-webkit-inner-spin-button {
   color: #000000;
   border: solid 4px #f2f2f2;
   background-color: #f2f2f2;
-  width: 240px;
-  min-height: 110px;
-  padding: 16px;
+  width: 248px;
+  min-height: 117px;
+  padding: 12px;
   resize: none;
 
   &:hover {
@@ -420,6 +442,7 @@ input::-webkit-inner-spin-button {
   line-height: 26px;
   color: #ffffff;
   cursor: pointer;
+  margin-bottom: 3px;
 
   // Состояния кнопки "Отправить отзыв"
   &:hover {
@@ -445,6 +468,7 @@ input::-webkit-inner-spin-button {
   line-height: 21px;
   color: rgba(51, 51, 51, 0.6);
   padding-right: 20px;
+  margin: 0;
 }
 
 // Вид на планшете
@@ -487,6 +511,9 @@ input::-webkit-inner-spin-button {
   .feedback-form__introduce-legend {
     font-size: 21px;
     line-height: 26px;
+    text-align: end;
+    padding-right: 41px;
+    margin-bottom: 27px;
   }
 
   // Настройки элемента "Контактная информация" на планшете
@@ -495,23 +522,35 @@ input::-webkit-inner-spin-button {
     justify-self: end;
     padding: 0;
     margin: 0;
+    width: 298px;
   }
 
   .feedback-form__contacts-legend {
     font-size: 21px;
     line-height: 26px;
+    text-align: start;
+    padding-right: 2px;
+    margin-bottom: 27px;
+  }
+
+  .feedback-form__contacts-label {
+    padding-left: 33px;
+  }
+
+  .feedback-form__contacts-input {
+    align-self: end;
   }
 
   // Позиционирование иконки телефона на планшете
   .feedback-form__phone-icon {
-    top: 47px;
-    right: 0;
+    top: 74px;
+    right: 1px;
   }
 
   // Позиционирование иконки email на планшете
   .feedback-form__email-icon {
-    top: 126px;
-    right: 0;
+    top: 169px;
+    right: 1px;
   }
 
   // Декоративная гоирзонтальная серая полоса слева от "Впечатления"
@@ -541,6 +580,7 @@ input::-webkit-inner-spin-button {
     font-size: 21px;
     line-height: 26px;
     margin: 0 auto;
+    margin-bottom: 27px;
   }
 
   .feedback-form__impression {
@@ -554,7 +594,7 @@ input::-webkit-inner-spin-button {
       justify-self: center;
       align-self: center;
       grid-template-columns: 280px 280px;
-      grid-template-rows: 48px 48px;
+      grid-template-rows: 46px 46px;
       gap: 16px;
     }
   }
@@ -590,6 +630,8 @@ input::-webkit-inner-spin-button {
     font-size: 21px;
     line-height: 26px;
     margin: 0 auto;
+    margin-bottom: 28px;
+    padding-top: 2px;
   }
 
   .feedback-form__attractions {
@@ -603,15 +645,25 @@ input::-webkit-inner-spin-button {
     display: grid;
     justify-self: center;
     align-self: center;
-    grid-template-columns: 240px 240px;
+    grid-template-columns: 224px 224px;
     grid-template-rows: 46px 46px;
     row-gap: 16px;
+    column-gap: 32px;
   }
 
-  .feedback-form__attractions-item:not(:last-child) {
-    margin-bottom: 0;
+  .feedback-form__attractions-item {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 
+  .feedback-form__attractions-label {
+    width: 162px;
+    padding-left: 62px;
+    margin: 0;
+  }
 
   // Декоративная гоирзонтальная серая полоса слева от "Опишите свои эмоции"
   .feedback-form__description::before {
@@ -640,6 +692,7 @@ input::-webkit-inner-spin-button {
     font-size: 21px;
     line-height: 26px;
     margin: 0 auto;
+    margin-bottom: 28px;
   }
 
   .feedback-form__description {
@@ -648,11 +701,13 @@ input::-webkit-inner-spin-button {
     justify-self: center;
     display: grid;
     padding: 0;
+    margin-top: -6px;
+    width: 648px;
   }
 
   .feedback-form__description-input {
-    width: 608px;
-    min-height: 120px;
+    width: 615px;
+    min-height: 127px;
   }
 
   .feedback-form__button {
@@ -660,8 +715,13 @@ input::-webkit-inner-spin-button {
   }
 
   .feedback-form__required-field-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
     align-self: end;
     justify-self: end;
+    padding: 0;
+    padding-bottom: 17px;
   }
 
   .feedback-form__next-line-tablet::after {
@@ -684,7 +744,7 @@ input::-webkit-inner-spin-button {
   .feedback-form__introduce::after {
     position: absolute;
     top: 0;
-    right: -63px;
+    right: -64px;
     content: "";
     width: 1px;
     height: 338px;
@@ -697,8 +757,12 @@ input::-webkit-inner-spin-button {
     justify-self: start;
   }
 
+  .feedback-form__introduce-legend {
+    padding-right: 104px;
+  }
+
   .feedback-form__introduce-input {
-    width: 390px;
+    width: 398px;
   }
 
   // Настройки элемента "Контактная информация" на десктопе
@@ -707,19 +771,28 @@ input::-webkit-inner-spin-button {
     justify-self: end;
   }
 
+  .feedback-form__contacts-legend {
+    padding-right: 0;
+    padding-left: 30px;
+  }
+
+  .feedback-form__contacts-label {
+    padding-left: 16px;
+  }
+
   .feedback-form__contacts-input {
-    width: 312px;
+    width: 308px;
   }
 
   // Позиционирование иконки телефона на десктопе
   .feedback-form__phone-icon {
-    top: 47px;
+    top: 74px;
     right: 0;
   }
 
   // Позиционирование иконки email на десктопе
   .feedback-form__email-icon {
-    top: 126px;
+    top: 169px;
     right: 0;
   }
 
@@ -758,6 +831,8 @@ input::-webkit-inner-spin-button {
     grid-template-rows: 80px;
     column-gap: 28px;
     align-items: center;
+    width: 854px;
+    padding: 0 53px 0 53px;
   }
 
   // Декоративная гоирзонтальная серая полоса слева от "Посещенные достопримечательности"
@@ -789,6 +864,11 @@ input::-webkit-inner-spin-button {
     padding: 0;
   }
 
+  .feedback-form__attractions-label {
+    width: auto;
+    max-width: 184px;
+  }
+
   .feedback-form__attractions-list {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -806,7 +886,7 @@ input::-webkit-inner-spin-button {
   .feedback-form__description::before {
     position: absolute;
     left: 0;
-    top: 12px;
+    top: 18px;
     content: "";
     width: 280px;
     height: 1px;
@@ -817,7 +897,7 @@ input::-webkit-inner-spin-button {
   .feedback-form__description::after {
     position: absolute;
     right: 0;
-    top: 12px;
+    top: 18px;
     content: "";
     width: 280px;
     height: 1px;
@@ -830,13 +910,18 @@ input::-webkit-inner-spin-button {
     justify-content: center;
   }
 
+  .feedback-form__description-label {
+    padding-top: 6px;
+  }
+
   .feedback-form__description-input {
-    width: 728px;
-    min-height: 120px;
+    width: 736px;
+    min-height: 127px;
   }
 
   .feedback-form__button {
     margin-left: 96px;
+    margin-top: -8px;
     width: 384px;
   }
 
