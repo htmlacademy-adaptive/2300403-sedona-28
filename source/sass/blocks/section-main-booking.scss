@@ -67,7 +67,7 @@
   color: #ffffff;
 }
 
-.section-main-booking-map {
+.section-main-booking__map {
   width: 320px;
   height: 350px;
   background-image: url("../img/map-mobile.jpg");
@@ -101,7 +101,7 @@
     width: 458px;
   }
 
-  .section-main-booking-map {
+  .section-main-booking__map {
     width: 768px;
     height: 350px;
     background-image: url("../img/map-tablet.jpg");
@@ -129,7 +129,7 @@
     margin-bottom: 45px;
   }
 
-  .section-main-booking-map {
+  .section-main-booking__map {
     width: 1200px;
     height: 350px;
     background-image: url("../img/map-desktop.jpg");
