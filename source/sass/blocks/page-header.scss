@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.page-header-navigation {
+.page-header__navigation {
   order: 1;
   width: 320px;
   position: relative;
@@ -26,7 +26,7 @@
     width: 320px;
   }
 
-  // Если .page-header-navigation БЕЗ --nojs (используется JS), тогда список меню вне потока, перекрывая контент
+  // Если .page-header__navigation БЕЗ --nojs (используется JS), тогда список меню вне потока, перекрывая контент
   .page-header__menu-list {
     position: absolute;
     left: 0;
@@ -39,8 +39,8 @@
     margin: 0;
   }
 
-  // Если .page-header-navigation--nojs (не использует JS), тогда список меню в потоке, не перекрывая контент
-  .page-header-navigation--nojs .page-header__menu-list {
+  // Если .page-header__navigation--nojs (не использует JS), тогда список меню в потоке, не перекрывая контент
+  .page-header__navigation--nojs .page-header__menu-list {
     position: relative;
   }
 
@@ -58,9 +58,9 @@
     border: none;
   }
 
-  // Кнопка "крестик" для закрытия меню (page-header-navigation--opened)
+  // Кнопка "крестик" для закрытия меню (page-header__navigation--opened)
   // Крестик скрыт без JS
-  .page-header-navigation--opened .page-header__menu-button::before {
+  .page-header__navigation--opened .page-header__menu-button::before {
     display: none;
     content: "";
     position: absolute;
@@ -71,16 +71,16 @@
     background-image: url("../img/stack.svg#cross-icon");
   }
 
-  .page-header-navigation--opened .page-header__menu-button:hover::before {
+  .page-header__navigation--opened .page-header__menu-button:hover::before {
     opacity: 0.6;
   }
 
-  .page-header-navigation--opened .page-header__menu-button:active::before {
+  .page-header__navigation--opened .page-header__menu-button:active::before {
     opacity: 0.3;
   }
 
   // Кнопка "бурегер" для открытия меню
-  .page-header-navigation--closed .page-header__menu-button {
+  .page-header__navigation--closed .page-header__menu-button {
     top: 0;
     right: 0;
 
@@ -104,7 +104,7 @@
   }
 
   // Когда меню закрыто, все пункты меню спрятаны
-  .page-header-navigation--closed .page-header__menu-list {
+  .page-header__navigation--closed .page-header__menu-list {
     display: none;
   }
 
@@ -174,7 +174,7 @@
   }
 
   // Перебиваем порядок отображения меню при --nojs на планшете
-  .page-header-navigation--nojs .page-header__menu-list {
+  .page-header__navigation--nojs .page-header__menu-list {
     position: static;
   }
 
@@ -193,7 +193,7 @@
     margin-left: -92.5px;
   }
 
-  .page-header-navigation {
+  .page-header__navigation {
     position: static;
     width: 768px;
   }
@@ -252,7 +252,7 @@
   }
 
   // Отключение кнопок меню мобильной версии на версии для планшета
-  .page-header-navigation__burger-menu-label {
+  .page-header__navigation__burger-menu-label {
     display: none;
   }
 }
@@ -263,7 +263,7 @@
     width: 1200px;
   }
 
-  .page-header-navigation {
+  .page-header__navigation {
     width: 1200px;
   }
 

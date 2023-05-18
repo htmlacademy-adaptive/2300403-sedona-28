@@ -26,24 +26,6 @@
   color: #000000;
 }
 
-// Состояние блока "Разработано" при наведении и нажатии
-.footer-developer-information__link {
-  color: #000000;
-
-  &:hover {
-    color: #81b3d2;
-  }
-
-  &:active {
-    color: #b3b3b3;
-  }
-}
-
-// Цвет родителя для текста логотипа разработчика
-.footer-developer-information__text {
-  color: currentColor;
-}
-
 @media (min-width: $tablet-width) {
   .footer {
     min-width: 648px;
