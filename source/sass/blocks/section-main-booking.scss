@@ -10,8 +10,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 38px 18px 49px 18px;
+  padding: 39px 18px 49px 18px;
 }
+
 
 .section-main-booking__button-title {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -19,6 +20,12 @@
   font-size: 21px;
   line-height: 26px;
   color: #000000;
+  margin-bottom: 20px;
+}
+
+.section-main-booking__button-description {
+  margin: 0;
+  margin-bottom: 32px;
 }
 
 .section-main-booking__button {
@@ -82,6 +89,7 @@
   .section-main-booking__button-title {
     font-size: 30px;
     line-height: 26px;
+    margin-bottom: 32px;
   }
 
   .section-main-booking__button-description {
@@ -100,6 +108,11 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  .section-main-booking__next-line-tablet::after {
+    content: "\A";
+    white-space: pre;
+  }
 }
 
 // Вид на десктопе
@@ -109,7 +122,11 @@
   }
 
   .section-main-booking__button-wrap {
-    padding: 60px 371px 66px 371px;
+    padding: 61px 371px 66px 371px;
+  }
+
+  .section-main-booking__button-description {
+    margin-bottom: 45px;
   }
 
   .section-main-booking-map {

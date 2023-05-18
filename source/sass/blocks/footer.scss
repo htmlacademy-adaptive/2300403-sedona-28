@@ -3,6 +3,14 @@
   flex-direction: column;
   align-items: center;
   padding: 33px 82px;
+
+  &--index-position {
+    padding-top: 42px;
+  }
+
+  &--form-position {
+    padding-top: 56px;
+  }
 }
 
 .footer__hashtag {
@@ -38,10 +46,18 @@
 
 @media (min-width: $tablet-width) {
   .footer {
-    min-width: 642px;
+    min-width: 648px;
     flex-direction: row;
     justify-content: space-between;
-    padding: 36px 60px;
+    padding: 76px 0 36px 0;
+
+    &--form-position {
+      padding-top: 97px;
+    }
+
+    &--index-position {
+      padding-top: 36px;
+    }
   }
 
   .footer__hashtag {
@@ -52,6 +68,14 @@
 @media (min-width: $desktop-width) {
   .footer {
     min-width: 960px;
-    padding: 36px 120px;
+    padding: 120px 120px 36px 120px;
+
+    &--form-position {
+      padding-top: 97px;
+    }
+
+    &--index-position {
+      padding-top: 37px;
+    }
   }
 }

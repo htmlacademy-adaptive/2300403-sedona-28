@@ -110,10 +110,12 @@
 
   .page-header__menu-item {
     display: flex;
-    min-width: 320px;
     justify-content: center;
     align-items: center;
-    min-height: 55px;
+    min-width: 320px;
+    min-height: 26px;
+    padding-top: 17px;
+    padding-bottom: 12px;
     margin-bottom: 1px;
     box-shadow: 0 1px 0 #01010133, inset 0 1px 0 #ffffff33;
 
@@ -210,6 +212,7 @@
     min-width: 153px;
     min-height: 56px;
     box-shadow: none;
+    padding: 0;
   }
 
   // Отступ у второго элемента меню в планшетной версии
@@ -222,6 +225,8 @@
     font-size: 14px;
     line-height: 21px;
     padding: 15px;
+    padding-top: 18px;
+    padding-left: 17px;
   }
 
   // Состояния элементов меню, версия для планшета

@@ -43,20 +43,23 @@
     <!-- Секция интро с начальным описанием страницы формы-->
     <section class="page-intro">
       <!-- Общий контйнер для изображений на фоне гор -->
-      <div class="welcome-images">
+      <div class="welcome-images welcome-images--sedona-only-position">
         <!-- Текст с цитатой в виде изображения -->
         <ul class="welcome-images__list welcome-images__list--sedona-only-position">
-          <li class="welcome-images__item welcome-images__sedona-image">
-            <span class="">Sedona</span>
+          <li
+            class="welcome-images__item welcome-images__sedona-only-image welcome-images__sedona-image--sedona-only-position">
+            <span class="visually-hidden">Sedona</span>
           </li>
         </ul>
         <!-- Декоротивный угол фона -->
         <div class="page-intro__bottom-decoration"></div>
       </div>
       <!-- Краткое описание формы  -->
-      <div class="page-intro__text-wrap">
-        <b class="page-intro__bold-text page-intro__bold-text--form-size">Оставьте свой отзыв</b>
-        <h2 class="page-intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+      <div class="page-intro__text-wrap page-intro__text-wrap--form-position">
+        <b class="page-intro__bold-text page-intro__bold-text--form-position page-intro__bold-text--form-size">Оставьте
+          свой отзыв</b>
+        <h2 class="page-intro__text page-intro__text--form-position">Помогите нашим отелям стать лучше! оставьте отзыв о
+          них, <span class="page-intro__next-line-tablet"></span>а также о
           посещенных
           вами достопримечательностях
         </h2>
@@ -71,13 +74,13 @@
           <ul class="feedback-form__introduce-list">
             <li class="feedback-form__introduce-item">
               <label class="feedback-form__introduce-label" for="name">Имя*:</label>
-              <input class="feedback-form__introduce-input" type="text" id="name" name="name" placeholder="Пётр"
-                required>
+              <input class="feedback-form__introduce-input feedback-form__introduce-input--margin" type="text" id="name"
+                name="name" placeholder="Пётр" required>
             </li>
             <li class="feedback-form__introduce-item">
               <label class="feedback-form__introduce-label" for="surname">Фамилия*:</label>
-              <input class="feedback-form__introduce-input" type="text" id="surname" name="surname"
-                placeholder="Пустота" required>
+              <input class="feedback-form__introduce-input feedback-form__introduce-input--margin" type="text"
+                id="surname" name="surname" placeholder="Пустота" required>
             </li>
             <li class="feedback-form__introduce-item">
               <label class="feedback-form__introduce-label" for="patronymic">Отчество:</label>
@@ -92,13 +95,16 @@
           <ul class="feedback-form__contacts-list">
             <li class="feedback-form__contacts-item feedback-form__contacts-item--phone">
               <label class="feedback-form__contacts-label" for="telephone">Контактный телефон*:</label>
-              <input class="feedback-form__contacts-input feedback-form__contacts-input--phone" type="number"
-                name="telephone" id="telephone" placeholder="Введите телефон" required>
+              <input
+                class="feedback-form__contacts-input feedback-form__contacts-input--margin feedback-form__contacts-input--phone"
+                type="number" name="telephone" id="telephone" placeholder="Введите телефон" required>
+              <div class="feedback-form__phone-icon"></div>
             </li>
             <li class="feedback-form__contacts-item feedback-form__contacts-item--email">
               <label class="feedback-form__contacts-label" for="email">Электронная почта*:</label>
               <input class="feedback-form__contacts-input feedback-form__contacts-input--email" type="email"
                 name="email" id="email" placeholder="Введите e-mail" required>
+              <div class="feedback-form__email-icon"></div>
             </li>
           </ul>
         </fieldset>
@@ -125,7 +131,8 @@
         </fieldset>
 
         <fieldset class="feedback-form__attractions">
-          <span class="feedback-form__attractions-legend">Посещенные достопримечательности:</span>
+          <span class="feedback-form__attractions-legend">Посещенные <span
+              class="feedback-form__next-line-tablet"></span>достопримечательности:</span>
           <ul class="feedback-form__attractions-list">
             <li class="feedback-form__attractions-item">
               <input class="feedback-form__attractions-input visually-hidden" type="checkbox" name="bridge" id="bridge"
@@ -150,7 +157,7 @@
         </fieldset>
 
         <fieldset class="feedback-form__description">
-          <label class="feedback-form__description-label" for="description-of-emotions">Опишите свои эмоции:</label><br>
+          <label class="feedback-form__description-label" for="description-of-emotions">Опишите свои эмоции:</label>
           <textarea class="feedback-form__description-input" name="description-of-emotions" id="description-of-emotions"
             placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
@@ -162,16 +169,17 @@
   <!-- Блок модальных окон -->
   <!-- Окно подтверждения отправки формы -->
   <div class="modal-wrap">
-    <div class="modal-wrap__accetped-window modal-wrap__accetped-window--disable">
-      <div class="modal-wrap__content">
-        <div class="modal-wrap__content-text-wrap">
-          <b class="modal-wrap__content-title">Ваш отзыв отправлен!</b>
-          <p class="modal-wrap__content-text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<span></span> В
+    <div class="modal-wrap__accepted-window modal-wrap__accepted-window--disable">
+      <div class="modal-wrap__content modal-wrap__content--accepted-window">
+        <div class="modal-wrap__content-text-wrap modal-wrap__content-text-wrap--accepted-window">
+          <b class="modal-wrap__content-title modal-wrap__content-title--accepted-window">Ваш отзыв отправлен!</b>
+          <p class="modal-wrap__content-text modal-wrap__content-text--accepted-window">Спасибо за ваше участие, ваш
+            отзыв уже поступил к нам.<span></span> В
             ближайшее время мы
             опубликуем его на сайте.</p>
         </div>
-        <div class="modal-wrap__content-button-wrap">
-          <button class="modal-wrap__content-button">Закрыть окно</button>
+        <div class="modal-wrap__content-button-wrap modal-wrap__content-button-wrap--accepted-window">
+          <button class="modal-wrap__content-button modal-wrap__content-button--accepted-window">Закрыть окно</button>
         </div>
       </div>
     </div>
@@ -191,7 +199,7 @@
     </div>
   </div>
   <!-- Футер главной страницы -->
-  <footer class="footer">
+  <footer class="footer footer--form-position">
     <b class="footer__hashtag"><a class="footer__hashtag-link" href="#">#visitsedona</a></b>
     <ul class="socials-list">
       <li class="socials-list__item">
