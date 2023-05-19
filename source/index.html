@@ -78,11 +78,18 @@
                   class="page-advantages__next-line-desktop"></span> там течет своя жизнь</p>
             </div>
             <picture>
+              <!-- WebP изображения -->
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/photo-city-desktop.webp, img/photo-city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/photo-city-tablet.webp, img/photo-city-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-city-mobile.webp, img/photo-city-mobile@2x.webp 2x">
+              <!-- JPEG изображения -->
               <source media="(min-width: 1200px)"
                 srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
-              <img class="page-advantages__item-photo" src="img/photo-city-mobile.jpg" width="320" height="260"
-                srcset="img/photo-city-mobile@2x.jpg 2x" alt="Здание с флагами США.">
+              <img class="page-advantages__item-photo page-advantages__item-photo" src="img/photo-city-mobile.jpg"
+                width="320" height="260" srcset="img/photo-city-mobile@2x.jpg 2x" alt="Здание с флагами США.">
             </picture>
           </div>
           <ul class="page-advantages__sub-list">
@@ -111,12 +118,19 @@
         <li class="page-advantages__item">
           <div class="page-advantages__item-with-photo page-advantages__item-with-photo--reverse">
             <picture>
+              <!-- WebP изображения -->
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/photo-bridge-desktop.webp, img/photo-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/photo-bridge-tablet.webp, img/photo-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-bridge-mobile.webp, img/photo-bridge-mobile@2x.webp 2x">
+              <!-- JPEG изображения -->
               <source media="(min-width: 1200px)"
                 srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-              <img class="page-advantages__item-photo" src="img/photo-bridge-mobile.jpg" width="320" height="260"
-                srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография каньона.">
+              <img class="page-advantages__item-photo page-advantages__item-photo" src="img/photo-bridge-mobile.jpg"
+                width="320" height="260" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография каньона.">
             </picture>
             <div class="page-advantages__item-text-wrap page-advantages__item-text-wrap--another-position">
               <b class="page-advantages__item-bold-text page-advantages__item-bold-text--white-color">Там
