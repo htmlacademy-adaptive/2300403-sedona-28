@@ -9,8 +9,8 @@
   <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="/source/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/source/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -104,13 +104,21 @@
           <div class="catalog-photos__item-photo-wrap">
             <a class="catalog-photos__item-photo-link" href="#">
               <picture>
+                <!-- WebP изображения -->
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/cactus-catalog-photo-desktop.webp, img/cactus-catalog-photo-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/cactus-catalog-photo-tablet.webp, img/cactus-catalog-photo-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/cactus-catalog-photo-mobile.webp, img/cactus-catalog-photo-mobile@2x.webp 2x">
+                <!-- JPEG изображения -->
                 <source media="(min-width: 1200px)"
                   srcset="img/cactus-catalog-photo-desktop.jpg 1x, img/cactus-catalog-photo-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/cactus-catalog-photo-tablet.jpg 1x, img/cactus-catalog-photo-tablet@2x.jpg 2x">
                 <img class="catalog-photos__item-photo" src="img/cactus-catalog-photo-mobile.jpg" width="280"
                   height="280" srcset="img/cactus-catalog-photo-mobile@2x.jpg 2x"
-                  alt="Фотография дороги на фоне заката.">
+                  alt="Фотография кактуса на фоне каньона.">
               </picture>
             </a>
           </div>
@@ -131,13 +139,21 @@
           <div class="catalog-photos__item-photo-wrap">
             <a class="catalog-photos__item-photo-link" href="#">
               <picture>
+                <!-- WebP изображения -->
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/forest-with-road-catalog-photo-desktop.webp, img/forest-with-road-catalog-photo-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/forest-with-road-catalog-photo-tablet.webp, img/forest-with-road-catalog-photo-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/forest-with-road-catalog-photo-mobile.webp, img/forest-with-road-catalog-photo-mobile@2x.webp 2x">
+                <!-- JPEG изображения -->
                 <source media="(min-width: 1200px)"
                   srcset="img/forest-with-road-catalog-photo-desktop.jpg 1x, img/forest-with-road-catalog-photo-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/forest-with-road-catalog-photo-tablet.jpg 1x, img/forest-with-road-catalog-photo-tablet@2x.jpg 2x">
                 <img class="catalog-photos__item-photo" src="img/forest-with-road-catalog-photo-mobile.jpg" width="280"
                   srcset="img/forest-with-road-catalog-photo-mobile@2x.jpg 2x" height="280"
-                  alt="Фотография дороги на фоне заката.">
+                  alt="Фотография дороги на фоне леса.">
               </picture>
             </a>
           </div>
@@ -158,13 +174,20 @@
           <div class="catalog-photos__item-photo-wrap">
             <a class="catalog-photos__item-photo-link" href="#">
               <picture>
+                <!-- WebP изображения -->
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/bridge-catalog-photo-desktop.webp, img/bridge-catalog-photo-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/bridge-catalog-photo-tablet.webp, img/bridge-catalog-photo-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/bridge-catalog-photo-mobile.webp, img/bridge-catalog-photo-mobile@2x.webp 2x">
+                <!-- JPEG изображения -->
                 <source media="(min-width: 1200px)"
                   srcset="img/bridge-catalog-photo-desktop.jpg 1x, img/bridge-catalog-photo-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/bridge-catalog-photo-tablet.jpg 1x, img/bridge-catalog-photo-tablet@2x.jpg 2x">
                 <img class="catalog-photos__item-photo" src="img/bridge-catalog-photo-mobile.jpg" width="280"
-                  height="280" srcset="img/bridge-catalog-photo-mobile@2x.jpg 2x"
-                  alt="Фотография дороги на фоне заката.">
+                  height="280" srcset="img/bridge-catalog-photo-mobile@2x.jpg 2x" alt="Фотография каньона.">
               </picture>
             </a>
           </div>
@@ -190,8 +213,16 @@
         <p class="catalog-video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
       </div>
-      <a class="catalog-video__video-link" href="#">
+      <div class="catalog-video__video-link">
         <picture>
+          <!-- WebP изображения -->
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/video-preview-catalog-desktop.webp, img/video-preview-catalog-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/video-preview-catalog-tablet.webp, img/video-preview-catalog-tablet@2x.webp 2x">
+          <source type="image/webp"
+            srcset="img/video-preview-catalog-mobile.webp, img/video-preview-catalog-mobile@2x.webp 2x">
+          <!-- JPEG изображения -->
           <source media="(min-width: 1200px)"
             srcset="img/video-preview-catalog-desktop.jpg 1x, img/video-preview-catalog-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)"
@@ -199,7 +230,8 @@
           <img class="catalog-video__preview-image" src="img/video-preview-catalog-mobile.jpg" width="280" height="177"
             srcset="img/video-preview-catalog-mobile@2x.jpg 2x" alt="Превью видеоролика.">
         </picture>
-      </a>
+        <button class="catalog-video__video-button"></button>
+      </div>
     </section>
 
   </main>

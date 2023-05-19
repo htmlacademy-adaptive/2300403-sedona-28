@@ -194,7 +194,7 @@ input::-webkit-inner-spin-button {
 }
 
 .feedback-form__contacts-input::placeholder {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -600,7 +600,7 @@ input::-webkit-inner-spin-button {
       justify-self: center;
       align-self: center;
       grid-template-columns: 280px 280px;
-      grid-template-rows: 46px 46px;
+      grid-template-rows: minmax(46px, auto);
       gap: 16px;
     }
   }
@@ -652,7 +652,7 @@ input::-webkit-inner-spin-button {
     justify-self: center;
     align-self: center;
     grid-template-columns: 224px 224px;
-    grid-template-rows: 46px 46px;
+    grid-template-rows: minmax(46px, auto);
     row-gap: 16px;
     column-gap: 32px;
   }
@@ -834,7 +834,7 @@ input::-webkit-inner-spin-button {
   .feedback-form__impression-list {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 80px;
+    grid-template-rows: minmax(80px, auto);
     column-gap: 28px;
     align-items: center;
     width: 854px;
@@ -878,7 +878,7 @@ input::-webkit-inner-spin-button {
   .feedback-form__attractions-list {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 108px;
+    grid-template-rows: minmax(108px, auto);
     column-gap: 64px;
     justify-content: center;
     align-items: center;
