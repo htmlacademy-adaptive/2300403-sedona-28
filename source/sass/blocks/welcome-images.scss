@@ -64,19 +64,18 @@
   height: 48.8px;
   margin-bottom: 33.64px;
 
+  &--form-size {
+    width: 229px;
+    height: 39px;
+    margin: 0;
+  }
+
   // Размер только Седона в каталоге
   &--catalog-size {
     width: 229px;
     height: 39px;
     margin-bottom: 10px;
   }
-}
-
-// Размеры изображения, только Седона
-.welcome-images__sedona-image--sedona-only-position {
-  width: 229px;
-  height: 39px;
-  margin: 0;
 }
 
 // Изображение "BECAUSE THE GRAND CANYON SUCKS!"
@@ -133,17 +132,16 @@
   }
 
   .welcome-images__sedona-only-image {
+    &--form-size {
+      width: 457px;
+      height: 77.6px;
+    }
+
     &--catalog-size {
       width: 456.9px;
       height: 77.6px;
       margin-bottom: 58px;
     }
-  }
-
-
-  .welcome-images__sedona-image--sedona-only-position {
-    width: 457px;
-    height: 77.6px;
   }
 
   // Изображение "BECAUSE THE GRAND CANYON SUCKS!"
@@ -179,12 +177,12 @@
     padding: 101px 0 63px 0;
   }
 
-  .welcome-images__sedona-image--sedona-only-position {
-    width: 459.5px;
-    height: 79.8px;
-  }
-
   .welcome-images__sedona-only-image {
+    &--form-size {
+      width: 459.5px;
+      height: 79.8px;
+    }
+
     &--catalog-size {
       width: 459.5px;
       height: 79.8px;
